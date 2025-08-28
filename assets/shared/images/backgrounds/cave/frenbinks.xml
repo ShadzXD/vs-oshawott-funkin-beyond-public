@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="frenbinks.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="frenbinks0000" x="0" y="0" width="216" height="288" frameX="0" frameY="-6" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0001" x="0" y="0" width="216" height="288" frameX="0" frameY="-6" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0002" x="216" y="0" width="214" height="288" frameX="-1" frameY="-6" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0003" x="216" y="0" width="214" height="288" frameX="-1" frameY="-6" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0004" x="430" y="0" width="203" height="288" frameX="-6" frameY="-3" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0005" x="430" y="0" width="203" height="288" frameX="-6" frameY="-3" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0006" x="633" y="0" width="191" height="288" frameX="-12" frameY="0" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0007" x="633" y="0" width="191" height="288" frameX="-12" frameY="0" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0008" x="633" y="0" width="191" height="288" frameX="-12" frameY="0" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0009" x="824" y="0" width="189" height="287" frameX="-13" frameY="0" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0010" x="824" y="0" width="189" height="287" frameX="-13" frameY="0" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0011" x="633" y="0" width="191" height="288" frameX="-12" frameY="0" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0012" x="633" y="0" width="191" height="288" frameX="-12" frameY="0" frameWidth="216" frameHeight="294"/>
+	<SubTexture name="frenbinks0013" x="633" y="0" width="191" height="288" frameX="-12" frameY="0" frameWidth="216" frameHeight="294"/>
+</TextureAtlas>

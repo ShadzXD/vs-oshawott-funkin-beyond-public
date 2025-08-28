@@ -1,0 +1,94 @@
+{
+	"animations": [
+		{
+			"offsets": [-91, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [-51, -1],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [-119, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [-120, -47],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [-121, 41],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [-104, -5],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "exhausted idle",
+			"indices": []
+		},
+		{
+			"offsets": [-80, -20],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [],
+			"name": "hey"
+		},
+		{
+			"offsets": [-73, 6],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "pokeball hit"
+		},
+		{
+			"offsets": [-99, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "water gun"
+		},
+		{
+			"offsets": [123, 3],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "dodge"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Oshawott/oshawott",
+	"position": [110, 390],
+	"healthicon": "oshawott",
+	"flip_x": false,
+	"healthbar_colors": [143, 220, 255],
+	"camera_position": [-180, -30],
+	"sing_duration": 6.1,
+	"scale": 1.2,
+	"_editor_isPlayer": false
+}

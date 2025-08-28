@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="oshano.png">
+<SubTexture name="oshano danceleft0000" x="0" y="260" width="67" height="72" frameX="-17" frameY="-28" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano danceleft0001" x="120" y="178" width="58" height="81" frameX="-20" frameY="-19" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano danceleft0002" x="239" y="0" width="57" height="82" frameX="-20" frameY="-18" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano danceright0000" x="178" y="178" width="59" height="76" frameX="-18" frameY="-24" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano danceright0001" x="239" y="82" width="56" height="82" frameX="-20" frameY="-18" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano danceright0002" x="239" y="0" width="57" height="82" frameX="-20" frameY="-18" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano up0000" x="0" y="0" width="52" height="92" frameX="-23" frameY="-8" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano up0001" x="0" y="178" width="60" height="82" frameX="-20" frameY="-18" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano up0002" x="60" y="178" width="60" height="82" frameX="-20" frameY="-18" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano down0000" x="67" y="260" width="68" height="63" frameX="-18" frameY="-37" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano down0001" x="296" y="0" width="63" height="75" frameX="-18" frameY="-25" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano down0002" x="296" y="75" width="63" height="75" frameX="-17" frameY="-25" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano left0000" x="52" y="0" width="63" height="86" frameX="-10" frameY="-14" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano left0001" x="115" y="0" width="62" height="86" frameX="-12" frameY="-14" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano left0002" x="177" y="0" width="62" height="86" frameX="-12" frameY="-14" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano right0000" x="0" y="92" width="63" height="86" frameX="-27" frameY="-14" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano right0001" x="63" y="92" width="62" height="86" frameX="-26" frameY="-14" frameWidth="100" frameHeight="100" />
+<SubTexture name="oshano right0002" x="125" y="92" width="62" height="86" frameX="-26" frameY="-14" frameWidth="100" frameHeight="100" />
+</TextureAtlas>

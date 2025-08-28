@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-88,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-75,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-118,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-100,
+				-32
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-180,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-91,
+				30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "giggle",
+			"indices": [],
+			"name": "giggle"
+		},
+		{
+			"offsets": [
+				-108,
+				-94
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "pokeball impact"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-68,
+				0
+			],
+			"anim": "attack",
+			"fps": 24,
+			"name": "shell attack",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-88,
+				0
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "exhausted idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Oshawott/oshawottshiny",
+	"position": [
+		30,
+		420
+	],
+	"healthicon": "oshawottshiny",
+	"flip_x": false,
+	"healthbar_colors": [
+		176,
+		255,
+		255
+	],
+	"camera_position": [
+		120,
+		-50
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

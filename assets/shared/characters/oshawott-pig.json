@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				70,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				0,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				30,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-21,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				12,
+				82
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "die",
+			"indices": [],
+			"name": "oshadie"
+		},
+		{
+			"offsets": [
+				23,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "speak",
+			"indices": [],
+			"name": "oshawott speak"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-40
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "note down miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				0
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "note left miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				50
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "note up miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				0
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "note right miss",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Oshawott/oshawott_da_pig",
+	"position": [
+		0,
+		380
+	],
+	"healthicon": "oshawott",
+	"flip_x": false,
+	"healthbar_colors": [
+		117,
+		235,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

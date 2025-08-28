@@ -1,0 +1,51 @@
+{
+	"storyName": "In the forest we go!",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Wandering",
+			"gf",
+			[
+				75,
+				113,
+				253
+			]
+		],
+		[
+			"vibe_to_the_vines",
+			"snivy",
+			[
+				75,
+				113,
+				253
+			]
+		],
+		[
+			"Da_pig",
+			"tepig",
+			[
+				75,
+				113,
+				253
+			],
+			"dacool"
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "week2",
+	"hiddenUntilUnlocked": false
+}

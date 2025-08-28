@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-299,
+				-250
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "tepig danceleft"
+		},
+		{
+			"offsets": [
+				-299,
+				-250
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "tepig danceright"
+		},
+		{
+			"offsets": [
+				-306,
+				-251
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "tepig left"
+		},
+		{
+			"offsets": [
+				-317,
+				-250
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "tepig down"
+		},
+		{
+			"offsets": [
+				-297,
+				-246
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "tepig up"
+		},
+		{
+			"offsets": [
+				-219,
+				-220
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "tepig right"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Tepig/tepig",
+	"position": [
+		-140,
+		-90
+	],
+	"healthicon": "tepig-pixel",
+	"flip_x": false,
+	"healthbar_colors": [
+		231,
+		148,
+		85
+	],
+	"camera_position": [
+		-80,
+		-20
+	],
+	"sing_duration": 6.1,
+	"scale": 2.2,
+	"_editor_isPlayer": false
+}

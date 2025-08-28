@@ -1,0 +1,27 @@
+{
+	"storyName": "",
+	"difficulties": "Normal, Shiny",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Asperita",
+			"gf",
+			[
+				165,
+				0,
+				77
+			],
+			"asperita"
+		]
+	],
+	"weekName": "tutorial"
+}

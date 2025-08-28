@@ -1,0 +1,35 @@
+{
+	"storyName": "Shiny Remixes",
+	"difficulties": "Normal",
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		["Watering shiny", "oshawott", [75, 113, 253]],
+		["Asperita shiny", "oshawott", [255, 204, 0]],
+		["Dance shiny", "oshawott", [255, 102, 102]],
+		["Drunken Opiate shiny", "oshawott", [51, 204, 51]],
+		["Figure Faceoff shiny", "oshawott", [204, 51, 255]],
+		["Littleroot shiny", "oshawott", [255, 51, 153]],
+		["Ocean Aggravation shiny", "oshawott", [0, 204, 204]],
+		["Oshawugh shiny", "oshawott", [102, 255, 102]],
+		["ShellShock shiny", "oshawott", [102, 204, 255]],
+		["Trifecta shiny", "oshawott", [255, 102, 204]],
+		["Wandering shiny", "oshawott", [255, 153, 51]],
+                ["da_pig-shiny", "oshawott", [51, 255, 255]]
+                ["Wott shiny", "oshawott", [51, 255, 255]]
+	],
+	"weekCharacters": [
+		"osha-menu",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": ""
+}

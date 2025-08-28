@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-64,
+				-272
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "quil idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				-260
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "quil left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-280
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "quil down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-190
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "quil up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-47,
+				-228
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "quil right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Cyndaquil/quil",
+	"position": [
+		40,
+		70
+	],
+	"healthicon": "snivy",
+	"flip_x": true,
+	"healthbar_colors": [
+		76,
+		148,
+		76
+	],
+	"camera_position": [
+		340,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 2,
+	"_editor_isPlayer": true
+}

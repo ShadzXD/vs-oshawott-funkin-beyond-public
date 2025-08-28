@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="oshawugh foreground.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="foreground bumpers0000" x="10" y="10" width="3421" height="706" frameX="0" frameY="-26" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0001" x="10" y="10" width="3421" height="706" frameX="0" frameY="-26" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0002" x="10" y="726" width="3414" height="709" frameX="-4" frameY="-23" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0003" x="10" y="726" width="3414" height="709" frameX="-4" frameY="-23" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0004" x="10" y="1445" width="3393" height="731" frameX="-10" frameY="-1" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0005" x="10" y="1445" width="3393" height="731" frameX="-10" frameY="-1" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0006" x="10" y="2186" width="3388" height="732" frameX="-12" frameY="0" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0007" x="10" y="2186" width="3388" height="732" frameX="-12" frameY="0" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0008" x="10" y="2186" width="3388" height="732" frameX="-12" frameY="0" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0009" x="10" y="2186" width="3388" height="732" frameX="-12" frameY="0" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0010" x="10" y="2186" width="3388" height="732" frameX="-12" frameY="0" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0011" x="10" y="2186" width="3388" height="732" frameX="-12" frameY="0" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0012" x="10" y="2186" width="3388" height="732" frameX="-12" frameY="0" frameWidth="3421" frameHeight="732"/>
+	<SubTexture name="foreground bumpers0013" x="10" y="2186" width="3388" height="732" frameX="-12" frameY="0" frameWidth="3421" frameHeight="732"/>
+</TextureAtlas>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="carbinks2.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="carbinks20000" x="0" y="0" width="241" height="262"/>
+	<SubTexture name="carbinks20001" x="0" y="0" width="241" height="262"/>
+	<SubTexture name="carbinks20002" x="241" y="0" width="239" height="261" frameX="-1" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20003" x="241" y="0" width="239" height="261" frameX="-1" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20004" x="480" y="0" width="235" height="260" frameX="-3" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20005" x="480" y="0" width="235" height="260" frameX="-3" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20006" x="480" y="0" width="235" height="260" frameX="-3" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20007" x="715" y="0" width="223" height="257" frameX="-9" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20008" x="715" y="0" width="223" height="257" frameX="-9" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20009" x="0" y="262" width="221" height="256" frameX="-10" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20010" x="0" y="262" width="221" height="256" frameX="-10" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20011" x="480" y="0" width="235" height="260" frameX="-3" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20012" x="480" y="0" width="235" height="260" frameX="-3" frameY="0" frameWidth="241" frameHeight="262"/>
+	<SubTexture name="carbinks20013" x="480" y="0" width="235" height="260" frameX="-3" frameY="0" frameWidth="241" frameHeight="262"/>
+</TextureAtlas>

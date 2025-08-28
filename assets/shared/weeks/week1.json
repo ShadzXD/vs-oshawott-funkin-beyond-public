@@ -1,0 +1,51 @@
+{
+	"storyName": "The Water World",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "Osha",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"osha-menu",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Watering",
+			"oshawott",
+			[
+				75,
+				113,
+				253
+			]
+		],
+		[
+			"Shellshock",
+			"oshawott",
+			[
+				75,
+				113,
+				253
+			]
+		],
+		[
+			"Ocean Aggrivation",
+			"oshawott",
+			[
+				75,
+				113,
+				253
+			],
+			"test inc"
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "WeekOsha",
+	"hiddenUntilUnlocked": false
+}

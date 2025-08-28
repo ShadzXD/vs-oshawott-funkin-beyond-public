@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Noibat-Body.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Noibat-Body instância 10000" x="0" y="0" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10001" x="0" y="0" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10002" x="127" y="0" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10003" x="127" y="0" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10004" x="254" y="0" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10005" x="254" y="0" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10006" x="381" y="0" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10007" x="381" y="0" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10008" x="0" y="133" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10009" x="0" y="133" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10010" x="0" y="133" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10011" x="0" y="133" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10012" x="0" y="133" width="117" height="123"/>
+	<SubTexture name="Noibat-Body instância 10013" x="0" y="133" width="117" height="123"/>
+</TextureAtlas>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="dewott assets.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="crouch and spin0000" x="20" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0001" x="20" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0002" x="554" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0003" x="554" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0004" x="1088" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0005" x="1088" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0006" x="1622" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0007" x="1622" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0008" x="1622" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0009" x="1622" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0010" x="1622" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0011" x="1622" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0012" x="1622" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0013" x="2156" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0014" x="2156" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0015" x="2690" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0016" x="2690" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0017" x="3224" y="20" width="514" height="543"/>
+	<SubTexture name="crouch and spin0018" x="20" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0019" x="554" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0020" x="1088" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0021" x="1622" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0022" x="1622" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0023" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0024" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0025" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0026" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0027" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0028" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0029" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0030" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0031" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0032" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0033" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0034" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="crouch and spin0035" x="2156" y="583" width="514" height="543"/>
+	<SubTexture name="down0000" x="2690" y="583" width="659" height="460"/>
+	<SubTexture name="down0001" x="2690" y="583" width="659" height="460"/>
+	<SubTexture name="down0002" x="3369" y="583" width="659" height="460"/>
+	<SubTexture name="down0003" x="3369" y="583" width="659" height="460"/>
+	<SubTexture name="down0004" x="3369" y="583" width="659" height="460"/>
+	<SubTexture name="down0005" x="3369" y="583" width="659" height="460"/>
+	<SubTexture name="down0006" x="3369" y="583" width="659" height="460"/>
+	<SubTexture name="down0007" x="3369" y="583" width="659" height="460"/>
+	<SubTexture name="idle0000" x="20" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0001" x="20" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0002" x="546" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0003" x="546" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0004" x="1072" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0005" x="1072" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0006" x="1598" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0007" x="1598" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0008" x="2124" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0009" x="2124" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0010" x="2124" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0011" x="2124" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0012" x="2124" y="1146" width="506" height="550"/>
+	<SubTexture name="idle0013" x="2124" y="1146" width="506" height="550"/>
+	<SubTexture name="left0000" x="2650" y="1146" width="461" height="528"/>
+	<SubTexture name="left0001" x="2650" y="1146" width="461" height="528"/>
+	<SubTexture name="left0002" x="3131" y="1146" width="461" height="528"/>
+	<SubTexture name="left0003" x="3131" y="1146" width="461" height="528"/>
+	<SubTexture name="left0004" x="3131" y="1146" width="461" height="528"/>
+	<SubTexture name="left0005" x="3131" y="1146" width="461" height="528"/>
+	<SubTexture name="left0006" x="3131" y="1146" width="461" height="528"/>
+	<SubTexture name="left0007" x="3131" y="1146" width="461" height="528"/>
+	<SubTexture name="right0000" x="20" y="1716" width="509" height="556"/>
+	<SubTexture name="right0001" x="20" y="1716" width="509" height="556"/>
+	<SubTexture name="right0002" x="549" y="1716" width="509" height="556"/>
+	<SubTexture name="right0003" x="549" y="1716" width="509" height="556"/>
+	<SubTexture name="right0004" x="549" y="1716" width="509" height="556"/>
+	<SubTexture name="right0005" x="549" y="1716" width="509" height="556"/>
+	<SubTexture name="right0006" x="549" y="1716" width="509" height="556"/>
+	<SubTexture name="right0007" x="549" y="1716" width="509" height="556"/>
+	<SubTexture name="up0000" x="1078" y="1716" width="450" height="593"/>
+	<SubTexture name="up0001" x="1078" y="1716" width="450" height="593"/>
+	<SubTexture name="up0002" x="1548" y="1716" width="450" height="593"/>
+	<SubTexture name="up0003" x="1548" y="1716" width="450" height="593"/>
+	<SubTexture name="up0004" x="1548" y="1716" width="450" height="593"/>
+	<SubTexture name="up0005" x="1548" y="1716" width="450" height="593"/>
+	<SubTexture name="up0006" x="1548" y="1716" width="450" height="593"/>
+	<SubTexture name="up0007" x="1548" y="1716" width="450" height="593"/>
+</TextureAtlas>

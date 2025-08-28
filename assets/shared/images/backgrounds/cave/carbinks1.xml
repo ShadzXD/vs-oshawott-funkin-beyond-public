@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="carbinks1.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="carbinks10000" x="0" y="0" width="276" height="267" frameX="0" frameY="-6" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10001" x="0" y="0" width="276" height="267" frameX="0" frameY="-6" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10002" x="276" y="0" width="275" height="267" frameX="0" frameY="-6" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10003" x="276" y="0" width="275" height="267" frameX="0" frameY="-6" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10004" x="276" y="0" width="275" height="267" frameX="0" frameY="-6" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10005" x="551" y="0" width="269" height="265" frameX="-3" frameY="-4" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10006" x="551" y="0" width="269" height="265" frameX="-3" frameY="-4" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10007" x="551" y="0" width="269" height="265" frameX="-3" frameY="-4" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10008" x="0" y="267" width="252" height="259" frameX="-10" frameY="0" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10009" x="0" y="267" width="252" height="259" frameX="-10" frameY="0" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10010" x="252" y="267" width="250" height="257" frameX="-11" frameY="0" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10011" x="252" y="267" width="250" height="257" frameX="-11" frameY="0" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10012" x="252" y="267" width="250" height="257" frameX="-11" frameY="0" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10013" x="0" y="267" width="252" height="259" frameX="-10" frameY="0" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10014" x="0" y="267" width="252" height="259" frameX="-10" frameY="0" frameWidth="276" frameHeight="273"/>
+	<SubTexture name="carbinks10015" x="0" y="267" width="252" height="259" frameX="-10" frameY="0" frameWidth="276" frameHeight="273"/>
+</TextureAtlas>

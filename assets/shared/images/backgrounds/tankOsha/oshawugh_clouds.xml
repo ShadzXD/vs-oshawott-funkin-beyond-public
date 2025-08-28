@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="oshawugh clouds.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="clouds loop0000" x="10" y="10" width="3301" height="450" frameX="0" frameY="-1" frameWidth="3301" frameHeight="452"/>
+	<SubTexture name="clouds loop0001" x="10" y="10" width="3301" height="450" frameX="0" frameY="-1" frameWidth="3301" frameHeight="452"/>
+	<SubTexture name="clouds loop0002" x="10" y="470" width="3298" height="452" frameX="-2" frameY="0" frameWidth="3301" frameHeight="452"/>
+	<SubTexture name="clouds loop0003" x="10" y="470" width="3298" height="452" frameX="-2" frameY="0" frameWidth="3301" frameHeight="452"/>
+	<SubTexture name="clouds loop0004" x="10" y="10" width="3301" height="450" frameX="0" frameY="-1" frameWidth="3301" frameHeight="452"/>
+	<SubTexture name="clouds loop0005" x="10" y="10" width="3301" height="450" frameX="0" frameY="-1" frameWidth="3301" frameHeight="452"/>
+	<SubTexture name="clouds loop0006" x="10" y="470" width="3298" height="452" frameX="-2" frameY="0" frameWidth="3301" frameHeight="452"/>
+	<SubTexture name="clouds loop0007" x="10" y="470" width="3298" height="452" frameX="-2" frameY="0" frameWidth="3301" frameHeight="452"/>
+</TextureAtlas>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Whimsicott3.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Whimsicott3 instância 10000" x="0" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10001" x="0" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10002" x="189" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10003" x="189" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10004" x="378" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10005" x="378" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10006" x="567" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10007" x="567" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10008" x="756" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10009" x="756" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10010" x="756" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10011" x="756" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10012" x="756" y="0" width="179" height="215"/>
+	<SubTexture name="Whimsicott3 instância 10013" x="756" y="0" width="179" height="215"/>
+</TextureAtlas>

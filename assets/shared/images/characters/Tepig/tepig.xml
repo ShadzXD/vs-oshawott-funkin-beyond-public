@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="tepig.png">
+<SubTexture name="tepig danceleft0000" x="574" y="538" width="173" height="215" frameX="-129" frameY="-154" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig danceleft0001" x="614" y="0" width="165" height="224" frameX="-133" frameY="-145" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig danceleft0002" x="614" y="224" width="164" height="223" frameX="-134" frameY="-146" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig danceright0000" x="779" y="208" width="168" height="207" frameX="-131" frameY="-162" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig danceright0001" x="0" y="538" width="164" height="222" frameX="-134" frameY="-147" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig danceright0002" x="614" y="224" width="164" height="223" frameX="-134" frameY="-146" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig up0000" x="0" y="0" width="192" height="293" frameX="-129" frameY="-78" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig up0001" x="403" y="0" width="211" height="249" frameX="-124" frameY="-122" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig up0002" x="192" y="0" width="211" height="250" frameX="-125" frameY="-121" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig down0000" x="192" y="760" width="210" height="177" frameX="-109" frameY="-192" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig down0001" x="0" y="760" width="192" height="197" frameX="-116" frameY="-172" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig down0002" x="779" y="415" width="192" height="198" frameX="-116" frameY="-171" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig left0000" x="779" y="0" width="206" height="208" frameX="-63" frameY="-162" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig left0001" x="369" y="538" width="205" height="218" frameX="-74" frameY="-151" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig left0002" x="164" y="538" width="205" height="219" frameX="-75" frameY="-150" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig right0000" x="197" y="293" width="197" height="244" frameX="-211" frameY="-140" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig right0001" x="394" y="293" width="197" height="244" frameX="-201" frameY="-139" frameWidth="500" frameHeight="500" />
+<SubTexture name="tepig right0002" x="0" y="293" width="197" height="245" frameX="-201" frameY="-138" frameWidth="500" frameHeight="500" />
+</TextureAtlas>

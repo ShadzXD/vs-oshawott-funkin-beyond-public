@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="rotom dex.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="idle0000" x="20" y="20" width="325" height="266" frameX="-2" frameY="-11" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0001" x="20" y="20" width="325" height="266" frameX="-2" frameY="-11" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0002" x="365" y="20" width="336" height="267" frameX="0" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0003" x="365" y="20" width="336" height="267" frameX="0" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0004" x="20" y="307" width="334" height="262" frameX="-7" frameY="-1" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0005" x="20" y="307" width="334" height="262" frameX="-7" frameY="-1" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0006" x="374" y="307" width="335" height="262" frameX="-7" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0007" x="374" y="307" width="335" height="262" frameX="-7" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0008" x="374" y="307" width="335" height="262" frameX="-7" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0009" x="374" y="307" width="335" height="262" frameX="-7" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0010" x="374" y="307" width="335" height="262" frameX="-7" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0011" x="374" y="307" width="335" height="262" frameX="-7" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0012" x="374" y="307" width="335" height="262" frameX="-7" frameY="0" frameWidth="342" frameHeight="277"/>
+	<SubTexture name="idle0013" x="374" y="307" width="335" height="262" frameX="-7" frameY="0" frameWidth="342" frameHeight="277"/>
+</TextureAtlas>

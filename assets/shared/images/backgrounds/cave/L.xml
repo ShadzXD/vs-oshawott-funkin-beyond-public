@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="L.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="L0000" x="0" y="0" width="96" height="122" frameX="0" frameY="-5" frameWidth="96" frameHeight="132"/>
+	<SubTexture name="L0001" x="0" y="0" width="96" height="122" frameX="0" frameY="-5" frameWidth="96" frameHeight="132"/>
+	<SubTexture name="L0002" x="96" y="0" width="95" height="128" frameX="-1" frameY="-2" frameWidth="96" frameHeight="132"/>
+	<SubTexture name="L0003" x="96" y="0" width="95" height="128" frameX="-1" frameY="-2" frameWidth="96" frameHeight="132"/>
+	<SubTexture name="L0004" x="191" y="0" width="93" height="132" frameX="-1" frameY="0" frameWidth="96" frameHeight="132"/>
+</TextureAtlas>

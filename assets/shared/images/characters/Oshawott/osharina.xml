@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="osharina.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="idle left0000" x="10" y="10" width="398" height="481"/>
+	<SubTexture name="idle left0001" x="10" y="10" width="398" height="481"/>
+	<SubTexture name="idle left0002" x="418" y="10" width="398" height="481"/>
+	<SubTexture name="idle left0003" x="418" y="10" width="398" height="481"/>
+	<SubTexture name="idle left0004" x="826" y="10" width="398" height="481"/>
+	<SubTexture name="idle left0005" x="826" y="10" width="398" height="481"/>
+	<SubTexture name="idle left0006" x="1234" y="10" width="398" height="481"/>
+	<SubTexture name="idle left0007" x="1234" y="10" width="398" height="481"/>
+	<SubTexture name="idle left0008" x="10" y="501" width="398" height="481"/>
+	<SubTexture name="idle left0009" x="10" y="501" width="398" height="481"/>
+	<SubTexture name="idle left0010" x="10" y="501" width="398" height="481"/>
+	<SubTexture name="idle left0011" x="10" y="501" width="398" height="481"/>
+	<SubTexture name="idle left0012" x="10" y="501" width="398" height="481"/>
+	<SubTexture name="idle left0013" x="10" y="501" width="398" height="481"/>
+	<SubTexture name="idle right0000" x="418" y="501" width="398" height="481"/>
+	<SubTexture name="idle right0001" x="418" y="501" width="398" height="481"/>
+	<SubTexture name="idle right0002" x="826" y="501" width="398" height="481"/>
+	<SubTexture name="idle right0003" x="826" y="501" width="398" height="481"/>
+	<SubTexture name="idle right0004" x="1234" y="501" width="398" height="481"/>
+	<SubTexture name="idle right0005" x="1234" y="501" width="398" height="481"/>
+	<SubTexture name="idle right0006" x="10" y="992" width="398" height="481"/>
+	<SubTexture name="idle right0007" x="10" y="992" width="398" height="481"/>
+	<SubTexture name="idle right0008" x="418" y="992" width="398" height="481"/>
+	<SubTexture name="idle right0009" x="418" y="992" width="398" height="481"/>
+	<SubTexture name="idle right0010" x="418" y="992" width="398" height="481"/>
+	<SubTexture name="idle right0011" x="418" y="992" width="398" height="481"/>
+	<SubTexture name="idle right0012" x="418" y="992" width="398" height="481"/>
+	<SubTexture name="idle right0013" x="418" y="992" width="398" height="481"/>
+</TextureAtlas>

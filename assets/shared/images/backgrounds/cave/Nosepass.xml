@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Nosepass.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Nosepass0000" x="0" y="0" width="459" height="340" frameX="0" frameY="-24" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0001" x="0" y="0" width="459" height="340" frameX="0" frameY="-24" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0002" x="459" y="0" width="458" height="341" frameX="-1" frameY="-22" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0003" x="459" y="0" width="458" height="341" frameX="-1" frameY="-22" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0004" x="917" y="0" width="454" height="347" frameX="-3" frameY="-17" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0005" x="917" y="0" width="454" height="347" frameX="-3" frameY="-17" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0006" x="917" y="0" width="454" height="347" frameX="-3" frameY="-17" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0007" x="1371" y="0" width="445" height="360" frameX="-7" frameY="-3" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0008" x="1371" y="0" width="445" height="360" frameX="-7" frameY="-3" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0009" x="1371" y="0" width="445" height="360" frameX="-7" frameY="-3" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0010" x="1371" y="0" width="445" height="360" frameX="-7" frameY="-3" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0011" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0012" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0013" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0014" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0015" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0016" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0017" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0018" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0019" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0020" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0021" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0022" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0023" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0024" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0025" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+	<SubTexture name="Nosepass0026" x="0" y="360" width="444" height="363" frameX="-8" frameY="0" frameWidth="459" frameHeight="364"/>
+</TextureAtlas>

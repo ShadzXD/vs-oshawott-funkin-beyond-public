@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Sewaddle2.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Sewaddle2 instância 10000" x="0" y="0" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10001" x="0" y="0" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10002" x="121" y="0" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10003" x="121" y="0" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10004" x="242" y="0" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10005" x="242" y="0" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10006" x="363" y="0" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10007" x="363" y="0" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10008" x="0" y="141" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10009" x="0" y="141" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10010" x="0" y="141" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10011" x="0" y="141" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10012" x="0" y="141" width="111" height="131"/>
+	<SubTexture name="Sewaddle2 instância 10013" x="0" y="141" width="111" height="131"/>
+</TextureAtlas>

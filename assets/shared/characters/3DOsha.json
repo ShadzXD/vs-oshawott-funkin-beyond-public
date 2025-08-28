@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-300,
+				-230
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-306,
+				-224
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-296,
+				-228
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-298,
+				-212
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-303,
+				-239
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Oshawott/Oshawott3D",
+	"position": [
+		-180,
+		210
+	],
+	"healthicon": "oshawott",
+	"flip_x": true,
+	"healthbar_colors": [
+		143,
+		220,
+		255
+	],
+	"camera_position": [
+		-380,
+		140
+	],
+	"sing_duration": 4,
+	"scale": 2
+}

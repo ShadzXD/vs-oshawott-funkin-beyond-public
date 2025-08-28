@@ -1,0 +1,102 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [3, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Pico Idle Dance0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [85, -10],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Pico NOTE LEFT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [84, -80],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Pico Down Note0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [21, 27],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "pico Up note0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-48, 2],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Pico Note Right0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [83, 28],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "Pico Left Note MISS0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [80, -38],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Pico Down Note MISS0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [28, 67],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Pico Up Note MISS0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-45, 50],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Pico Right Note MISS0",
+			"indices": []
+		},
+		{
+			"offsets": [39, 1],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Pico HEY!!0"
+		},
+		{
+			"loop": false,
+			"offsets": [497, 111],
+			"anim": "shoot",
+			"fps": 24,
+			"name": "PicoShootBall instância",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Pico/pico-essentials,characters/Pico/dapig_picoball",
+	"position": [0, 290],
+	"healthicon": "pico",
+	"flip_x": true,
+	"healthbar_colors": [183, 216, 85],
+	"camera_position": [140, 50],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="oshawott lookout.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="lookoutawott0000" x="10" y="10" width="406" height="700" frameX="0" frameY="-7" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0001" x="10" y="10" width="406" height="700" frameX="0" frameY="-7" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0002" x="426" y="10" width="402" height="701" frameX="-2" frameY="-6" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0003" x="426" y="10" width="402" height="701" frameX="-2" frameY="-6" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0004" x="10" y="721" width="394" height="706" frameX="-6" frameY="-1" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0005" x="10" y="721" width="394" height="706" frameX="-6" frameY="-1" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0006" x="414" y="721" width="392" height="707" frameX="-7" frameY="0" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0007" x="414" y="721" width="392" height="707" frameX="-7" frameY="0" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0008" x="414" y="721" width="392" height="707" frameX="-7" frameY="0" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0009" x="414" y="721" width="392" height="707" frameX="-7" frameY="0" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0010" x="414" y="721" width="392" height="707" frameX="-7" frameY="0" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0011" x="414" y="721" width="392" height="707" frameX="-7" frameY="0" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0012" x="414" y="721" width="392" height="707" frameX="-7" frameY="0" frameWidth="406" frameHeight="707"/>
+	<SubTexture name="lookoutawott0013" x="414" y="721" width="392" height="707" frameX="-7" frameY="0" frameWidth="406" frameHeight="707"/>
+</TextureAtlas>

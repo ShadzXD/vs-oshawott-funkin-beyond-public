@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Celebi.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Celebi instância 10000" x="0" y="0" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10001" x="0" y="0" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10002" x="146" y="0" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10003" x="146" y="0" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10004" x="292" y="0" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10005" x="292" y="0" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10006" x="0" y="199" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10007" x="0" y="199" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10008" x="146" y="199" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10009" x="146" y="199" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10010" x="146" y="199" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10011" x="146" y="199" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10012" x="146" y="199" width="136" height="189"/>
+	<SubTexture name="Celebi instância 10013" x="146" y="199" width="136" height="189"/>
+</TextureAtlas>

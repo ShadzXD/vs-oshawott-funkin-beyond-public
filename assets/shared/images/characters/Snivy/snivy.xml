@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="snivyfecta.png">
+<SubTexture name="snivyfecta idle0000" x="808" y="0" width="231" height="190" frameX="-170" frameY="-224" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta idle0001" x="595" y="0" width="213" height="205" frameX="-183" frameY="-209" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta idle0002" x="595" y="205" width="212" height="205" frameX="-184" frameY="-209" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta idle0003" x="595" y="205" width="212" height="205" frameX="-184" frameY="-209" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta up0000" x="0" y="0" width="119" height="322" frameX="-224" frameY="-40" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta up0001" x="248" y="0" width="129" height="304" frameX="-216" frameY="-58" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta up0002" x="119" y="0" width="129" height="305" frameX="-215" frameY="-57" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta up0003" x="119" y="0" width="129" height="305" frameX="-215" frameY="-57" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta up0004" x="119" y="0" width="129" height="305" frameX="-215" frameY="-57" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta up0005" x="119" y="0" width="129" height="305" frameX="-216" frameY="-58" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta down0000" x="0" y="743" width="235" height="160" frameX="-163" frameY="-260" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta down0001" x="808" y="190" width="223" height="177" frameX="-172" frameY="-244" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta down0002" x="808" y="367" width="224" height="177" frameX="-171" frameY="-244" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta down0003" x="808" y="367" width="224" height="177" frameX="-171" frameY="-244" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta left0000" x="377" y="0" width="218" height="219" frameX="-104" frameY="-184" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta left0001" x="0" y="322" width="208" height="217" frameX="-121" frameY="-184" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta left0002" x="208" y="322" width="207" height="217" frameX="-122" frameY="-184" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta left0003" x="208" y="322" width="207" height="217" frameX="-122" frameY="-184" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta right0000" x="0" y="539" width="214" height="204" frameX="-204" frameY="-200" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta right0001" x="426" y="539" width="211" height="203" frameX="-193" frameY="-199" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta right0002" x="214" y="539" width="212" height="204" frameX="-192" frameY="-198" frameWidth="600" frameHeight="600" />
+<SubTexture name="snivyfecta right0003" x="214" y="539" width="212" height="204" frameX="-192" frameY="-198" frameWidth="600" frameHeight="600" />
+</TextureAtlas>

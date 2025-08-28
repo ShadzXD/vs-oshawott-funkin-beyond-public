@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Panpour.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Panpour instância 10000" x="0" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10001" x="0" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10002" x="175" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10003" x="175" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10004" x="350" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10005" x="350" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10006" x="525" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10007" x="525" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10008" x="700" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10009" x="700" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10010" x="700" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10011" x="700" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10012" x="700" y="0" width="165" height="174"/>
+	<SubTexture name="Panpour instância 10013" x="700" y="0" width="165" height="174"/>
+</TextureAtlas>

@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"offsets": [0, -9],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+			"name": "dance_atlas"
+		},
+		{
+			"loop": false,
+			"offsets": [0, -26],
+			"anim": "cheer",
+			"fps": 24,
+			"name": "hey_atlas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [0, -3],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left_atlas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [0, -56],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down_atlas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [0, -30],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up_atlas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [0, -20],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [-2, -17],
+			"anim": "scared",
+			"fps": 24,
+			"name": "scared_atlas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-2, -32],
+			"anim": "sad",
+			"fps": 24,
+			"name": "cry_atlas",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+		},
+		{
+			"offsets": [0, -9],
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "dance_atlas"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GF/GF_SHINY_ATLAS",
+	"position": [0, 0],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [165, 0, 77],
+	"camera_position": [180, 380],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

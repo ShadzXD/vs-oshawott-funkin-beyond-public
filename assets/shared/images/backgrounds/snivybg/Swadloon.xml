@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Swadloon.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Swadloon instância 10000" x="0" y="0" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10001" x="0" y="0" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10002" x="174" y="0" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10003" x="174" y="0" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10004" x="348" y="0" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10005" x="348" y="0" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10006" x="0" y="157" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10007" x="0" y="157" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10008" x="174" y="157" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10009" x="174" y="157" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10010" x="174" y="157" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10011" x="174" y="157" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10012" x="174" y="157" width="164" height="147"/>
+	<SubTexture name="Swadloon instância 10013" x="174" y="157" width="164" height="147"/>
+</TextureAtlas>

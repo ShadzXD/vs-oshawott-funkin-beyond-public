@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Cottonee.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Cottonee instância 10000" x="0" y="0" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10001" x="0" y="0" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10002" x="433" y="0" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10003" x="433" y="0" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10004" x="0" y="329" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10005" x="0" y="329" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10006" x="433" y="329" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10007" x="433" y="329" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10008" x="0" y="658" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10009" x="0" y="658" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10010" x="0" y="658" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10011" x="0" y="658" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10012" x="0" y="658" width="423" height="319"/>
+	<SubTexture name="Cottonee instância 10013" x="0" y="658" width="423" height="319"/>
+</TextureAtlas>

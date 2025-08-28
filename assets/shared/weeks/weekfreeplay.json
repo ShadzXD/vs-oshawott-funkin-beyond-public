@@ -1,0 +1,129 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"littleroot",
+			"bf-pixel",
+			[
+				75,
+				113,
+				253
+			]
+		],
+		[
+			"OshawUgh",
+			"oshawott",
+			[
+				75,
+				113,
+				253
+			],
+			"oshawugh"
+		],
+		[
+			"Figure Faceoff",
+			"OshToy",
+			[
+				75,
+				113,
+				253
+			]
+		],
+		[
+			"trifecta",
+			"fart",
+			[
+				75,
+				113,
+				253
+			],
+			"trifecta"
+		],
+		[
+			"Seasong",
+			"oshawott",
+			[
+				75,
+				113,
+				253
+			]
+		],
+		[
+			"25 Dola",
+			"pen",
+			[
+				75,
+				113,
+				253
+			],
+			"25-dola"
+		],
+		[
+			"aqua clash",
+			"oshawott",
+			[
+				75,
+				113,
+				253
+			],
+			"aqua_clash"
+		],
+		[
+			"On The Go",
+			"oshawott",
+			[
+				75,
+				113,
+				253
+			]
+		],
+		[
+			"Stumped",
+			"phantump",
+			[
+				146,
+				113,
+				253
+			],
+			"stumped"
+		],
+		[
+			"Cocoon",
+			"diancie",
+			[
+				255,
+				153,
+				215
+			],
+			"cocoon"
+		],
+		[
+			"Genwunner",
+			"bulbsquirt",
+			[
+				255,
+				153,
+				215
+			],
+			"bulbsquirt"
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
+}

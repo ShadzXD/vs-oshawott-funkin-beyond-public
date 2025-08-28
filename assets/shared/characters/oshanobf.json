@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-155,
+				-515
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "oshanobf danceleft"
+		},
+		{
+			"offsets": [
+				-155,
+				-515
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "oshanobf danceright"
+		},
+		{
+			"offsets": [
+				-145,
+				-518
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "oshanobf down"
+		},
+		{
+			"offsets": [
+				-155,
+				-515
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singUP",
+			"loop": false,
+			"name": "oshanobf up"
+		},
+		{
+			"offsets": [
+				-69,
+				-508
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "oshanobf left"
+		},
+		{
+			"offsets": [
+				-180,
+				-515
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "oshanobf right"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/BF/oshanobf",
+	"position": [
+		-100,
+		-80
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		216,
+		85,
+		142
+	],
+	"camera_position": [
+		10,
+		460
+	],
+	"sing_duration": 6.1,
+	"scale": 2
+}

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="quil.png">
+<SubTexture name="quil idle0000" x="0" y="912" width="295" height="166" frameX="-57" frameY="-143" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil idle0001" x="504" y="697" width="284" height="181" frameX="-65" frameY="-128" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil idle0002" x="965" y="0" width="284" height="181" frameX="-66" frameY="-128" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil up0000" x="0" y="469" width="240" height="228" frameX="-71" frameY="-15" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil up0001" x="0" y="697" width="261" height="215" frameX="-59" frameY="-28" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil up0002" x="240" y="469" width="261" height="217" frameX="-58" frameY="-26" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil up0003" x="706" y="0" width="259" height="216" frameX="-72" frameY="-41" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil down0000" x="261" y="697" width="243" height="184" frameX="-53" frameY="-124" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil down0001" x="706" y="428" width="227" height="211" frameX="-61" frameY="-98" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil down0002" x="706" y="216" width="227" height="212" frameX="-62" frameY="-97" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil left0000" x="205" y="0" width="251" height="234" frameX="-18" frameY="-76" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil left0001" x="456" y="0" width="250" height="234" frameX="-25" frameY="-76" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil left0002" x="206" y="235" width="250" height="233" frameX="-29" frameY="-77" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil right0000" x="456" y="235" width="208" height="231" frameX="-148" frameY="-102" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil right0001" x="0" y="235" width="206" height="234" frameX="-144" frameY="-97" frameWidth="400" frameHeight="400" />
+<SubTexture name="quil right0002" x="0" y="0" width="205" height="235" frameX="-144" frameY="-96" frameWidth="400" frameHeight="400" />
+</TextureAtlas>

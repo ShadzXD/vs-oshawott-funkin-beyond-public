@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Pansage.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Pansage instância 10000" x="0" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10001" x="0" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10002" x="198" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10003" x="198" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10004" x="396" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10005" x="396" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10006" x="594" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10007" x="594" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10008" x="792" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10009" x="792" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10010" x="0" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10011" x="0" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10012" x="0" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10013" x="0" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10014" x="198" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10015" x="198" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10016" x="396" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10017" x="396" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10018" x="594" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10019" x="594" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10020" x="792" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10021" x="792" y="331" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10022" x="0" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10023" x="0" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10024" x="0" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10025" x="0" y="0" width="188" height="321"/>
+	<SubTexture name="Pansage instância 10026" x="0" y="0" width="188" height="321"/>
+</TextureAtlas>

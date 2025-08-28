@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="oshawugh bg bumpers.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="backbumpers0000" x="10" y="10" width="852" height="375" frameX="0" frameY="-12" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0001" x="10" y="10" width="852" height="375" frameX="0" frameY="-12" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0002" x="10" y="395" width="849" height="378" frameX="-3" frameY="-9" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0003" x="10" y="395" width="849" height="378" frameX="-3" frameY="-9" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0004" x="10" y="783" width="837" height="386" frameX="-10" frameY="-1" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0005" x="10" y="783" width="837" height="386" frameX="-10" frameY="-1" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0006" x="10" y="1179" width="835" height="387" frameX="-11" frameY="0" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0007" x="10" y="1179" width="835" height="387" frameX="-11" frameY="0" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0008" x="10" y="1179" width="835" height="387" frameX="-11" frameY="0" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0009" x="10" y="1179" width="835" height="387" frameX="-11" frameY="0" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0010" x="10" y="1179" width="835" height="387" frameX="-11" frameY="0" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0011" x="10" y="1179" width="835" height="387" frameX="-11" frameY="0" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0012" x="10" y="1179" width="835" height="387" frameX="-11" frameY="0" frameWidth="852" frameHeight="387"/>
+	<SubTexture name="backbumpers0013" x="10" y="1179" width="835" height="387" frameX="-11" frameY="0" frameWidth="852" frameHeight="387"/>
+</TextureAtlas>

@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-56,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-48,
+				-5
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-67,
+				-1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-65,
+				23
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-51,
+				5
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "note left miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-41,
+				1
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "note down miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-65,
+				13
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "note right miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-58,
+				31
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "note up miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				10
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "hey",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BF/calemfriend",
+	"position": [
+		20,
+		300
+	],
+	"healthicon": "calemfriend",
+	"flip_x": true,
+	"healthbar_colors": [
+		69,
+		51,
+		108
+	],
+	"camera_position": [
+		-50,
+		-20
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

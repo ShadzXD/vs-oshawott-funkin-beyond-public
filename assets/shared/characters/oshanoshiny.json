@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-125,
+				-515
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "oshano danceleft"
+		},
+		{
+			"offsets": [
+				-125,
+				-515
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "oshano danceright"
+		},
+		{
+			"offsets": [
+				-125,
+				-515
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "oshano down"
+		},
+		{
+			"offsets": [
+				-125,
+				-515
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "oshano up"
+		},
+		{
+			"offsets": [
+				-129,
+				-515
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "oshano left"
+		},
+		{
+			"offsets": [
+				-120,
+				-515
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "oshano right"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Oshawott/oshanoshiny",
+	"position": [
+		-100,
+		-80
+	],
+	"healthicon": "oshawott",
+	"flip_x": false,
+	"healthbar_colors": [
+		238,
+		238,
+		238
+	],
+	"camera_position": [
+		50,
+		380
+	],
+	"sing_duration": 6.1,
+	"scale": 2
+}

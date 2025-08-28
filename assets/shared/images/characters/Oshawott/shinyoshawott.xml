@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="shinyoshawott.png">
+<SubTexture name="shinyoshawott idle0000" x="354" y="585" width="203" height="166" frameX="-127" frameY="-193" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott idle0001" x="215" y="397" width="185" height="182" frameX="-132" frameY="-177" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott idle0002" x="400" y="397" width="184" height="182" frameX="-132" frameY="-177" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott up0000" x="0" y="0" width="150" height="201" frameX="-149" frameY="-99" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott up0001" x="164" y="201" width="164" height="195" frameX="-147" frameY="-105" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott up0002" x="313" y="0" width="164" height="196" frameX="-149" frameY="-104" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott up0003" x="0" y="201" width="164" height="196" frameX="-148" frameY="-109" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott up0004" x="150" y="0" width="163" height="197" frameX="-146" frameY="-114" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott left0000" x="689" y="182" width="169" height="177" frameX="-130" frameY="-183" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott left0001" x="185" y="585" width="169" height="176" frameX="-132" frameY="-183" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott left0002" x="689" y="359" width="169" height="177" frameX="-132" frameY="-182" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott down0000" x="557" y="585" width="198" height="161" frameX="-127" frameY="-198" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott down0001" x="0" y="585" width="185" height="181" frameX="-132" frameY="-178" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott down0002" x="689" y="0" width="184" height="182" frameX="-132" frameY="-177" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott right0000" x="0" y="397" width="215" height="188" frameX="-144" frameY="-170" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott right0001" x="477" y="0" width="212" height="190" frameX="-144" frameY="-167" frameWidth="500" frameHeight="500" />
+<SubTexture name="shinyoshawott right0002" x="477" y="190" width="212" height="190" frameX="-144" frameY="-167" frameWidth="500" frameHeight="500" />
+</TextureAtlas>

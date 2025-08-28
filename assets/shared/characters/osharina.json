@@ -1,0 +1,30 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "idle-left",
+			"fps": 24,
+			"name": "idle left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "idle-right",
+			"fps": 24,
+			"name": "idle right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Oshawott/osharina",
+	"position": [250, 50],
+	"healthicon": "bf",
+	"flip_x": false,
+	"healthbar_colors": [49, 176, 209],
+	"camera_position": [-10, 0],
+	"sing_duration": 4,
+	"scale": 1.2,
+	"_editor_isPlayer": false
+}

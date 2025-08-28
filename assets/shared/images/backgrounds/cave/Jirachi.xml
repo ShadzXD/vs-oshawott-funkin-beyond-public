@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Jirachi.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Jirachi0000" x="0" y="0" width="169" height="242" frameX="0" frameY="-1" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0001" x="0" y="0" width="169" height="242" frameX="0" frameY="-1" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0002" x="169" y="0" width="165" height="242" frameX="-2" frameY="-1" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0003" x="169" y="0" width="165" height="242" frameX="-2" frameY="-1" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0004" x="334" y="0" width="155" height="244" frameX="-7" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0005" x="334" y="0" width="155" height="244" frameX="-7" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0006" x="334" y="0" width="155" height="244" frameX="-7" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0007" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0008" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0009" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0010" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0011" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0012" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0013" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0014" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0015" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0016" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0017" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0018" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0019" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0020" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0021" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0022" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0023" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0024" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0025" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+	<SubTexture name="Jirachi0026" x="0" y="244" width="152" height="244" frameX="-8" frameY="0" frameWidth="169" frameHeight="244"/>
+</TextureAtlas>

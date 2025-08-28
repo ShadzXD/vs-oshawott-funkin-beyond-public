@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="shiny oshawott assets.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="down0000" x="20" y="20" width="290" height="292"/>
+	<SubTexture name="down0001" x="20" y="20" width="290" height="292"/>
+	<SubTexture name="down0002" x="330" y="20" width="290" height="292"/>
+	<SubTexture name="down0003" x="330" y="20" width="290" height="292"/>
+	<SubTexture name="down0004" x="330" y="20" width="290" height="292"/>
+	<SubTexture name="down0005" x="330" y="20" width="290" height="292"/>
+	<SubTexture name="down0006" x="330" y="20" width="290" height="292"/>
+	<SubTexture name="down0007" x="330" y="20" width="290" height="292"/>
+	<SubTexture name="exhausted idle0000" x="640" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0001" x="640" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0002" x="958" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0003" x="958" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0004" x="1276" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0005" x="1276" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0006" x="1594" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0007" x="1594" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0008" x="1912" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0009" x="1912" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0010" x="1912" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0011" x="1912" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0012" x="1912" y="20" width="298" height="319"/>
+	<SubTexture name="exhausted idle0013" x="1912" y="20" width="298" height="319"/>
+	<SubTexture name="giggle0000" x="2230" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0001" x="2230" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0002" x="2547" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0003" x="2547" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0004" x="2864" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0005" x="2864" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0006" x="3181" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0007" x="3181" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0008" x="2230" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0009" x="2230" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0010" x="2547" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0011" x="2547" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0012" x="2864" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0013" x="2864" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0014" x="3181" y="20" width="297" height="343"/>
+	<SubTexture name="giggle0015" x="3181" y="20" width="297" height="343"/>
+	<SubTexture name="idle0000" x="3498" y="20" width="298" height="319"/>
+	<SubTexture name="idle0001" x="3498" y="20" width="298" height="319"/>
+	<SubTexture name="idle0002" x="20" y="383" width="298" height="319"/>
+	<SubTexture name="idle0003" x="20" y="383" width="298" height="319"/>
+	<SubTexture name="idle0004" x="338" y="383" width="298" height="319"/>
+	<SubTexture name="idle0005" x="338" y="383" width="298" height="319"/>
+	<SubTexture name="idle0006" x="656" y="383" width="298" height="319"/>
+	<SubTexture name="idle0007" x="656" y="383" width="298" height="319"/>
+	<SubTexture name="idle0008" x="974" y="383" width="298" height="319"/>
+	<SubTexture name="idle0009" x="974" y="383" width="298" height="319"/>
+	<SubTexture name="idle0010" x="974" y="383" width="298" height="319"/>
+	<SubTexture name="idle0011" x="974" y="383" width="298" height="319"/>
+	<SubTexture name="idle0012" x="974" y="383" width="298" height="319"/>
+	<SubTexture name="idle0013" x="974" y="383" width="298" height="319"/>
+	<SubTexture name="left0000" x="1292" y="383" width="281" height="319"/>
+	<SubTexture name="left0001" x="1292" y="383" width="281" height="319"/>
+	<SubTexture name="left0002" x="1593" y="383" width="281" height="319"/>
+	<SubTexture name="left0003" x="1593" y="383" width="281" height="319"/>
+	<SubTexture name="left0004" x="1593" y="383" width="281" height="319"/>
+	<SubTexture name="left0005" x="1593" y="383" width="281" height="319"/>
+	<SubTexture name="left0006" x="1593" y="383" width="281" height="319"/>
+	<SubTexture name="left0007" x="1593" y="383" width="281" height="319"/>
+	<SubTexture name="pokeball impact0000" x="1894" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0001" x="2213" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0002" x="2532" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0003" x="2851" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0004" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0005" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0006" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0007" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0008" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0009" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0010" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0011" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0012" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0013" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0014" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0015" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0016" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0017" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0018" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0019" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0020" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0021" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0022" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0023" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0024" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0025" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0026" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0027" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0028" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0029" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0030" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0031" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0032" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0033" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0034" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0035" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0036" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0037" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0038" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0039" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0040" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0041" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0042" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0043" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0044" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0045" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0046" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0047" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="pokeball impact0048" x="3170" y="383" width="299" height="283"/>
+	<SubTexture name="right0000" x="3489" y="383" width="355" height="321"/>
+	<SubTexture name="right0001" x="3489" y="383" width="355" height="321"/>
+	<SubTexture name="right0002" x="20" y="724" width="355" height="321"/>
+	<SubTexture name="right0003" x="20" y="724" width="355" height="321"/>
+	<SubTexture name="right0004" x="20" y="724" width="355" height="321"/>
+	<SubTexture name="right0005" x="20" y="724" width="355" height="321"/>
+	<SubTexture name="right0006" x="20" y="724" width="355" height="321"/>
+	<SubTexture name="right0007" x="20" y="724" width="355" height="321"/>
+	<SubTexture name="shell attack0000" x="395" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0001" x="395" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0002" x="1095" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0003" x="1095" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0004" x="1795" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0005" x="1795" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0006" x="2495" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0007" x="2495" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0008" x="2495" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0009" x="2495" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0010" x="2495" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0011" x="2495" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0012" x="3195" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0013" x="3195" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0014" x="20" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0015" x="20" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0016" x="20" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0017" x="20" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0018" x="20" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0019" x="20" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0020" x="720" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0021" x="1420" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0022" x="2120" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0023" x="2820" y="1065" width="680" height="319"/>
+	<SubTexture name="shell attack0024" x="20" y="1404" width="680" height="319"/>
+	<SubTexture name="shell attack0025" x="720" y="1404" width="680" height="319"/>
+	<SubTexture name="shell attack0026" x="1420" y="1404" width="680" height="319"/>
+	<SubTexture name="shell attack0027" x="2120" y="1404" width="680" height="319"/>
+	<SubTexture name="shell attack0028" x="2820" y="1404" width="680" height="319"/>
+	<SubTexture name="shell attack0029" x="20" y="1743" width="680" height="319"/>
+	<SubTexture name="shell attack0030" x="720" y="1743" width="680" height="319"/>
+	<SubTexture name="shell attack0031" x="1420" y="1743" width="680" height="319"/>
+	<SubTexture name="shell attack0032" x="2120" y="1743" width="680" height="319"/>
+	<SubTexture name="shell attack0033" x="2820" y="1743" width="680" height="319"/>
+	<SubTexture name="shell attack0034" x="20" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0035" x="720" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0036" x="1420" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0037" x="1420" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0038" x="1420" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0039" x="1420" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0040" x="1420" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0041" x="1420" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0042" x="2120" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0043" x="2120" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0044" x="2820" y="2082" width="680" height="319"/>
+	<SubTexture name="shell attack0045" x="20" y="2421" width="680" height="319"/>
+	<SubTexture name="shell attack0046" x="20" y="2421" width="680" height="319"/>
+	<SubTexture name="shell attack0047" x="720" y="2421" width="680" height="319"/>
+	<SubTexture name="shell attack0048" x="720" y="2421" width="680" height="319"/>
+	<SubTexture name="shell attack0049" x="1420" y="2421" width="680" height="319"/>
+	<SubTexture name="shell attack0050" x="1420" y="2421" width="680" height="319"/>
+	<SubTexture name="shell attack0051" x="2120" y="2421" width="680" height="319"/>
+	<SubTexture name="shell attack0052" x="2120" y="2421" width="680" height="319"/>
+	<SubTexture name="shell attack0053" x="395" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0054" x="395" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0055" x="395" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0056" x="395" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0057" x="395" y="724" width="680" height="319"/>
+	<SubTexture name="shell attack0058" x="395" y="724" width="680" height="319"/>
+	<SubTexture name="up0000" x="2820" y="2421" width="258" height="354"/>
+	<SubTexture name="up0001" x="2820" y="2421" width="258" height="354"/>
+	<SubTexture name="up0002" x="3098" y="2421" width="258" height="354"/>
+	<SubTexture name="up0003" x="3098" y="2421" width="258" height="354"/>
+	<SubTexture name="up0004" x="3098" y="2421" width="258" height="354"/>
+	<SubTexture name="up0005" x="3098" y="2421" width="258" height="354"/>
+	<SubTexture name="up0006" x="3098" y="2421" width="258" height="354"/>
+	<SubTexture name="up0007" x="3098" y="2421" width="258" height="354"/>
+</TextureAtlas>

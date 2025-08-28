@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Petilil.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Petilil instância 10000" x="0" y="0" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10001" x="0" y="0" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10002" x="297" y="0" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10003" x="297" y="0" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10004" x="594" y="0" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10005" x="594" y="0" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10006" x="0" y="339" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10007" x="0" y="339" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10008" x="297" y="339" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10009" x="297" y="339" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10010" x="297" y="339" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10011" x="297" y="339" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10012" x="297" y="339" width="287" height="329"/>
+	<SubTexture name="Petilil instância 10013" x="297" y="339" width="287" height="329"/>
+</TextureAtlas>

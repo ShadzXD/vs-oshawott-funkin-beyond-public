@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="oshafecta.png">
+<SubTexture name="oshafecta idle0000" x="998" y="0" width="233" height="192" frameX="-163" frameY="-228" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta idle0001" x="230" y="661" width="227" height="198" frameX="-169" frameY="-222" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta idle0002" x="776" y="209" width="213" height="207" frameX="-169" frameY="-213" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta idle0003" x="228" y="235" width="211" height="210" frameX="-169" frameY="-210" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta idle0004" x="228" y="235" width="211" height="210" frameX="-169" frameY="-210" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta up0000" x="0" y="0" width="180" height="235" frameX="-188" frameY="-106" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta up0001" x="180" y="0" width="186" height="225" frameX="-182" frameY="-119" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta up0002" x="366" y="0" width="186" height="222" frameX="-182" frameY="-124" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta up0003" x="366" y="0" width="186" height="222" frameX="-182" frameY="-124" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta up0004" x="366" y="0" width="186" height="222" frameX="-182" frameY="-124" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta up0005" x="366" y="0" width="186" height="222" frameX="-182" frameY="-125" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta down0000" x="998" y="192" width="210" height="185" frameX="-175" frameY="-238" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta down0001" x="658" y="661" width="200" height="193" frameX="-175" frameY="-230" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta down0002" x="457" y="661" width="201" height="194" frameX="-174" frameY="-229" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta down0003" x="457" y="661" width="201" height="194" frameX="-174" frameY="-229" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta down0004" x="457" y="661" width="201" height="194" frameX="-174" frameY="-229" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta down0005" x="776" y="416" width="201" height="195" frameX="-173" frameY="-228" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta left0000" x="0" y="235" width="228" height="217" frameX="-97" frameY="-214" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta left0001" x="0" y="452" width="224" height="209" frameX="-110" frameY="-218" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta left0002" x="224" y="452" width="224" height="209" frameX="-111" frameY="-218" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta left0003" x="224" y="452" width="224" height="209" frameX="-111" frameY="-218" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta left0004" x="224" y="452" width="224" height="209" frameX="-111" frameY="-218" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta left0005" x="552" y="0" width="224" height="210" frameX="-112" frameY="-217" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta right0000" x="0" y="661" width="230" height="205" frameX="-186" frameY="-232" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta right0001" x="448" y="452" width="221" height="209" frameX="-183" frameY="-223" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta right0002" x="552" y="210" width="222" height="210" frameX="-182" frameY="-222" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta right0003" x="552" y="210" width="222" height="210" frameX="-182" frameY="-222" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta right0004" x="552" y="210" width="222" height="210" frameX="-182" frameY="-222" frameWidth="600" frameHeight="600" />
+<SubTexture name="oshafecta right0005" x="776" y="0" width="222" height="209" frameX="-181" frameY="-223" frameWidth="600" frameHeight="600" />
+</TextureAtlas>

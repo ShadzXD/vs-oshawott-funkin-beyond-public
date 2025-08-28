@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="aquaclash crowd.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="aquaclash crowd0000" x="10" y="10" width="2234" height="809" frameX="-2" frameY="-9" frameWidth="2241" frameHeight="822"/>
+	<SubTexture name="aquaclash crowd0001" x="10" y="10" width="2234" height="809" frameX="-2" frameY="-9" frameWidth="2241" frameHeight="822"/>
+	<SubTexture name="aquaclash crowd0002" x="10" y="10" width="2234" height="809" frameX="-2" frameY="-9" frameWidth="2241" frameHeight="822"/>
+	<SubTexture name="aquaclash crowd0003" x="10" y="829" width="2241" height="820" frameX="0" frameY="-2" frameWidth="2241" frameHeight="822"/>
+	<SubTexture name="aquaclash crowd0004" x="10" y="829" width="2241" height="820" frameX="0" frameY="-2" frameWidth="2241" frameHeight="822"/>
+	<SubTexture name="aquaclash crowd0005" x="10" y="829" width="2241" height="820" frameX="0" frameY="-2" frameWidth="2241" frameHeight="822"/>
+	<SubTexture name="aquaclash crowd0006" x="10" y="1659" width="2222" height="820" frameX="-17" frameY="0" frameWidth="2241" frameHeight="822"/>
+	<SubTexture name="aquaclash crowd0007" x="10" y="1659" width="2222" height="820" frameX="-17" frameY="0" frameWidth="2241" frameHeight="822"/>
+	<SubTexture name="aquaclash crowd0008" x="10" y="1659" width="2222" height="820" frameX="-17" frameY="0" frameWidth="2241" frameHeight="822"/>
+</TextureAtlas>
