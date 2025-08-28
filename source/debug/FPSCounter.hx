@@ -4,71 +4,70 @@ import flixel.FlxG;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
 import openfl.system.System;
+import openfl.events.Event;
 
 /**
 	The FPS class provides an easy-to-use monitor to display
 	the current frame rate of an OpenFL project
 **/
+/*
+	FIXED UP CLASS WRITTEN BY Itz-miles!
+	*/
 class FPSCounter extends TextField
 {
 	/**
 		The current frame rate, expressed using frames-per-second
 	**/
 	public var currentFPS(default, null):Int;
-
-	/**
-		The current memory usage (WARNING: this is NOT your total program memory usage, rather it shows the garbage collector memory)
-	**/
-	public var memoryMegas(get, never):Float;
-
+	
 	@:noCompletion private var times:Array<Float>;
 
-	public function new(x:Float = 10, y:Float = 10, color:Int = 0x000000)
+	public static var updateInterval:Int = 250; // keep this high
+
+	public function new(x:Float = 10, y:Float = 10)
 	{
 		super();
 
 		this.x = x;
 		this.y = y;
 
-		currentFPS = 0;
 		selectable = false;
 		mouseEnabled = false;
-		defaultTextFormat = new TextFormat("_sans", 14, color);
+		defaultTextFormat = new TextFormat("VCR OSD Mono", 17, 0xFFFFFF);
 		autoSize = LEFT;
 		multiline = true;
-		text = "FPS: ";
+		backgroundColor = 0xFF000000;
 
+		text = "FPS: ";
+		cacheAsBitmap = false;
+
+		addEventListener(Event.DEACTIVATE, _ -> focus = false);
+		addEventListener(Event.ACTIVATE, _ -> focus = true);
 		times = [];
 	}
 
-	var deltaTimeout:Float = 0.0;
-
-	// Event Handlers
+	private static var then:Int = 0;
+	private static var now:Int = 0;
+	private static var focus:Bool = true;
 	private override function __enterFrame(deltaTime:Float):Void
 	{
-		final now:Float = haxe.Timer.stamp() * 1000;
-		times.push(now);
-		while (times[0] < now - 1000) times.shift();
-		// prevents the overlay from updating every frame, why would you need to anyways @crowplexus
-		if (deltaTimeout < 50) {
-			deltaTimeout += deltaTime;
+		if (!focus || !visible)
 			return;
-		}
 
-		currentFPS = times.length < FlxG.updateFramerate ? times.length : FlxG.updateFramerate;		
-		updateText();
-		deltaTimeout = 0.0;
+		now = lime.system.System.getTimer();
+		times.push(now);
+		while (times[0] < now - 1000)
+			times.shift();
+
+		if (now - then < updateInterval)
+			return;
+
+		then = now;
+		currentFPS = times.length < FlxG.updateFramerate ? times.length : FlxG.updateFramerate;
+		text = 'FPS: $currentFPS / ' + ClientPrefs.data.framerate
+	 + '\nRAM: ${flixel.util.FlxStringUtil.formatBytes(System.totalMemory)}';
+		// The frametime is currently a lie. Using deltaTime causes the TextField to regen more frequently, which is hideously memory intensive.
+
 	}
 
-	public dynamic function updateText():Void { // so people can override it in hscript
-		text = 'FPS: ${currentFPS}'
-		+ '\nMemory: ${flixel.util.FlxStringUtil.formatBytes(memoryMegas)}';
-
-		textColor = 0xFFFFFFFF;
-		if (currentFPS < FlxG.drawFramerate * 0.5)
-			textColor = 0xFFFF0000;
-	}
-
-	inline function get_memoryMegas():Float
-		return cpp.vm.Gc.memInfo64(cpp.vm.Gc.MEM_INFO_USAGE);
 }
