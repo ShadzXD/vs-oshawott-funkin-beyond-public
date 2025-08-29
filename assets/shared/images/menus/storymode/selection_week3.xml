@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="selection_week3.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="basicweek3 instância 10000" x="0" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10001" x="0" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10002" x="0" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10003" x="0" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10004" x="499" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10005" x="499" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10006" x="499" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10007" x="499" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10008" x="998" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10009" x="998" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10010" x="998" y="0" width="489" height="147"/>
+	<SubTexture name="basicweek3 instância 10011" x="998" y="0" width="489" height="147"/>
+	<SubTexture name="selectweek3 instância 10000" x="1497" y="0" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10001" x="1497" y="0" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10002" x="0" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10003" x="0" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10004" x="523" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10005" x="523" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10006" x="1046" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10007" x="1046" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10008" x="0" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10009" x="0" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10010" x="0" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10011" x="0" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10012" x="523" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10013" x="523" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10014" x="523" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10015" x="523" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10016" x="1046" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10017" x="1046" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10018" x="1046" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10019" x="1046" y="162" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10020" x="0" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10021" x="0" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10022" x="0" y="324" width="513" height="152"/>
+	<SubTexture name="selectweek3 instância 10023" x="0" y="324" width="513" height="152"/>
+</TextureAtlas>

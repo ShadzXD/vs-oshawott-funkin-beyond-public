@@ -1,21 +1,22 @@
 {
 	"animations": [
 		{
+			"offsets": [5655, 5524],
 			"loop": false,
-			"offsets": [5565, 5484],
-			"anim": "entrance",
 			"fps": 24,
-			"name": "dragonite pico intro",
-			"indices": []
+			"anim": "entrance",
+			"indices": [],
+			"name": "dragonite pico intro"
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Pico/dragoniteEntrance",
 	"position": [0, -29],
 	"healthicon": "pico",
 	"flip_x": true,
 	"healthbar_colors": [183, 216, 85],
-	"camera_position": [-70, 490],
+	"camera_position": [6070, -2820],
 	"sing_duration": 4,
 	"scale": 1,
 	"_editor_isPlayer": true

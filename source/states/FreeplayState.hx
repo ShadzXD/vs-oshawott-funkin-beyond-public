@@ -16,7 +16,9 @@ import flixel.util.FlxDestroyUtil;
 import openfl.utils.Assets;
 
 import haxe.Json;
-
+import flixel.util.FlxStringUtil;
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.display.FlxGridOverlay;
 class FreeplayState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
@@ -39,9 +41,8 @@ class FreeplayState extends MusicBeatState
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<HealthIcon> = [];
+	private var portraitArray:Array<FlxSprite> = [];
 
-	var bg:FlxSprite;
-	var intendedColor:Int;
 
 	var missingTextBG:FlxSprite;
 	var missingText:FlxText;
@@ -51,7 +52,7 @@ class FreeplayState extends MusicBeatState
 	var bottomBG:FlxSprite;
 
 	var player:MusicPlayer;
-
+	var portrait:FlxSprite;
 	override function create()
 	{
 		//Paths.clearStoredMemory();
@@ -102,23 +103,45 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 		Mods.loadTopMod();
+		static final fileLocation = 'menus/freeplay/ui-assets/';
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.antialiasing = ClientPrefs.data.antialiasing;
-		add(bg);
-		bg.screenCenter();
+		var grid:FlxBackdrop = new FlxBackdrop(FlxGridOverlay.createGrid(5, 5, 10, 10, true, 0x7E10200B, 0x0));
+		grid.velocity.x = 6;
+		add(grid);
 
+		var blueBorder:FlxSprite = new FlxSprite().loadGraphic(Paths.image(fileLocation + 'Blueborders'));
+		add(blueBorder);
+		blueBorder.screenCenter();
+
+		var darkHexagons:FlxSprite = new FlxSprite(-40 ,0).loadGraphic(Paths.image(fileLocation + 'DarkHexagons'));
+		darkHexagons.screenCenter(Y);
+		add(darkHexagons);
+
+		var hexagonsNormal:FlxSprite = new FlxSprite(darkHexagons.x + 41,0).loadGraphic(Paths.image(fileLocation + 'Hexagons'));
+		hexagonsNormal.screenCenter(Y);
+		add(hexagonsNormal);
+
+		var hexagonsLit:FlxSprite = new FlxSprite(hexagonsNormal.x).loadGraphic(Paths.image(fileLocation + 'HexagonsLight'));
+		hexagonsLit.screenCenter(Y);
+		hexagonsLit.alpha = 0;
+		FlxTween.tween(hexagonsLit, {alpha: 1}, 1, {ease: FlxEase.quadOut, startDelay: 0.3}); //looks kinda cool in my op
+		add(hexagonsLit);
+
+		var overlay:FlxSprite = new FlxSprite(20, 0).loadGraphic(Paths.image(fileLocation + 'songname_overlay'));
+		add(overlay);
+		overlay.screenCenter(Y);
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(90, 320, songs[i].songName, true);
+			var songText:Alphabet = new Alphabet(50, 20, songs[i].songName, true);
 			songText.targetY = i;
+			songText.setAlignmentFromString('centered');
 			grpSongs.add(songText);
 
-			songText.scaleX = Math.min(1, 980 / songText.width);
-			songText.snapToPosition();
+			songText.scaleX = Math.min(1, 400 / songText.width);
+			songText.scaleY = 0.8;
 
 			Mods.currentModDirectory = songs[i].folder;
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
@@ -127,11 +150,20 @@ class FreeplayState extends MusicBeatState
 			
 			// too laggy with a lot of songs, so i had to recode the logic for it
 			songText.visible = songText.active = songText.isMenuItem = false;
-			icon.visible = icon.active = false;
+			icon.visible = false;
+			icon.active = false;
+			var path:String =songs[i].songName.toLowerCase();
+			path = path.replace(' ', '_');
+			 portrait = new FlxSprite(520, 53);
+			portrait.loadGraphic(Paths.image('menus/freeplay/' + path));		
+			portrait.setGraphicSize(Std.int(portrait.width * 1.02));
+			portrait.visible = portrait.active = false;
+			portraitArray.push(portrait);
+			add(portrait);
 
 			// using a FlxGroup is too much fuss!
-			iconArray.push(icon);
-			add(icon);
+			//iconArray.push(icon);
+			//add(icon);
 
 			// songText.x += 40;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
@@ -139,19 +171,23 @@ class FreeplayState extends MusicBeatState
 		}
 		WeekData.setDirectoryFromWeek();
 
-		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
-
-		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 66, 0xFF000000);
-		scoreBG.alpha = 0.6;
+		
+		var portraitFrame:FlxSprite = new FlxSprite(500,39).loadGraphic(Paths.image(fileLocation + 'MainFrame'));
+		add(portraitFrame);
+	
+		scoreBG = new FlxSprite(FlxG.width * 0.39, 0).loadGraphic(Paths.image(fileLocation + 'scoreui'));
 		add(scoreBG);
+
+		scoreText = new FlxText(scoreBG.x + 20, scoreBG.y + 10, 0, "", 20);
+		scoreText.setFormat(Paths.font("PokemonGB.ttf"), 20, FlxColor.WHITE, RIGHT);
+		scoreText.antialiasing = false;
+		add(scoreText);
 
 		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
 		diffText.font = scoreText.font;
 		add(diffText);
 
 		add(scoreText);
-
 
 		missingTextBG = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		missingTextBG.alpha = 0.6;
@@ -165,8 +201,6 @@ class FreeplayState extends MusicBeatState
 		add(missingText);
 
 		if(curSelected >= songs.length) curSelected = 0;
-		bg.color = songs[curSelected].color;
-		intendedColor = bg.color;
 		lerpSelected = curSelected;
 
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
@@ -178,6 +212,7 @@ class FreeplayState extends MusicBeatState
 		var leText:String = Language.getPhrase("freeplay_tip", "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.");
 		bottomString = leText;
 		var size:Int = 16;
+		
 		bottomText = new FlxText(bottomBG.x, bottomBG.y + 4, FlxG.width, leText, size);
 		bottomText.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, CENTER);
 		bottomText.scrollFactor.set();
@@ -185,7 +220,12 @@ class FreeplayState extends MusicBeatState
 		
 		player = new MusicPlayer(this);
 		add(player);
+
+		var wifiIcon:FlxSprite = new FlxSprite(scoreBG.x + 700, scoreBG.y + 5).loadGraphic(Paths.image(fileLocation + 'wifiicon'));
+		add(wifiIcon);
 		
+		var randomButtons:FlxSprite = new FlxSprite(scoreBG.x + 600,FlxG.height - 50).loadGraphic(Paths.image(fileLocation + 'randomui'));
+		add(randomButtons);
 		changeSelection();
 		updateTexts();
 		super.create();
@@ -243,7 +283,7 @@ class FreeplayState extends MusicBeatState
 
 		if (!player.playingMusic)
 		{
-			scoreText.text = Language.getPhrase('personal_best', 'PERSONAL BEST: {1} ({2}%)', [lerpScore, ratingSplit.join('.')]);
+			scoreText.text = 'PERSONAL BEST: '  +  '${FlxStringUtil.formatMoney(lerpScore, false, true)}' + ' (' + ratingSplit.join('.') + '%)';
 			positionHighscore();
 			
 			if(songs.length > 1)
@@ -304,6 +344,7 @@ class FreeplayState extends MusicBeatState
 		{
 			if (player.playingMusic)
 			{
+				if(zoomTween != null) zoomTween.cancel();
 				FlxG.sound.music.stop();
 				destroyFreeplayVocals();
 				FlxG.sound.music.volume = 0;
@@ -519,26 +560,6 @@ class FreeplayState extends MusicBeatState
 		_updateSongLastDifficulty();
 		if(playSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
-		var newColor:Int = songs[curSelected].color;
-		if(newColor != intendedColor)
-		{
-			intendedColor = newColor;
-			FlxTween.cancelTweensOf(bg);
-			FlxTween.color(bg, 1, bg.color, intendedColor);
-		}
-
-		for (num => item in grpSongs.members)
-		{
-			var icon:HealthIcon = iconArray[num];
-			item.alpha = 0.6;
-			icon.alpha = 0.6;
-			if (item.targetY == curSelected)
-			{
-				item.alpha = 1;
-				icon.alpha = 1;
-			}
-		}
-		
 		Mods.currentModDirectory = songs[curSelected].folder;
 		PlayState.storyWeek = songs[curSelected].week;
 		Difficulty.loadFromWeek();
@@ -553,6 +574,22 @@ class FreeplayState extends MusicBeatState
 			curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(Difficulty.getDefault())));
 		else
 			curDifficulty = 0;
+		for (item in grpSongs.members)
+		{
+			item.alpha = 0.6;
+			if (item.targetY == curSelected)
+				item.alpha = 1;
+		}
+					//portrait.loadGraphic(Paths.image('menus/freeplay/' + songs[curSelected].songName));			
+
+		for (i in 0...portraitArray.length)
+		{
+			portraitArray[i].alpha = 0;
+						portraitArray[i].active = false;
+
+		}
+		portraitArray[curSelected].alpha = 1;
+		portraitArray[curSelected].active = true;
 
 		changeDiff();
 		_updateSongLastDifficulty();
@@ -563,14 +600,11 @@ class FreeplayState extends MusicBeatState
 
 	private function positionHighscore()
 	{
-		scoreText.x = FlxG.width - scoreText.width - 6;
-		scoreBG.scale.x = FlxG.width - scoreText.x + 6;
-		scoreBG.x = FlxG.width - (scoreBG.scale.x / 2);
 		diffText.x = Std.int(scoreBG.x + (scoreBG.width / 2));
 		diffText.x -= diffText.width / 2;
 	}
 
-	var _drawDistance:Int = 4;
+	var _drawDistance:Int = 7;
 	var _lastVisibles:Array<Int> = [];
 	public function updateTexts(elapsed:Float = 0.0)
 	{
@@ -578,7 +612,7 @@ class FreeplayState extends MusicBeatState
 		for (i in _lastVisibles)
 		{
 			grpSongs.members[i].visible = grpSongs.members[i].active = false;
-			iconArray[i].visible = iconArray[i].active = false;
+			portraitArray[i].visible = portraitArray[i].active = false;
 		}
 		_lastVisibles = [];
 
@@ -588,15 +622,32 @@ class FreeplayState extends MusicBeatState
 		{
 			var item:Alphabet = grpSongs.members[i];
 			item.visible = item.active = true;
-			item.x = ((item.targetY - lerpSelected) * item.distancePerItem.x) + item.startPosition.x;
-			item.y = ((item.targetY - lerpSelected) * 1.3 * item.distancePerItem.y) + item.startPosition.y;
-
-			var icon:HealthIcon = iconArray[i];
-			icon.visible = icon.active = true;
+			//item.x = ((item.targetY - lerpSelected) * item.distancePerItem.x) + item.startPosition.x;
+			item.y = ((item.targetY - lerpSelected) * item.distancePerItem.y) + item.startPosition.y;
+			var portrait:FlxSprite = portraitArray[i];
+			portrait.visible = portrait.active = true;
+		
 			_lastVisibles.push(i);
 		}
 	}
+		var zoomTween:FlxTween;
 
+	override function beatHit()
+	{
+		if(curBeat % 4 == 0 && player.playingMusic)
+		{
+			if(!ClientPrefs.data.camZooms) return;
+			FlxG.camera.zoom = 1.03;
+
+			if(zoomTween != null) zoomTween.cancel();
+			zoomTween = FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.circOut, onComplete: function(twn:FlxTween)
+			{
+				zoomTween = null;
+
+			}	
+			});
+		}
+	}
 	override function destroy():Void
 	{
 		super.destroy();
