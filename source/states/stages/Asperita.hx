@@ -43,7 +43,7 @@ class Asperita extends BaseStage
 		healthBarBaseGame.setColors(FlxColor.RED, FlxColor.LIME);
         healthBarBaseGame.cameras = [camHUD];
 		add(healthBarBaseGame);
-        */
+  
         scoreTextBaseGame = new FlxText(700, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11) + 50, 0, '', 20);
         scoreTextBaseGame.setFormat(Paths.font('vcr-og.ttf'), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         scoreTextBaseGame.scrollFactor.set();
@@ -52,7 +52,7 @@ class Asperita extends BaseStage
         //game.timeBar.alpha = 0;
           //      game.timeTxt.alpha = 0;
 
-
+      */
         stageBack = new BGSprite('backgrounds/backstage/backDark', 729, -170, 1, 1);
 		stageBack.scale.set(1, 1);
         //stageBack.updateHitbox();
@@ -125,9 +125,9 @@ class Asperita extends BaseStage
 
     override function createPost() {
         //basegame ui.
-        game.uiPrefix = 'funkin/';
+       // game.uiPrefix = 'funkin/';
         //game.timeBar.visible = false;
-        DS = new BGSprite('dsUI', -150, -250, 1, 1);
+        DS = new BGSprite('backgrounds/dsUI', -150, -250, 1, 1);
         DS.scale.set(1.3, 1.3);
         DS.alpha = 0;
         add(DS);
@@ -185,11 +185,8 @@ class Asperita extends BaseStage
             game.boyfriend.shader = null;
             game.dad.shader = null;
             game.gf.shader = null;
-
-            game.uiPrefix = 'original/';
-            scoreTextBaseGame.kill();
-            scoreTextBaseGame.destroy();
-
+            game.comboClass.hudType = 'OSHA'; 
+            game.comboClass.loadStuff();
         }
 	}
 }

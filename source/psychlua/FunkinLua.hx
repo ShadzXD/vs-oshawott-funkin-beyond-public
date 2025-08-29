@@ -155,7 +155,6 @@ class FunkinLua {
 			set('playbackRate', 1);
 			#end
 	
-			set('guitarHeroSustains', game.guitarHeroSustains);
 			set('instakillOnMiss', game.instakillOnMiss);
 			set('botPlay', game.cpuControlled);
 			set('practice', game.practiceMode);

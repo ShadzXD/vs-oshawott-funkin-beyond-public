@@ -2,7 +2,7 @@
 	"animations": [
 		{
 			"loop": false,
-			"offsets": [-88, 0],
+			"offsets": [-91, 0],
 			"anim": "idle",
 			"fps": 24,
 			"name": "idle",
@@ -10,7 +10,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [-75, -3],
+			"offsets": [-51, -1],
 			"anim": "singLEFT",
 			"fps": 24,
 			"name": "left",
@@ -18,7 +18,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [-118, 3],
+			"offsets": [-119, 0],
 			"anim": "singRIGHT",
 			"fps": 24,
 			"name": "right",
@@ -26,7 +26,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [-110, -42],
+			"offsets": [-120, -47],
 			"anim": "singDOWN",
 			"fps": 24,
 			"name": "down",
@@ -34,54 +34,62 @@
 		},
 		{
 			"loop": false,
-			"offsets": [-139, 50],
+			"offsets": [-121, 41],
 			"anim": "singUP",
 			"fps": 24,
 			"name": "up",
 			"indices": []
 		},
 		{
-			"loop": false,
-			"offsets": [-91, 30],
-			"anim": "giggle",
-			"fps": 24,
-			"name": "giggle",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [-108, -94],
-			"anim": "hurt",
-			"fps": 24,
-			"name": "pokeball impact",
-			"indices": []
-		},
-		{
-			"offsets": [-68, 0],
-			"loop": false,
-			"fps": 24,
-			"anim": "attack",
-			"indices": [],
-			"name": "shell attack"
-		},
-		{
-			"offsets": [-88, 0],
+			"offsets": [-104, -5],
 			"loop": false,
 			"fps": 24,
 			"anim": "idle-alt",
 			"indices": [],
 			"name": "exhausted idle"
+		},
+		{
+			"loop": false,
+			"offsets": [-80, -20],
+			"anim": "cheer",
+			"fps": 24,
+			"name": "hey",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-73, 6],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "pokeball hit",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-99, 0],
+			"anim": "attack",
+			"fps": 24,
+			"name": "water gun",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [123, 3],
+			"anim": "dodge",
+			"fps": 24,
+			"name": "dodge",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Oshawott/oshawottshiny",
-	"position": [30, 420],
-	"healthicon": "oshawottshiny",
+	"position": [110, 390],
+	"healthicon": "oshawott",
 	"flip_x": false,
-	"healthbar_colors": [176, 255, 255],
-	"camera_position": [120, -50],
+	"healthbar_colors": [143, 220, 255],
+	"camera_position": [-180, -30],
 	"sing_duration": 6.1,
-	"scale": 1,
+	"scale": 1.2,
 	"_editor_isPlayer": false
 }
