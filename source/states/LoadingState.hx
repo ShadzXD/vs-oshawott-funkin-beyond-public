@@ -68,42 +68,22 @@ class LoadingState extends MusicBeatState
 	var curPercent:Float = 0;
 	var stateChangeDelay:Float = 0;
 
-	#if PSYCH_WATERMARKS
-	var logo:FlxSprite;
-	var pessy:FlxSprite;
-	var loadingText:FlxText;
 
-	var timePassed:Float;
-	var shakeFl:Float;
-	var shakeMult:Float = 0;
-	
-	var isSpinning:Bool = false;
-	var spawnedPessy:Bool = false;
-	var pressedTimes:Int = 0;
-	#else
 	var funkay:FlxSprite;
-	#end
 
 	#if HSCRIPT_ALLOWED
 	var hscript:HScript;
 	#end
+
+	var noticeFinished:Bool = false;
+	var finishedText:FlxText;
 	override function create()
 	{
 		persistentUpdate = true;
 		barGroup = new FlxSpriteGroup();
 		add(barGroup);
 
-		var barBack:FlxSprite = new FlxSprite(0, 660).makeGraphic(1, 1, FlxColor.BLACK);
-		barBack.scale.set(FlxG.width - 300, 25);
-		barBack.updateHitbox();
-		barBack.screenCenter(X);
-		barGroup.add(barBack);
-
-		bar = new FlxSprite(barBack.x + 5, barBack.y + 5).makeGraphic(1, 1, FlxColor.WHITE);
-		bar.scale.set(0, 15);
-		bar.updateHitbox();
-		barGroup.add(bar);
-		barWidth = Std.int(barBack.width - 10);
+		/*
 
 		#if HSCRIPT_ALLOWED
 		if(Mods.currentModDirectory != null && Mods.currentModDirectory.trim().length > 0)
@@ -141,49 +121,51 @@ class LoadingState extends MusicBeatState
 			}
 		}
 		#end
-
-		#if PSYCH_WATERMARKS // PSYCH LOADING SCREEN
-		var bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.antialiasing = ClientPrefs.data.antialiasing;
-		bg.setGraphicSize(Std.int(FlxG.width));
-		bg.color = 0xFFD16FFF;
-		bg.updateHitbox();
-		addBehindBar(bg);
+		*/
+		if(ClientPrefs.data.loadingScreen)
+		{
+			var randomIMG:Int = FlxG.random.int(1, 24);
+			trace(randomIMG);
+			var loadingPath = 'images/loadingScreens/AnimatedLoading-';
+			funkay = new FlxSprite().loadGraphic(Paths.image('loadingScreens/AnimatedLoading-' + randomIMG));
+			funkay.frames = Paths.getSparrowAtlas('loadingScreens/AnimatedLoading-' + randomIMG);
+			funkay.animation.addByPrefix('thing', 'AnimatedLoading', 24, true);
+			funkay.animation.play('thing');
+			funkay.setGraphicSize(1280, 720);
+			funkay.scrollFactor.set();
+			funkay.screenCenter();
+			funkay.updateHitbox();
+			add(funkay);
 	
-		loadingText = new FlxText(520, 600, 400, Language.getPhrase('now_loading', 'Now Loading', ['...']), 32);
-		loadingText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, OUTLINE_FAST, FlxColor.BLACK);
-		loadingText.borderSize = 2;
-		addBehindBar(loadingText);
-	
-		logo = new FlxSprite(0, 0).loadGraphic(Paths.image('loading_screen/icon'));
-		logo.antialiasing = ClientPrefs.data.antialiasing;
-		logo.scale.set(0.75, 0.75);
-		logo.updateHitbox();
-		logo.screenCenter();
-		logo.x -= 50;
-		logo.y -= 40;
-		addBehindBar(logo);
+			finishedText = new FlxText(0, 0, 0, "Loading Finished! Press Enter to continue.", 32);
+			finishedText.font = Paths.font('vcr.ttf');
+			finishedText.alpha = 0;
+			add(finishedText);
 
-		#else // BASE GAME LOADING SCREEN
-		var bg = new FlxSprite().makeGraphic(1, 1, 0xFFCAFF4D);
-		bg.scale.set(FlxG.width, FlxG.height);
-		bg.updateHitbox();
-		bg.screenCenter();
-		addBehindBar(bg);
+			var barBack:FlxSprite = new FlxSprite(0, 660).makeGraphic(1, 1, FlxColor.BLACK);
+			barBack.scale.set(FlxG.width - 300, 25);
+			barBack.updateHitbox();
+			barBack.screenCenter(X);
+			barGroup.add(barBack);
 
-		funkay = new FlxSprite(0, 0).loadGraphic(Paths.image('funkay'));
-		funkay.antialiasing = ClientPrefs.data.antialiasing;
-		funkay.setGraphicSize(0, FlxG.height);
-		funkay.updateHitbox();
-		addBehindBar(funkay);
-		#end
+			bar = new FlxSprite(barBack.x + 5, barBack.y + 5).makeGraphic(1, 1, FlxColor.WHITE);
+			bar.scale.set(0, 15);
+			bar.updateHitbox();
+			barGroup.add(bar);
+			barWidth = Std.int(barBack.width - 10);
+			FlxG.sound.playMusic(Paths.music('menus/loadingsong'), 1);	
+
+		}else
+		{
+			if (stateChangeDelay <= 0 && checkLoaded())
+			{
+				dontUpdate = true;
+				finishedLoading = true;
+				onLoad();
+			}
+		}
 		super.create();
 
-		if (stateChangeDelay <= 0 && checkLoaded())
-		{
-			dontUpdate = true;
-			onLoad();
-		}
 	}
 
 	function addBehindBar(obj:flixel.FlxBasic)
@@ -204,7 +186,7 @@ class LoadingState extends MusicBeatState
 				if(stateChangeDelay <= 0)
 				{
 					transitioning = true;
-					onLoad();
+					finishedLoading = true;
 					return;
 				}
 				else stateChangeDelay = Math.max(0, stateChangeDelay - elapsed);
@@ -220,7 +202,20 @@ class LoadingState extends MusicBeatState
 			bar.scale.x = barWidth * curPercent;
 			bar.updateHitbox();
 		}
-		
+
+		if(finishedLoading && !noticeFinished)
+		{
+			if(ClientPrefs.data.loadingScreen)
+			{
+				noticeFinished = true;
+				FlxTween.tween(finishedText, {alpha: 1}, 0.5);
+			}else onLoad();
+			trace('finished Loading!');
+		}
+		if(finishedLoading && controls.ACCEPT)
+		{
+			onLoad();
+		}
 		#if HSCRIPT_ALLOWED
 		if(hscript != null)
 		{
@@ -229,76 +224,7 @@ class LoadingState extends MusicBeatState
 		}
 		#end
 
-		#if PSYCH_WATERMARKS // PSYCH LOADING SCREEN
-		timePassed += elapsed;
-		shakeFl += elapsed * 3000;
-		var dots:String = '';
-		switch(Math.floor(timePassed % 1 * 3))
-		{
-			case 0:
-				dots = '.';
-			case 1:
-				dots = '..';
-			case 2:
-				dots = '...';
-		}
-		loadingText.text = Language.getPhrase('now_loading', 'Now Loading{1}', [dots]);
 
-		if(!spawnedPessy)
-		{
-			if(!transitioning && controls.ACCEPT)
-			{
-				shakeMult = 1;
-				FlxG.sound.play(Paths.sound('cancelMenu'));
-				pressedTimes++;
-			}
-			shakeMult = Math.max(0, shakeMult - elapsed * 5);
-			logo.offset.x = Math.sin(shakeFl * Math.PI / 180) * shakeMult * 100;
-
-			if(pressedTimes >= 5)
-			{
-				FlxG.camera.fade(0xAAFFFFFF, 0.5, true);
-				logo.visible = false;
-				spawnedPessy = true;
-				stateChangeDelay = 5;
-				FlxG.sound.play(Paths.sound('secret'));
-
-				pessy = new FlxSprite(700, 140);
-				pessy.frames = Paths.getSparrowAtlas('loading_screen/pessy');
-				pessy.animation.addByPrefix('run', 'run', 24, true);
-				pessy.animation.addByPrefix('spin', 'spin', 24, true);
-				pessy.antialiasing = ClientPrefs.data.antialiasing;
-				pessy.flipX = (logo.offset.x > 0);
-				pessy.visible = false;
-
-				new FlxTimer().start(0.01, function(tmr:FlxTimer) {
-					pessy.x = FlxG.width + 200;
-					pessy.velocity.x = -1100;
-					if(pessy.flipX)
-					{
-						pessy.x = -pessy.width - 200;
-						pessy.velocity.x *= -1;
-					}
-		
-					pessy.visible = true;
-					pessy.animation.play('run', true);
-					#if ACHIEVEMENTS_ALLOWED Achievements.unlock('pessy_easter_egg'); #end
-					
-					insert(members.indexOf(loadingText), pessy);
-				});
-			}
-		}
-		else if(!isSpinning && (pessy.flipX && pessy.x > FlxG.width) || (!pessy.flipX && pessy.x < -pessy.width))
-		{
-			isSpinning = true;
-			pessy.animation.play('spin', true);
-			pessy.flipX = false;
-			pessy.x = 500;
-			pessy.y = FlxG.height + 500;
-			pessy.velocity.x = 0;
-			FlxTween.tween(pessy, {y: 10}, 0.65, {ease: FlxEase.quadOut});
-		}
-		#end
 	}
 
 	#if HSCRIPT_ALLOWED
@@ -325,7 +251,6 @@ class LoadingState extends MusicBeatState
 		FlxG.camera.visible = false;
 		MusicBeatState.switchState(target);
 		transitioning = true;
-		finishedLoading = true;
 	}
 
 	static function _loaded()

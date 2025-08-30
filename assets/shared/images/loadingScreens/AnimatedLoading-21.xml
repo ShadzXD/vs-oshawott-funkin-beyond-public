@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="AnimatedLoading-21.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="AnimatedLoading instância 10000" x="0" y="0" width="1280" height="720"/>
+	<SubTexture name="AnimatedLoading instância 10001" x="1290" y="0" width="1280" height="720"/>
+	<SubTexture name="AnimatedLoading instância 10002" x="2580" y="0" width="1280" height="720"/>
+	<SubTexture name="AnimatedLoading instância 10003" x="0" y="730" width="1280" height="720"/>
+</TextureAtlas>
