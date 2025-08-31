@@ -269,6 +269,7 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		trace(storyWeek);
 		//trace('Playback Rate: ' + playbackRate);
 		_lastLoadedModDirectory = Mods.currentModDirectory;
 		Paths.clearStoredMemory();
