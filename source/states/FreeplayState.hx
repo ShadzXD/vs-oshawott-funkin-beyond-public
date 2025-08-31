@@ -154,7 +154,7 @@ class FreeplayState extends MusicBeatState
 			icon.active = false;
 			var path:String =songs[i].songName.toLowerCase();
 			path = path.replace(' ', '_');
-			 portrait = new FlxSprite(520, 53);
+			portrait = new FlxSprite(520, 53);
 			portrait.loadGraphic(Paths.image('menus/freeplay/' + path));		
 			portrait.setGraphicSize(Std.int(portrait.width * 1.02));
 			portrait.visible = portrait.active = false;

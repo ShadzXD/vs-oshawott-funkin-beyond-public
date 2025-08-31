@@ -5,6 +5,7 @@ import lime.utils.Assets as LimeAssets;
 
 class CoolUtil
 {
+	/*
 	public static function checkForUpdates(url:String = null):String {
 		if (url == null || url.length == 0)
 			url = "https://raw.githubusercontent.com/ShadowMario/FNF-PsychEngine/main/gitVersion.txt";
@@ -31,6 +32,7 @@ class CoolUtil
 		}
 		return version;
 	}
+	*/
 	inline public static function quantize(f:Float, snap:Float){
 		// changed so this actually works lol
 		var m:Float = Math.fround(f * snap);
