@@ -1,0 +1,223 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Pico Idle Dance0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-34,
+				-80
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Pico Down Note0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				27
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "pico Up note0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-71,
+				26
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "Pico Left Note MISS0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				193,
+				-36
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Pico Down Note MISS0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				64
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Pico Up Note MISS0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				64,
+				49
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Pico Right Note MISS0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				29,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Pico HEY!!0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				0
+			],
+			"anim": "pissed",
+			"fps": 24,
+			"name": "Pico Gets Pissed0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				0
+			],
+			"anim": "burpshit",
+			"fps": 24,
+			"name": "burpshit0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				34,
+				0
+			],
+			"anim": "burpsmile",
+			"fps": 24,
+			"name": "burpsmile0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				0
+			],
+			"anim": "cock",
+			"fps": 24,
+			"name": "cutscene cock0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				1
+			],
+			"anim": "shit",
+			"fps": 24,
+			"name": "shit0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				65,
+				231
+			],
+			"anim": "shoot",
+			"fps": 24,
+			"name": "shoot and return0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				0
+			],
+			"anim": "idle-pissed",
+			"fps": 24,
+			"name": "Pico Pissed Idle0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				-1
+			],
+			"anim": "unpissed",
+			"fps": 24,
+			"name": "Pico Not Pissed0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-79,
+				-12
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Pico NOTE LEFT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				58,
+				-1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Pico Note Right0",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Pico/pico-galaxy",
+	"position": [
+		-30,
+		300
+	],
+	"healthicon": "pico",
+	"flip_x": true,
+	"healthbar_colors": [
+		183,
+		216,
+		85
+	],
+	"camera_position": [
+		140,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}
