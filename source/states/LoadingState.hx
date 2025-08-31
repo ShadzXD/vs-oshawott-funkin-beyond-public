@@ -132,9 +132,8 @@ class LoadingState extends MusicBeatState
 			funkay.animation.addByPrefix('thing', 'AnimatedLoading', 24, true);
 			funkay.animation.play('thing');
 			funkay.setGraphicSize(1280, 720);
-			funkay.scrollFactor.set();
-			funkay.screenCenter();
 			funkay.updateHitbox();
+			funkay.screenCenter();
 			add(funkay);
 	
 			finishedText = new FlxText(0, 0, 0, "Loading Finished! Press Enter to continue.", 32);

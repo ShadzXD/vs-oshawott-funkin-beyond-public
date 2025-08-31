@@ -7,7 +7,7 @@ import backend.Song;
 
 import flixel.group.FlxGroup;
 
-//import substates.GameplayChangersSubstate;
+import options.GameplayChangersSubstate;
 import substates.ResetScoreSubState;
 import flixel.util.FlxStringUtil;
 import flixel.addons.transition.FlxTransitionableState;
@@ -150,7 +150,6 @@ class StoryMenuState extends MusicBeatState
 
 		scoreText.text = "WEEK SCORE:" + FlxStringUtil.formatMoney(lerpScore, false, true);
 		// FlxG.watch.addQuick('font', scoreText.font);
-		trace(FlxG.sound.music.time);
 		if (!movedBack && !selectedWeek)
 		{
 			var upP = controls.UI_UP_P;
@@ -172,7 +171,7 @@ class StoryMenuState extends MusicBeatState
 			if(FlxG.keys.justPressed.CONTROL)
 			{
 				persistentUpdate = false;
-				///openSubState(new GameplayChangersSubstate());
+				openSubState(new GameplayChangersSubstate());
 			}
 			else if(controls.RESET)
 			{
