@@ -41,6 +41,7 @@ import objects.BGSprite;
 
 import states.PlayState;
 import states.LoadingState;
+import substates.StickerSubState;
 
 #if flxanimate
 import flxanimate.*;

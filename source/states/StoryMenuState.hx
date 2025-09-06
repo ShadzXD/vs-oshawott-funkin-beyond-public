@@ -37,28 +37,29 @@ class StoryMenuState extends MusicBeatState
 	var week3music:FlxSound;
 	var loadedWeeks:Array<WeekData> = [];
 	var isChangingSelections:Bool = false;
-	//public function new(?stickers:StickerSubState = null)
-	//{
-	//	super();
-	  
-	//if (stickers != null)
-		//{
-		//	stickerSubState = stickers;
-		//}
-//	}
+	var stickerSubState:StickerSubState;
+	public function new(?stickers:StickerSubState = null)
+  	{
+    	super();
+
+    	if (stickers?.members != null)
+    	{
+      		stickerSubState = stickers;
+    	}
+ 	}
 	var blackBar:FlxSprite;
 	override function create()
 	{
 		Paths.clearUnusedMemory();
 		persistentUpdate = persistentDraw = true;
-		//if (stickerSubState != null)
-		//{
-		//	openSubState(stickerSubState);
-			//stickerSubState.degenStickers();
-		//	FlxG.sound.playMusic(Paths.music('mainmenu'));
-	//	}
-		//else
-		//Paths.clearStoredMemory();
+		if (stickerSubState != null)
+		{
+			openSubState(stickerSubState);
+			stickerSubState.degenStickers();
+			FlxG.sound.playMusic(Paths.music('mainmenu'));
+		}
+		else
+		Paths.clearStoredMemory();
 		WeekData.reloadWeekFiles(true);
 
 		PlayState.isStoryMode = true;
