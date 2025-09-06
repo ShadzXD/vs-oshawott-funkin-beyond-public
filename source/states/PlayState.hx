@@ -2446,7 +2446,7 @@ class PlayState extends MusicBeatState
 
 		#if ACHIEVEMENTS_ALLOWED
 		var weekNoMiss:String = WeekData.getWeekFileName() + '_nomiss';
-		checkForAchievement([weekNoMiss, 'ur_bad', 'ur_good', 'hype', 'two_keys', 'toastie' #if BASE_GAME_FILES, 'debugger' #end]);
+		checkForAchievement([weekNoMiss,  #if BASE_GAME_FILES, 'debugger' #end]);
 		#end
 
 		var ret:Dynamic = callOnScripts('onEndSong', null, true);
@@ -3533,4 +3533,5 @@ class PlayState extends MusicBeatState
 		#end
 		return false;
 	}
+
 }

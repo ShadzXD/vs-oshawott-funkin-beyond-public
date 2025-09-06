@@ -1,0 +1,31 @@
+{
+  "name": "stickers-set-1",
+  "artist": "PhantomArcade3K, FrenchOtter, Plush, Uni",
+  "stickers": {
+    "bf": ["bfSticker1", "bfSticker2", "bfSticker3","bf_front_sticker"],
+    "pico": ["picoSticker1", "picoSticker2", "picoSticker3"],
+    "gf": ["gfSticker1", "gfSticker2", "gfSticker3"],
+    "oshawott": ["oshawott_sticker_1","oshawott_sticker_2","oshawott_sticker_3"],
+    "dewott": ["dewottSticker1"],
+    "tankawott": ["tankawottSticker1", "tankawottSticker2", "tankawottSticker3"],
+    "diancie": ["diancie_sticker1"],
+    "meloletta": ["melolettaSticker1"],
+    "piplup": ["piplupSticker1"],
+    "pikachu": ["pikachuSticker1", "pikachuSticker2", "pikachuSticker3"],
+    "phantump":["phantump_sticker"],
+    "skidnpump":["shiny_pump_sticker", "shiny_skid_sticker"],
+    "cumfriend":["calemfriend_sticker"],
+    "bulbasaur":["bulbasaur_sticker"],
+    "cynthia":["cynthia_sticker"],
+    "squirtle":["squirtle_sticker"],
+    "pokeball":["pokeball_sticker"],
+    "hex":["hex_sticker"],
+    "tepig":["tepigSticker1", "tepigSticker2", "tepigSticker3"],
+
+    "nene": ["neneSticker1", "neneSticker2", "neneSticker3"]
+  },
+  "stickerPacks": {
+    "all": ["bf", "pico", "gf", "oshawott", "dewott", "tankawott", "diancie", "meloletta", "piplup", "pikachu", "nene","phantump","skidnpump","cumfriend","bulbasaur","cynthia","squirtle",
+    "squirtle","pokeball","hex", "tepig"]
+  }
+}

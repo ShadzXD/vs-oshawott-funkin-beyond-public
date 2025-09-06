@@ -159,17 +159,16 @@ class GameOverSubstate extends MusicBeatSubstate
 			else if (controls.BACK)
 			{
 				#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
-				FlxG.camera.visible = false;
 				FlxG.sound.music.stop();
 				PlayState.deathCounter = 0;
 				PlayState.seenCutscene = false;
 				PlayState.chartingMode = false;
 	
 				Mods.loadTopMod();
-				if (PlayState.isStoryMode)
-					MusicBeatState.switchState(new StoryMenuState());
+				if(PlayState.isStoryMode)
+					openSubState(new StickerSubState(STORY));
 				else
-					MusicBeatState.switchState(new FreeplayState());
+					openSubState(new StickerSubState(FREEPLAY));
 	
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				PlayState.instance.callOnScripts('onGameOverConfirm', [false]);
