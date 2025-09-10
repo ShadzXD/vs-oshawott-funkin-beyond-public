@@ -128,6 +128,7 @@ class FreeplayState extends MusicBeatState
 
 		var grid:FlxBackdrop = new FlxBackdrop(FlxGridOverlay.createGrid(5, 5, 10, 10, true, 0x7E10200B, 0x0));
 		grid.velocity.x = 6;
+		grid.antialiasing = false;
 		add(grid);
 
 		var blueBorder:FlxSprite = new FlxSprite().loadGraphic(Paths.image(fileLocation + 'Blueborders'));
@@ -136,10 +137,12 @@ class FreeplayState extends MusicBeatState
 
 		var darkHexagons:FlxSprite = new FlxSprite(-40 ,0).loadGraphic(Paths.image(fileLocation + 'DarkHexagons'));
 		darkHexagons.screenCenter(Y);
+		darkHexagons.antialiasing = false;
 		add(darkHexagons);
 
 		var hexagonsNormal:FlxSprite = new FlxSprite(darkHexagons.x + 41,0).loadGraphic(Paths.image(fileLocation + 'Hexagons'));
 		hexagonsNormal.screenCenter(Y);
+		hexagonsNormal.antialiasing = false;
 		add(hexagonsNormal);
 
 		var hexagonsLit:FlxSprite = new FlxSprite(hexagonsNormal.x).loadGraphic(Paths.image(fileLocation + 'HexagonsLight'));
@@ -178,6 +181,7 @@ class FreeplayState extends MusicBeatState
 			portrait = new FlxSprite(520, 53);
 			portrait.loadGraphic(Paths.image('menus/freeplay/' + path));		
 			portrait.setGraphicSize(Std.int(portrait.width * 1.02));
+			portrait.antialiasing = false;
 			portrait.visible = portrait.active = false;
 			portraitArray.push(portrait);
 			add(portrait);

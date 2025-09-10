@@ -2,11 +2,12 @@ package states.stages;
 
 import openfl.display.BlendMode;
 
+/*
+* Code for Cynthia's house.
+*/
 class Cynthia extends BaseStage
 {
-	// If you're moving your stage from PlayState to a stage file,
-	// you might have to rename some variables if they're missing, for example: camZooming -> game.camZooming
-	static var path:String = 'backgrounds/cynthiaBG/';
+	final path = 'backgrounds/cynthiaBG/';
 	override function create()
 	{
 		var bg:BGSprite = new BGSprite(path + 'bg', -600, -200, 1, 1);

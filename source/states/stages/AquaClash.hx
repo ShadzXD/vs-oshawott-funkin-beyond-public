@@ -1,27 +1,23 @@
 package states.stages;
 import flixel.addons.display.FlxRuntimeShader;
-import openfl.filters.ShaderFilter;
 import objects.Note;
 import states.stages.objects.*;
+import openfl.display.BlendMode;
 
 class AquaClash extends BaseStage
 {
 	var stage:BGSprite;
-
 	var crow:BGSprite;
-	//var shader:FlxRuntimeShader;
 	var dropshadow:FlxRuntimeShader;
 	var dropshadow2:FlxRuntimeShader;
 	var dropshadow3:FlxRuntimeShader;
 
-	var D:FlxRuntimeShader;
-
 	var bfBG:BGSprite;
 	var darnellBG:MallCrowd;
 	var allowdarnellDance:Bool = true;
+	var osharinaDanceSuffix = 'left';
 	override function create()
 	{
-	
 		if(ClientPrefs.data.shaders)
 		{
 			dropshadow = new FlxRuntimeShader(File.getContent(Paths.shaderFragment("dropShadow"))); //bf bopper!
@@ -59,7 +55,7 @@ class AquaClash extends BaseStage
 		bfBG.updateHitbox();
 		add(bfBG);
 
-		//lazy asshole work around for darnell laughing
+		//lazy work around for darnell laughing
 		darnellBG = new MallCrowd(-40, 200,'backgrounds/aquaclash/dewnell',  'idle', 'haha');
 		darnellBG.updateHitbox();
 		add(darnellBG);
@@ -79,11 +75,12 @@ class AquaClash extends BaseStage
 			dad.shader = dropshadow2;
 			darnellBG.shader = dropshadow3;
 			gf.shader = dropshadow3;
-
 		}
+
 		var overlay:BGSprite = new BGSprite('backgrounds/aquaclash/overlay', -600, -200);
 		overlay.setGraphicSize(Std.int(overlay.width * 1.1));
-		overlay.alpha = 0.7;
+		overlay.alpha = 0.75;
+		//overlay.blend = BlendMode.LIGHTEN; 
 		add(overlay);
 
 	}
@@ -95,29 +92,11 @@ class AquaClash extends BaseStage
 		darnellBG.dance(false);
 		bfBG.dance(false);
 		crow.dance(true);
-		gf.playAnim('idle-' + suffix);
-
+		gf.playAnim('idle-' + osharinaDanceSuffix);
 	}
-	var suffix:String = 'left';
-	override public function moveCamera(isDad:Bool)
-	{
-		//trace('camera');
 
-		if(isDad)
-		{
-			suffix = 'left';
-		}
-		else 	
-		{
-			suffix = 'right';
-
-		}		
-
-
-	}
 	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
 	{
-
 		switch(eventName)
 		{
 			case "Change Character":
@@ -126,27 +105,25 @@ class AquaClash extends BaseStage
 				dad.shader = dropshadow2;
 				boyfriend.shader = dropshadow;
 				gf.shader = dropshadow;
-
 			}
 		}
 	}
+
 	override function noteMissCommon(direction:Int, note:Note = null)
 	{
-		//trace('lol');
-		if(game.lastCombo > 5)
-		{
-			darnellLaugh();
-		}
+		if(game.lastCombo > 5)darnellLaugh();
 	}
+
 	override function stepHit() {
-		if(curStep == 1064)
-		{
-			darnellLaugh();
-		}		
+		if(game.camFollow.x > 1000) osharinaDanceSuffix = 'right';
+		else if(game.camFollow.x < 600)osharinaDanceSuffix = 'left';
+
+		if(curStep == 1064) darnellLaugh();
 	}
+
 	function darnellLaugh()
 	{
-			darnellBG.animation.play('hey', true);
-			darnellBG.heyTimer = 0.5;
+		darnellBG.animation.play('hey', true);
+		darnellBG.heyTimer = 0.5;
 	}
 }
