@@ -45,7 +45,7 @@ class LoadingState extends MusicBeatState
 	static var requestedBitmaps:Map<String, BitmapData> = [];
 	static var mutex:Mutex;
 	static var threadPool:FixedThreadPool = null;
-
+	public static var canBeSkipped:Bool = false;
 	function new(target:FlxState, stopMusic:Bool)
 	{
 		this.target = target;
@@ -67,7 +67,7 @@ class LoadingState extends MusicBeatState
 	var intendedPercent:Float = 0;
 	var curPercent:Float = 0;
 	var stateChangeDelay:Float = 0;
-
+	
 
 	var funkay:FlxSprite;
 
@@ -122,7 +122,7 @@ class LoadingState extends MusicBeatState
 		}
 		#end
 		*/
-		if(ClientPrefs.data.loadingScreen)
+		if(!canBeSkipped && ClientPrefs.data.loadingScreen)
 		{
 			var randomIMG:Int = FlxG.random.int(1, 24);
 			trace(randomIMG);
@@ -246,7 +246,7 @@ class LoadingState extends MusicBeatState
 
 		if (stopMusic && FlxG.sound.music != null)
 			FlxG.sound.music.stop();
-
+		canBeSkipped = false;
 		FlxG.camera.visible = false;
 		MusicBeatState.switchState(target);
 		transitioning = true;

@@ -591,7 +591,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 	function openNewChart()
 	{
 		var song:SwagSong = {
-			song: 'Test',
+			song: 'Watering',
 			notes: [],
 			events: [],
 			bpm: 150,
@@ -4812,6 +4812,7 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 		updateChartData();
 		StageData.loadDirectory(PlayState.SONG);
 		LoadingState.loadAndSwitchState(new PlayState());
+		LoadingState.canBeSkipped = true;
 		ClientPrefs.toggleVolumeKeys(true);
 	}
 	
