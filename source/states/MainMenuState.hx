@@ -151,6 +151,7 @@ class MainMenuState extends MusicBeatState
                     if (FlxG.save.data.playedAsperita != null)
                         {
                             MusicBeatState.switchState(new StoryMenuState());
+
                             storymode.loadGraphic(Paths.image('menus/main/story-confirm'));
                         }
                         else
@@ -160,6 +161,7 @@ class MainMenuState extends MusicBeatState
                             PlayState.storyPlaylist = ['Asperita'];
                             PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase(), PlayState.storyPlaylist[0].toLowerCase());
                             PlayState.campaignScore = 0;
+                            PlayState.storyWeek = 0; //should prevent a crash ????
                             PlayState.campaignMisses = 0;
                             LoadingState.loadAndSwitchState(new PlayState(), true);
                         }

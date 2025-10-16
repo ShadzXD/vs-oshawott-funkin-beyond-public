@@ -219,7 +219,6 @@ class TitleState extends MusicBeatState
 
 
 
-
 		remove(credGroup);
 
 		if (initialized)

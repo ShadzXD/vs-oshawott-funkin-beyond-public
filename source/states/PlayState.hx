@@ -327,7 +327,7 @@ class PlayState extends MusicBeatState
 		storyDifficultyText = Difficulty.getString();
 
 		if (isStoryMode)
-			detailsText = "Story Mode"; //todo: fix this!
+			detailsText = "Story Mode: " + WeekData?.getCurrentWeek()?.weekName;
 		else
 			detailsText = "Freeplay";
 
