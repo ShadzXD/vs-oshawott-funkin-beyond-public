@@ -52,8 +52,8 @@ class HaxeIntroState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('boom'), 0.7);
 				boom = new FlxSprite(450, 100);
 				boom.scale.set(3, 3);
-				boom.frames = Paths.getSparrowAtlas('Boom');
-				boom.antialiasing = ClientPrefs.data.antialiasing;
+				boom.frames = Paths.getSparrowAtlas('menus/pre-title/Boom');
+				boom.antialiasing = false;
 				boom.updateHitbox();
 				boom.animation.addByPrefix('Boom', 'Boom', 20, false);
 				boom.animation.play('Boom');
