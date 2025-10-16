@@ -49,7 +49,7 @@ class OptionsState extends MusicBeatState
 		#end
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xff90e8f4;//change it up because im sick at looking at fucking purple
+		bg.color = 0xff6ce0f0;//change it up because im sick at looking at fucking purple
 		bg.updateHitbox(); 
 
 		bg.screenCenter();
