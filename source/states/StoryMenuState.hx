@@ -190,7 +190,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			lastSavedTime = FlxG.sound.music.time;
-			FlxG.sound.playMusic(Paths.music('freakyMenu', true));
+			FlxG.sound.playMusic(Paths.music('mainmenu', true));
 			FlxG.sound.music.time = lastSavedTime;
 			movedBack = true;
 			MusicBeatState.switchState(new MainMenuState());
