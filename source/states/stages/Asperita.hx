@@ -1,7 +1,6 @@
 package states.stages;
 
 import shaders.AdjustColorShader;
-
 import openfl.filters.ShaderFilter;
 import flixel.addons.display.FlxRuntimeShader;
 import objects.Bar;
@@ -30,37 +29,13 @@ class Asperita extends BaseStage
     var addBaseGameUI:Bool = true;
 	override function create()
 	{
-        /*
-        
-        var healthBarBaseGame:Bar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar-basegame', function(){
-			return game.healthLerp;
-		}, 0, 2);
-		healthBarBaseGame.screenCenter(X);
-		healthBarBaseGame.leftToRight = false;
-		healthBarBaseGame.scrollFactor.set();
-		healthBarBaseGame.visible = !ClientPrefs.data.hideHud;
-		healthBarBaseGame.alpha = ClientPrefs.data.healthBarAlpha;
-		healthBarBaseGame.setColors(FlxColor.RED, FlxColor.LIME);
-        healthBarBaseGame.cameras = [camHUD];
-		add(healthBarBaseGame);
-  
-        scoreTextBaseGame = new FlxText(700, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11) + 50, 0, '', 20);
-        scoreTextBaseGame.setFormat(Paths.font('vcr-og.ttf'), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        scoreTextBaseGame.scrollFactor.set();
-        scoreTextBaseGame.cameras = [camHUD];
-        add(scoreTextBaseGame);
-        //game.timeBar.alpha = 0;
-          //      game.timeTxt.alpha = 0;
-
-      */
+     
         stageBack = new BGSprite('backgrounds/backstage/backDark', 729, -170, 1, 1);
 		stageBack.scale.set(1, 1);
-        //stageBack.updateHitbox();
 		stageBack.alpha = 1;
 
         brightLightSmall = new BGSprite('backgrounds/backstage/brightLightSmall', 967, -103, 1.2, 1.2);
 		brightLightSmall.scale.set(1, 1);
-        //brightLightSmall.updateHitbox();
 		brightLightSmall.alpha = 1;
 
         var audience = new FlxSprite(560, 290);
@@ -73,7 +48,6 @@ class Asperita extends BaseStage
 
         stageFront = new BGSprite('backgrounds/backstage/bg', -603, -187, 1, 1);
 		stageFront.scale.set(1, 1);
-        //stageFront.updateHitbox();
 		stageFront.alpha = 1;
 
         server = new BGSprite('backgrounds/backstage/server', -361, 205, 1, 1);
@@ -124,9 +98,6 @@ class Asperita extends BaseStage
 	}
 
     override function createPost() {
-        //basegame ui.
-       // game.uiPrefix = 'funkin/';
-        //game.timeBar.visible = false;
         DS = new BGSprite('backgrounds/dsUI', -150, -250, 1, 1);
         DS.scale.set(1.3, 1.3);
         DS.alpha = 0;
@@ -134,7 +105,6 @@ class Asperita extends BaseStage
         DS.cameras = [camGame];
 
         super.createPost();
-        if(game.healthBar != null)game.healthBar.visible = false;
 
         if(!ClientPrefs.data.lowQuality) {
             game.boyfriend.shader = colorShaderBF;
@@ -157,20 +127,20 @@ class Asperita extends BaseStage
 		    colorShaderDad.saturation.value = [0];
         }
     }
-	override public function update(elapsed:Float)
-    {
-        if(scoreTextBaseGame!=null)scoreTextBaseGame.text = 'Score: ${FlxStringUtil.formatMoney(game.songScore, false, false)}';
-
-    }
     override function stepHit()
 	{
+        super.stepHit();
+
 		if (curStep == 304)
         {
             defaultCamZoom = 0.6;
+
             boyfriend.x += 200;
             boyfriend.y -= 70;
+
             dad.x += 150;
             dad.y -= 110;
+
             stageBack.alpha = 0;
             brightLightSmall.alpha = 0;
             stageFront.alpha = 0;
@@ -182,11 +152,20 @@ class Asperita extends BaseStage
             lightAbove.alpha = 0;
             viewPoint.alpha = 1;
             DS.alpha = 1;
+
             game.boyfriend.shader = null;
             game.dad.shader = null;
             game.gf.shader = null;
+
+            //combo class switch
             game.comboClass.hudType = 'OSHA'; 
             game.comboClass.loadStuff();
+
+            //hud class switch
+            //i dont know how to code
+            game.switchUIType();
+            game.set_health(1);
+
         }
 	}
 }

@@ -18,8 +18,9 @@ import states.TitleState;
 	public var noteSkin:String = 'Default';
 	public var splashSkin:String = 'Psych';
 	public var splashAlpha:Float = 0.6;
-	public var susSplashAlpha:Float = 0.6;
+	public var susSplashAlpha:Float = 1;
 	public var lowQuality:Bool = false;
+	public var showTime:Bool = true;
 	public var shaders:Bool = true;
 	public var cacheOnGPU:Bool = #if !switch false #else true #end; // GPU Caching made by Raltyro
 	public var framerate:Int = 60;
@@ -75,6 +76,8 @@ import states.TitleState;
 	public var discordRPC:Bool = true;
 	public var loadingScreen:Bool = true;
 	public var language:String = 'en-US';
+	public var camNoteMovement:Bool = true;
+
 }
 
 class ClientPrefs {

@@ -136,7 +136,6 @@ class FunkinLua {
 			set('deaths', PlayState.deathCounter);
 	
 			set('rating', game.ratingPercent);
-			set('ratingName', game.ratingName);
 			set('ratingFC', game.ratingFC);
 			set('totalPlayed', game.totalPlayed);
 			set('totalNotesHit', game.totalNotesHit);
@@ -847,15 +846,10 @@ class FunkinLua {
 			game.ratingPercent = value;
 			game.setOnScripts('rating', game.ratingPercent);
 		});
-		Lua_helper.add_callback(lua, "setRatingName", function(value:String) {
-			game.ratingName = value;
-			game.setOnScripts('ratingName', game.ratingName);
-		});
 		Lua_helper.add_callback(lua, "setRatingFC", function(value:String) {
 			game.ratingFC = value;
 			game.setOnScripts('ratingFC', game.ratingFC);
 		});
-		Lua_helper.add_callback(lua, "updateScoreText", function() game.updateScoreText());
 		Lua_helper.add_callback(lua, "getMouseX", function(?camera:String = 'game') {
 			var cam:FlxCamera = LuaUtils.cameraFromString(camera);
 			return FlxG.mouse.getScreenPosition(cam).x;
@@ -1128,24 +1122,7 @@ class FunkinLua {
 			return (obj != null && Std.isOfType(obj, FlxSound));
 		});
 
-		Lua_helper.add_callback(lua, "setHealthBarColors", function(left:String, right:String) {
-			var left_color:Null<FlxColor> = null;
-			var right_color:Null<FlxColor> = null;
-			if (left != null && left != '')
-				left_color = CoolUtil.colorFromString(left);
-			if (right != null && right != '')
-				right_color = CoolUtil.colorFromString(right);
-			game.healthBar.setColors(left_color, right_color);
-		});
-		Lua_helper.add_callback(lua, "setTimeBarColors", function(left:String, right:String) {
-			var left_color:Null<FlxColor> = null;
-			var right_color:Null<FlxColor> = null;
-			if (left != null && left != '')
-				left_color = CoolUtil.colorFromString(left);
-			if (right != null && right != '')
-				right_color = CoolUtil.colorFromString(right);
-			game.timeBar.setColors(left_color, right_color);
-		});
+
 
 		Lua_helper.add_callback(lua, "setObjectCamera", function(obj:String, camera:String = 'game') {
 			var real:FlxBasic = game.getLuaObject(obj);
