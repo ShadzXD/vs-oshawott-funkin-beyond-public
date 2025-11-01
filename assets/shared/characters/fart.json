@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 8,
+			"anim": "idle",
+			"indices": [],
+			"name": "oshafecta idle"
+		},
+		{
+			"offsets": [
+				-18,
+				10
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "oshafecta left"
+		},
+		{
+			"offsets": [
+				1,
+				5
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "oshafecta down"
+		},
+		{
+			"offsets": [
+				4,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "oshafecta up"
+		},
+		{
+			"offsets": [
+				-30,
+				19
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "oshafecta right"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Oshawott/fart",
+	"position": [
+		40,
+		220
+	],
+	"healthicon": "fart-pixel",
+	"flip_x": false,
+	"healthbar_colors": [
+		5,
+		0,
+		255
+	],
+	"camera_position": [
+		-220,
+		-360
+	],
+	"sing_duration": 6.1,
+	"scale": 1.8
+}
