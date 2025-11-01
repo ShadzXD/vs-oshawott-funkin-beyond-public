@@ -1,0 +1,5 @@
+me when i speak mid song
+if a subtitle already exists it overrides it
+
+value 1: text
+value 2: how long it lasts

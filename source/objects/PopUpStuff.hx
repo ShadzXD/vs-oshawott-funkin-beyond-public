@@ -4,8 +4,6 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import backend.Rating;
 using StringTools;
 
-
-
 class PopUpStuff extends FlxTypedGroup<FlxSprite>
 {
 	var antialias:Bool = true;
@@ -26,7 +24,6 @@ class PopUpStuff extends FlxTypedGroup<FlxSprite>
 
 		hudType = hud;
 
-		
 		if(fromPlayState)speedRate = PlayState.instance.playbackRate;
 
 		isBotplay = botplay;
@@ -35,6 +32,7 @@ class PopUpStuff extends FlxTypedGroup<FlxSprite>
 
 	public function displayRating(daRating:String)
 	{
+		
 		var rating:FlxSprite = new FlxSprite();
 		rating.loadGraphic(Paths.image(uiPrefix + daRating + uiSuffix));
 		rating.screenCenter();
@@ -46,7 +44,6 @@ class PopUpStuff extends FlxTypedGroup<FlxSprite>
 		rating.x += ClientPrefs.data.comboOffset[0];
 		rating.y -= ClientPrefs.data.comboOffset[1];
 		rating.antialiasing = antialias;
-
 		rating.setGraphicSize(Std.int(rating.width * size));
 		rating.updateHitbox();
 		add(rating);
@@ -58,6 +55,8 @@ class PopUpStuff extends FlxTypedGroup<FlxSprite>
 			},
 			startDelay: Conductor.crochet * 0.001 / speedRate
 		});
+		
+	
 	}
 
 	public function displayCombo(?combo:Int = 0)
@@ -137,5 +136,7 @@ class PopUpStuff extends FlxTypedGroup<FlxSprite>
 			Paths.image(uiPrefix + rating.image + uiSuffix);
 		for (i in 0...10)
 			Paths.image(uiPrefix + 'num' + i + uiSuffix);
+
+		Paths.image(uiPrefix + 'miss' + uiSuffix);
 	}
 }

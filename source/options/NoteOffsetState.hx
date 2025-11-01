@@ -58,8 +58,14 @@ class NoteOffsetState extends MusicBeatState
 		FlxG.sound.pause();
 
 		// Stage
-		Paths.setCurrentLevel(stageDirectory);
-		new BackgroundStage();
+				/////////////
+		var bg:BGSprite = new BGSprite('backgrounds/stage/stageback', -600, -200, 0.9, 0.9);
+		add(bg);
+
+		var stageFront:BGSprite = new BGSprite('backgrounds/stage/stagefront', -650, 600, 0.9, 0.9);
+		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+		stageFront.updateHitbox();
+		add(stageFront);
 
 		// Characters
 		gf = new Character(400, 130, 'gf');
@@ -77,9 +83,8 @@ class NoteOffsetState extends MusicBeatState
 		coolText.screenCenter();
 		coolText.x = FlxG.width * 0.35;
 
-		rating = new FlxSprite().loadGraphic(Paths.image('sick'));
+		rating = new FlxSprite().loadGraphic(Paths.image('popups/oshawott/sick'));
 		rating.cameras = [camHUD];
-		rating.antialiasing = ClientPrefs.data.antialiasing;
 		rating.setGraphicSize(Std.int(rating.width * 0.7));
 		rating.updateHitbox();
 		
@@ -98,7 +103,7 @@ class NoteOffsetState extends MusicBeatState
 		var daLoop:Int = 0;
 		for (i in seperatedScore)
 		{
-			var numScore:FlxSprite = new FlxSprite(43 * daLoop).loadGraphic(Paths.image('num' + i));
+			var numScore:FlxSprite = new FlxSprite(43 * daLoop).loadGraphic(Paths.image('popups/oshawott/num' + i));
 			numScore.cameras = [camHUD];
 			numScore.antialiasing = ClientPrefs.data.antialiasing;
 			numScore.setGraphicSize(Std.int(numScore.width * 0.5));
@@ -133,7 +138,7 @@ class NoteOffsetState extends MusicBeatState
 		barPercent = ClientPrefs.data.noteOffset;
 		updateNoteDelay();
 		
-		timeBar = new Bar(0, timeTxt.y + (timeTxt.height / 3), 'healthBar', function() return barPercent, delayMin, delayMax);
+		timeBar = new Bar(0, timeTxt.y + (timeTxt.height / 3), 'huds/vanilla/healthBar', function() return barPercent, delayMin, delayMax);
 		timeBar.scrollFactor.set();
 		timeBar.screenCenter(X);
 		timeBar.visible = false;

@@ -2168,6 +2168,7 @@ class PlayState extends MusicBeatState
 				switch(charType) {
 					case 0:
 						if(boyfriend.curCharacter != value2) {
+							boyfriend.shader = null;
 							if(!boyfriendMap.exists(value2)) {
 								addCharacterToList(value2, charType);
 							}
@@ -2182,6 +2183,7 @@ class PlayState extends MusicBeatState
 
 					case 1:
 						if(dad.curCharacter != value2) {
+							dad.shader = null;
 							if(!dadMap.exists(value2)) {
 								addCharacterToList(value2, charType);
 							}
@@ -2207,6 +2209,7 @@ class PlayState extends MusicBeatState
 						{
 							if(gf.curCharacter != value2)
 							{
+								gf.shader = null;
 								if(!gfMap.exists(value2)) {
 									addCharacterToList(value2, charType);
 								}
@@ -2698,6 +2701,12 @@ class PlayState extends MusicBeatState
 		});
 
 		noteMissCommon(daNote.noteData, daNote);
+		if(!daNote.isSustainNote)
+		{
+			comboClass.displayCombo(0);
+			comboClass.displayRating('miss');
+		}
+
 		stagesFunc(function(stage:BaseStage) stage.noteMiss(daNote));
 		var result:Dynamic = callOnLuas('noteMiss', [notes.members.indexOf(daNote), daNote.noteData, daNote.noteType, daNote.isSustainNote]);
 		if(result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll) callOnHScript('noteMiss', [daNote]);

@@ -1,0 +1,8 @@
+Makes the camera tilt like Shaggy
+
+Value 1 : Rotation speed (Put 0 to stop the rotation)
+Value 2 : Rotation degree
+
+Example :
+Value 1 : 2
+Value 2 : 5
