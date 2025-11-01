@@ -83,7 +83,10 @@ class PsychHUD extends MainHUD
     override public function updateScore(miss:Bool = false, ?score:Int, ?misses:Int, ?percent:Float)
 	{
 		// Rating Name
+		if(PlayState.instance.totalPlayed != 0) //Prevent divide by 0
+		{
 		recalculateRating(percent);
+		}
 		var str:String = ratingName;
 
 		var percent:Float = CoolUtil.floorDecimal(percent * 100, 2);
