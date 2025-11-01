@@ -166,6 +166,8 @@ class Asperita extends BaseStage
             game.switchUIType();
             game.set_health(1);
 
+            game.changeNoteSkin('NOTE_assets');
+
         }
 	}
 }

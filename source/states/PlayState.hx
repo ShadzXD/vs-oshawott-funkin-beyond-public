@@ -605,6 +605,28 @@ class PlayState extends MusicBeatState
 		
 		if(eventNotes.length < 1) checkEventNote();
 	}
+	/**
+	 * Function which switches out the note skin mid song.
+	 * @param skin 
+	 */
+	public function changeNoteSkin(skin:String)
+	{
+		strumLineNotes.forEachAlive(function(note:StrumNote) {
+			note.texture = 'notes/noteSkins/$skin'; //Load texture and anims
+			note.reloadNote();
+			note.centerOffsets();
+			note.centerOrigin();
+		});
+	
+		for (note in unspawnNotes)
+		{
+			if(note != null)
+			{
+				note.reloadNote('notes/noteSkins/$skin');
+				note.rgbShader.enabled = true;
+			}	
+		}
+	}
 
 	/**
 	 * Switch HUD Function.

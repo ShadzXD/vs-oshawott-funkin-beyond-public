@@ -61,8 +61,8 @@ class TitleState extends MusicBeatState
 	public static var titleJSON:TitleData;
 
 	public static var updateVersion:String = '';
-	final debugStageTesting:Bool = false; //USED FOR QUICK TESTING STAGES, SKIPPING A BUNCH OF MENUS.
-	final testingSongname:String = 'unlucky_undella'; //INPUT SONG NAME USED FOR TESTING, HERE
+	final debugStageTesting:Bool = true; //USED FOR QUICK TESTING STAGES, SKIPPING A BUNCH OF MENUS.
+	final testingSongname:String = 'watering'; //INPUT SONG NAME USED FOR TESTING, HERE
 	final debugOverworldTesting:Bool = false; //USED FOR QUICK TESTING THE OVERWORLD.
 
 	override public function create():Void
