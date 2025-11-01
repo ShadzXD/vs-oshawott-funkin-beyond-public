@@ -48,20 +48,17 @@ class TitleState extends MusicBeatState
 	var credGroup:FlxGroup;
 	var textGroup:FlxGroup;
 	var thefunny: FlxSprite;
-	
-
 
 	var curWacky:Array<String> = [];
 
 	var wackyImage:FlxSprite;
-
 
 	var mustUpdate:Bool = false;
 
 	public static var titleJSON:TitleData;
 
 	public static var updateVersion:String = '';
-	final debugStageTesting:Bool = true; //USED FOR QUICK TESTING STAGES, SKIPPING A BUNCH OF MENUS.
+	final debugStageTesting:Bool = false; //USED FOR QUICK TESTING STAGES, SKIPS MOST MENUS.
 	final testingSongname:String = 'watering'; //INPUT SONG NAME USED FOR TESTING, HERE
 	final debugOverworldTesting:Bool = false; //USED FOR QUICK TESTING THE OVERWORLD.
 

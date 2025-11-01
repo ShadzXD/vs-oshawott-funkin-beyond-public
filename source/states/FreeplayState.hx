@@ -30,7 +30,7 @@ class FreeplayState extends MusicBeatState
 	private static var lastDifficultyName:String = Difficulty.getDefault();
 
 	var scoreBG:FlxSprite;
-	var scoreText:FlxText;
+	public var scoreText:FlxText;
 	var diffText:FlxText;
 	var lerpScore:Int = 0;
 	var lerpRating:Float = 0;
@@ -58,6 +58,8 @@ class FreeplayState extends MusicBeatState
 	var difficultyOshawott:Array<String> = ['normal', 'shiny'];
 	var avalaibledifficultyOshawott:Array<String> = ['normal', 'shiny'];
 	var stickerSubState:StickerSubState;
+	public static var instance:FreeplayState;
+
 	public function new(?stickers:StickerSubState = null)
   	{
     	super();
@@ -71,7 +73,8 @@ class FreeplayState extends MusicBeatState
 	{
 		//Paths.clearStoredMemory();
 		//Paths.clearUnusedMemory();
-		
+		instance = this;
+
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
 		WeekData.reloadWeekFiles(false);
@@ -181,7 +184,7 @@ class FreeplayState extends MusicBeatState
 			portrait = new FlxSprite(520, 53);
 			portrait.loadGraphic(Paths.image('menus/freeplay/' + path));		
 			portrait.setGraphicSize(Std.int(portrait.width * 1.02));
-			portrait.antialiasing = false;
+			portrait.antialiasing = (path == 'cocoon' ? true : false);
 			portrait.visible = portrait.active = false;
 			portraitArray.push(portrait);
 			add(portrait);
@@ -427,10 +430,12 @@ class FreeplayState extends MusicBeatState
 			{
 				destroyFreeplayVocals();
 				FlxG.sound.music.volume = 0;
-
+				var difficShit:String = checkDifficulty(curDifficulty);				
+			
+	
 				Mods.currentModDirectory = songs[curSelected].folder;
 				var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
-				Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
+				Song.loadFromJson(poop + difficShit, songs[curSelected].songName.toLowerCase() + difficShit);
 				if (PlayState.SONG.needsVoices)
 				{
 					vocals = new FlxSound();

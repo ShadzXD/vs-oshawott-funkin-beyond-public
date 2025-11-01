@@ -55,7 +55,8 @@ class PsychHUD extends MainHUD
 		scoreText.scrollFactor.set();
 		scoreText.borderSize = 1.25;
 		add(scoreText);
-		updateScore();
+		updateScore(false, PlayState.instance.songScore, PlayState.instance.songMisses, PlayState.instance.ratingPercent); //hope this doesnt cause a crash
+
 	}
     
 
@@ -82,6 +83,7 @@ class PsychHUD extends MainHUD
     override public function updateScore(miss:Bool = false, ?score:Int, ?misses:Int, ?percent:Float)
 	{
 		// Rating Name
+		recalculateRating(percent);
 		var str:String = ratingName;
 
 		var percent:Float = CoolUtil.floorDecimal(percent * 100, 2);

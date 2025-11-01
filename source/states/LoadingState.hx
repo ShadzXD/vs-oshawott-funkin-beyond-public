@@ -61,9 +61,6 @@ class LoadingState extends MusicBeatState
 	var stopMusic:Bool = false;
 	var dontUpdate:Bool = false;
 
-	var barGroup:FlxSpriteGroup;
-	var bar:FlxSprite;
-	var barWidth:Int = 0;
 	var intendedPercent:Float = 0;
 	var curPercent:Float = 0;
 	var stateChangeDelay:Float = 0;
@@ -80,11 +77,8 @@ class LoadingState extends MusicBeatState
 	override function create()
 	{
 		persistentUpdate = true;
-		barGroup = new FlxSpriteGroup();
-		add(barGroup);
 
 		/*
-
 		#if HSCRIPT_ALLOWED
 		if(Mods.currentModDirectory != null && Mods.currentModDirectory.trim().length > 0)
 		{
@@ -141,17 +135,7 @@ class LoadingState extends MusicBeatState
 			finishedText.alpha = 0;
 			add(finishedText);
 
-			var barBack:FlxSprite = new FlxSprite(0, 660).makeGraphic(1, 1, FlxColor.BLACK);
-			barBack.scale.set(FlxG.width - 300, 25);
-			barBack.updateHitbox();
-			barBack.screenCenter(X);
-			barGroup.add(barBack);
 
-			bar = new FlxSprite(barBack.x + 5, barBack.y + 5).makeGraphic(1, 1, FlxColor.WHITE);
-			bar.scale.set(0, 15);
-			bar.updateHitbox();
-			barGroup.add(bar);
-			barWidth = Std.int(barBack.width - 10);
 			FlxG.sound.playMusic(Paths.music('menus/loadingsong'), 1);	
 
 		}else
@@ -167,10 +151,6 @@ class LoadingState extends MusicBeatState
 
 	}
 
-	function addBehindBar(obj:flixel.FlxBasic)
-	{
-		insert(members.indexOf(barGroup), obj);
-	}
 
 	var transitioning:Bool = false;
 	override function update(elapsed:Float)
@@ -197,9 +177,6 @@ class LoadingState extends MusicBeatState
 		{
 			if (Math.abs(curPercent - intendedPercent) < 0.001) curPercent = intendedPercent;
 			else curPercent = FlxMath.lerp(intendedPercent, curPercent, Math.exp(-elapsed * 15));
-
-			bar.scale.x = barWidth * curPercent;
-			bar.updateHitbox();
 		}
 
 		if(finishedLoading && !noticeFinished)
