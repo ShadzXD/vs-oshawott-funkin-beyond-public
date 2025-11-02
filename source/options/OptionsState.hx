@@ -44,6 +44,7 @@ class OptionsState extends MusicBeatState
 
 	override function create()
 	{
+		FlxG.sound.playMusic(Paths.music('menus/optionwott'), 0.6);
 		#if DISCORD_ALLOWED
 		DiscordClient.changePresence("Options Menu", null);
 		#end
@@ -102,7 +103,11 @@ class OptionsState extends MusicBeatState
 				StageData.loadDirectory(PlayState.SONG);
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
-			else MusicBeatState.switchState(new MainMenuState());
+			else
+			{
+				MusicBeatState.switchState(new MainMenuState());
+				FlxG.sound.playMusic(Paths.music('mainmenu'), 1);
+			}
 		}
 		else if (controls.ACCEPT) openSelectedSubstate(options[curSelected]);
 	}

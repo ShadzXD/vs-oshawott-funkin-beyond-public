@@ -54,11 +54,10 @@ class NotesColorSubState extends MusicBeatSubstate
 		DiscordClient.changePresence("Note Colors Menu", null);
 		#end
 		
-		onPixel = PlayState.isPixelStage;
+		onPixel = false;
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.color = 0xFFEA71FD;
 		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.data.antialiasing;
 		add(bg);
 
 		var grid:FlxBackdrop = new FlxBackdrop(FlxGridOverlay.createGrid(80, 80, 160, 160, true, 0x33FFFFFF, 0x0));
@@ -90,11 +89,6 @@ class NotesColorSubState extends MusicBeatSubstate
 		bg.alpha = 0.25;
 		add(bg);
 		
-		var text:Alphabet = new Alphabet(50, 86, 'CTRL', false);
-		text.alignment = CENTERED;
-		text.setScale(0.4);
-		add(text);
-
 		copyButton = new FlxSprite(760, 50).loadGraphic(Paths.image('noteColorMenu/copy'));
 		copyButton.alpha = 0.6;
 		add(copyButton);
@@ -243,13 +237,7 @@ class NotesColorSubState extends MusicBeatSubstate
 		var controllerPressed:Bool = (controls.controllerMode && controls.ACCEPT);
 		//
 
-		if(FlxG.keys.justPressed.CONTROL)
-		{
-			onPixel = !onPixel;
-			spawnNotes();
-			updateNotes(true);
-			FlxG.sound.play(Paths.sound('scrollMenu'), 0.6);
-		}
+
 
 		if(hexTypeNum > -1)
 		{
@@ -410,13 +398,7 @@ class NotesColorSubState extends MusicBeatSubstate
 				FlxG.sound.play(Paths.sound('scrollMenu'), 0.6);
 				updateColors();
 			}
-			else if (pointerOverlaps(skinNote))
-			{
-				onPixel = !onPixel;
-				spawnNotes();
-				updateNotes(true);
-				FlxG.sound.play(Paths.sound('scrollMenu'), 0.6);
-			}
+		
 			else if(pointerY() >= hexTypeLine.y && pointerY() < hexTypeLine.y + hexTypeLine.height &&
 					Math.abs(pointerX() - 1000) <= 84)
 			{
@@ -605,8 +587,8 @@ class NotesColorSubState extends MusicBeatSubstate
 
 		// respawn stuff
 		var res:Int = onPixel ? 160 : 17;
-		skinNote = new FlxSprite(48, 24).loadGraphic(Paths.image('noteColorMenu/' + (onPixel ? 'note' : 'notePixel')), true, res, res);
-		skinNote.antialiasing = ClientPrefs.data.antialiasing;
+		skinNote = new FlxSprite(48, 24).loadGraphic(Paths.image('noteColorMenu/note'), true, res, res);
+		skinNote.antialiasing = false;
 		skinNote.setGraphicSize(68);
 		skinNote.updateHitbox();
 		skinNote.animation.add('anim', [0], 24, true);
@@ -624,7 +606,7 @@ class NotesColorSubState extends MusicBeatSubstate
 			newNote.animation.add('anim', [i], 24, true);
 			newNote.animation.play('anim', true);
 			newNote.ID = i;
-			if(onPixel) newNote.antialiasing = false;
+			 newNote.antialiasing = false;
 			modeNotes.add(newNote);
 		}
 

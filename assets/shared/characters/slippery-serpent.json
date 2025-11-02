@@ -1,89 +1,63 @@
 {
 	"animations": [
 		{
+			"offsets": [-5, 0],
 			"loop": false,
-			"offsets": [
-				-5,
-				0
-			],
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
+			"offsets": [9, 0],
 			"loop": false,
-			"offsets": [
-				9,
-				0
-			],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
+			"offsets": [-93, -17],
 			"loop": false,
-			"offsets": [
-				-93,
-				-17
-			],
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
+			"offsets": [-8, 91],
 			"loop": false,
-			"offsets": [
-				-8,
-				91
-			],
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "up",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
+			"offsets": [-38, 1],
 			"loop": false,
-			"offsets": [
-				-38,
-				1
-			],
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
+			"indices": [],
+			"name": "right"
 		},
 		{
+			"offsets": [35, -48],
 			"loop": false,
-			"offsets": [
-				35,
-				-48
-			],
-			"anim": "hurt",
 			"fps": 24,
-			"name": "pokeball hit",
-			"indices": []
+			"anim": "hurt",
+			"indices": [],
+			"name": "pokeball hit"
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Snivy/slippery_serpent",
-	"position": [
-		0,
-		400
-	],
+	"position": [0, 400],
 	"healthicon": "snivy",
 	"flip_x": false,
-	"healthbar_colors": [
-		0,
-		255,
-		0
-	],
-	"camera_position": [
-		70,
-		0
-	],
+	"healthbar_colors": [139, 218, 54],
+	"camera_position": [70, 0],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1,
+	"_editor_isPlayer": false
 }

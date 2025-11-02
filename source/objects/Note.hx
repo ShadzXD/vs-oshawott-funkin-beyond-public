@@ -225,6 +225,11 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
+					// note colors
+					rgbShader.r = 0xFF00C8FF;
+					rgbShader.g = 0xFFCFEBF3;
+					rgbShader.b = 0xFF2366B8;
+
 			}
 			if (value != null && value.length > 1) NoteTypesConfig.applyNoteTypeData(this, value);
 			if (hitsound != 'hitsound' && hitsoundVolume > 0) Paths.sound(hitsound); //precache new sound for being idiot-proof
@@ -239,7 +244,7 @@ class Note extends FlxSprite
 
 		animation = new PsychAnimationController(this);
 
-		antialiasing = ClientPrefs.data.antialiasing;
+		antialiasing = false;
 		if(createdFrom == null) createdFrom = PlayState.instance;
 
 		if (prevNote == null)
@@ -391,7 +396,7 @@ class Note extends FlxSprite
 				loadGraphic(graphic, true, Math.floor(graphic.width / 4), Math.floor(graphic.height / 2));
 				originalHeight = graphic.height / 2;
 			} else {
-				var graphic = Paths.image('pixelUI/' + skinPixel + skinPostfix);
+				var graphic = Paths.image('pixelUI/noteSkins/NOTE_assets' + skinPostfix);
 				loadGraphic(graphic, true, Math.floor(graphic.width / 4), Math.floor(graphic.height / 5));
 			}
 			setGraphicSize(Std.int(width * PlayState.daPixelZoom));

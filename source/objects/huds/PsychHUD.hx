@@ -37,7 +37,7 @@ class PsychHUD extends MainHUD
 		healthBar.leftToRight = false;
 		healthBar.scrollFactor.set();
 		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
-		reloadHealthBarColors();
+		healthBar.setColors(FlxColor.RED, FlxColor.LIME);
 		add(healthBar);
 
 		iconP1 = new HealthIcon(PlayState.instance.boyfriend.healthIcon, true);
@@ -50,7 +50,7 @@ class PsychHUD extends MainHUD
 		iconP2.alpha = ClientPrefs.data.healthBarAlpha;
 		add(iconP2);
 
-		scoreText = new FlxText(0, healthBar.y + 60, FlxG.width, "", 20);
+		scoreText = new FlxText(0, healthBar.y + 55, FlxG.width, "", 20);
 		scoreText.setFormat(Paths.font(hudFont), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreText.scrollFactor.set();
 		scoreText.borderSize = 1.25;
@@ -84,9 +84,8 @@ class PsychHUD extends MainHUD
 	{
 		// Rating Name
 		if(PlayState.instance.totalPlayed != 0) //Prevent divide by 0
-		{
 		recalculateRating(percent);
-		}
+		
 		var str:String = ratingName;
 
 		var percent:Float = CoolUtil.floorDecimal(percent * 100, 2);
@@ -95,8 +94,8 @@ class PsychHUD extends MainHUD
 		// "tempScore" variable is used to prevent another memory leak, just in case
 		// "\n" here prevents the text from being cut off by beat zooms
 		var tempScore:String = 'Score: ${FlxStringUtil.formatMoney(score, false, true)}'
-		+ (' | Misses: ${misses}')
-		+ ' | Rating: ${str}';
+		+ (' // Misses: ${misses}')
+		+ ' // Rating: ${str}';
 	
 		 scoreText.text = tempScore;
 	}
@@ -137,10 +136,6 @@ class PsychHUD extends MainHUD
 		iconP2.updateHitbox();
 
     }
-    override public function reloadHealthBarColors() {
-		healthBar.setColors(FlxColor.fromRGB(PlayState.instance.dad.healthColorArray[0], PlayState.instance.dad.healthColorArray[1], PlayState.instance.dad.healthColorArray[2]),
-		FlxColor.fromRGB(PlayState.instance.boyfriend.healthColorArray[0], PlayState.instance.boyfriend.healthColorArray[1], PlayState.instance.boyfriend.healthColorArray[2]));
-	}
 
 	override function startSong()
 	{

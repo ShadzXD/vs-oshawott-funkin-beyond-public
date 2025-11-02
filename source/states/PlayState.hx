@@ -499,7 +499,6 @@ class PlayState extends MusicBeatState
 		add(grpHoldSplashes);
 
 		Conductor.songPosition = -Conductor.crochet * 5 + Conductor.offset;
-		var showTime:Bool = (ClientPrefs.data.timeBarType != 'Disabled');
 		
 		noteGroup.add(strumLineNotes);
 
