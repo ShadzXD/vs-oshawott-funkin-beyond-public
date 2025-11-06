@@ -25,6 +25,8 @@ class MainHUD extends FlxGroup
 
 	//disables health, if not needed
 	public var useHealth:Bool = true;
+	//GROUP THE ICONS!
+	public var iconGroup:FlxTypedGroup<HealthIcon>;
 
 	public var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], //From 0% to 19%

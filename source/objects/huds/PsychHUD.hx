@@ -16,6 +16,11 @@ class PsychHUD extends MainHUD
     var healthLerp:Float = 1;
 	var iconOffset:Int = 26;
 	var ratingName:String = '?';
+	final IDLE_ICON_VALUE = 0;
+	final LOSING_ICON_VALUE = 1; 
+	final WINNING_ICON_VALUE = 2;
+	final ALLY_ICON_OFFSET = 60;
+	final ENEMY_ICON_OFFSET = 40;
 
 	public function new()
     {
@@ -40,15 +45,17 @@ class PsychHUD extends MainHUD
 		healthBar.setColors(FlxColor.RED, FlxColor.LIME);
 		add(healthBar);
 
+		iconGroup = new FlxTypedGroup<HealthIcon>();
+		add(iconGroup);
 		iconP1 = new HealthIcon(PlayState.instance.boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 63;
 		iconP1.alpha = ClientPrefs.data.healthBarAlpha;
-		add(iconP1);
+		iconGroup.add(iconP1);
 
 		iconP2 = new HealthIcon(PlayState.instance.dad.healthIcon, false);
 		iconP2.y = healthBar.y - 63;
 		iconP2.alpha = ClientPrefs.data.healthBarAlpha;
-		add(iconP2);
+		iconGroup.add(iconP2);
 
 		scoreText = new FlxText(0, healthBar.y + 55, FlxG.width, "", 20);
 		scoreText.setFormat(Paths.font(hudFont), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -62,20 +69,30 @@ class PsychHUD extends MainHUD
 
     override function update(elapsed:Float)
     {
-		//TODO: PUT THE ICONS IN A GROUP!
-        var mult:Float = FlxMath.lerp(1, iconP1.scale.x, Math.exp(-elapsed * 5));
-		iconP1.scale.set(mult, mult);
-
-		var mult:Float = FlxMath.lerp(1, iconP2.scale.x, Math.exp(-elapsed * 5));
-		iconP2.scale.set(mult, mult);
-
-		iconP1.x = healthBar.barCenter + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
-		iconP2.x = healthBar.barCenter - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
 		var newPercent:Null<Float> = FlxMath.remapToRange(FlxMath.bound(healthBar.valueFunction(), healthBar.bounds.min, healthBar.bounds.max), healthBar.bounds.min, healthBar.bounds.max, 0, 100);
 		healthBar.percent = (newPercent != null ? newPercent : 0);
-		iconP1.animation.curAnim.curFrame = (healthBar.percent < 20) ? 1 : (healthBar.percent > 80) ? 2 : 0; //If health is under 20%, change player icon to frame 1 (losing icon), otherwise, frame 0 (normal)
-		iconP2.animation.curAnim.curFrame = (healthBar.percent > 80) ? 1 : (healthBar.percent < 20) ? 2: 0; //If health is over 80%, change opponent icon to frame 1 (losing icon), otherwise, frame 0 (normal)
+		for(obj in iconGroup)
+		{
+			var mult:Float =  FlxMath.lerp(1, iconP1.scale.x, Math.exp(-elapsed * 5));
+			obj.scale.set(mult, mult);
+			obj.updateHitbox();
 
+			if(obj.isPlayer)
+			{
+				obj.x = (healthBar.barCenter + (150 * obj.scale.x - 150) / 2 - (obj.isAlly ? iconOffset - ALLY_ICON_OFFSET : iconOffset));
+
+				obj.animation.curAnim.curFrame = (healthBar.percent < 20) ? LOSING_ICON_VALUE :
+				(healthBar.percent > 80) ? WINNING_ICON_VALUE : 
+				IDLE_ICON_VALUE;
+			}
+			else
+			{
+				obj.x = healthBar.barCenter - (150 * obj.scale.x) / 2 - (obj.isAlly ? iconOffset + ENEMY_ICON_OFFSET : iconOffset) * 2;
+				obj.animation.curAnim.curFrame = (healthBar.percent > 80) ? LOSING_ICON_VALUE : 
+				(healthBar.percent < 20) ? WINNING_ICON_VALUE : 
+				IDLE_ICON_VALUE;
+			}
+		}
 		timeTxt.text = FlxStringUtil.formatTime(songSeconds, false) + ' // ' + FlxStringUtil.formatTime(songLength, false);
     }
 
@@ -129,11 +146,12 @@ class PsychHUD extends MainHUD
     
 	override function beatHit()
 	{
-		iconP1.scale.set(1.1, 1.1);
-		iconP2.scale.set(1.1, 1.1);
-
-		iconP1.updateHitbox();
-		iconP2.updateHitbox();
+		for(icon in iconGroup)
+		{
+			icon.scale.set(1.1, 1.1);
+			icon.updateHitbox();
+		}
+	
 
     }
 

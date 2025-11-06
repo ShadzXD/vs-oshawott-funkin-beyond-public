@@ -3,8 +3,9 @@ package objects;
 class HealthIcon extends FlxSprite
 {
 	public var sprTracker:FlxSprite;
-	private var isPlayer:Bool = false;
+	public var isPlayer:Bool = false;
 	private var char:String = '';
+	public var isAlly:Bool = false;
 
 	public function new(char:String = 'face', isPlayer:Bool = false, ?allowGPU:Bool = true)
 	{
