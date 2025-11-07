@@ -470,7 +470,6 @@ class PlayState extends MusicBeatState
 		startCharacterScripts(boyfriend.curCharacter);
 		#end
 		var type:String = 'OSHA';
-
 		switch(songName)
 		{
 			case 'cocoon':
@@ -605,13 +604,13 @@ class PlayState extends MusicBeatState
 		if(eventNotes.length < 1) checkEventNote();
 	}
 	/**
-	 * Function which switches out the note skin mid song.
-	 * @param skin 
+	 * Function which switches out the note skin mid-song.
+	 * @param _skin 
 	 */
-	public function changeNoteSkin(skin:String)
+	public function changeNoteSkin(_skin:String)
 	{
 		strumLineNotes.forEachAlive(function(note:StrumNote) {
-			note.texture = 'notes/noteSkins/$skin'; //Load texture and anims
+			note.texture = 'notes/noteSkins/$_skin'; //Load texture and anims
 			note.reloadNote();
 			note.centerOffsets();
 			note.centerOrigin();
@@ -621,7 +620,7 @@ class PlayState extends MusicBeatState
 		{
 			if(note != null)
 			{
-				note.reloadNote('notes/noteSkins/$skin');
+				note.reloadNote('notes/noteSkins/$_skin');
 				note.rgbShader.enabled = true;
 			}	
 		}
@@ -630,7 +629,7 @@ class PlayState extends MusicBeatState
 	/**
 	 * Switch HUD Function.
 	 * Currently only works with Asperita
-	 */
+	*/
 	public function switchUIType()
 	{
 		//todo: make this actually good
@@ -2269,7 +2268,18 @@ class PlayState extends MusicBeatState
 
 			case 'Play Sound':
 				if(flValue2 == null) flValue2 = 1;
-				FlxG.sound.play(Paths.sound(value1), flValue2);
+				FlxG.sound.play(Paths.sound(value1), flValue2);	
+			case 'Alpha Tween Cam':
+					//tween
+					FlxTween.tween(camHUD, {alpha: 1}, flValue1,  {ease: FlxEase.quartInOut});	
+			case 'Add Icon':
+				var iconIsPlayer:Bool = value2 == 'yes' ? true : false; 
+				var newIcon:HealthIcon = new HealthIcon(value1,iconIsPlayer);
+				newIcon.y = hudClass.healthBar.y - 120;
+				newIcon.updateHitbox();
+				
+				newIcon.isAlly = true;
+				hudClass.iconGroup.add(newIcon);
 		}
 
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
