@@ -81,14 +81,16 @@ class PsychHUD extends MainHUD
 			{
 				obj.x = (healthBar.barCenter + (150 * obj.scale.x - 150) / 2 - (obj.isAlly ? iconOffset - ALLY_ICON_OFFSET : iconOffset));
 
-				obj.animation.curAnim.curFrame = (healthBar.percent < 20) ? LOSING_ICON_VALUE :
+				obj.animation.curAnim.curFrame = 
+				(healthBar.percent < 20) ? LOSING_ICON_VALUE :
 				(healthBar.percent > 80) ? WINNING_ICON_VALUE : 
 				IDLE_ICON_VALUE;
 			}
 			else
 			{
 				obj.x = healthBar.barCenter - (150 * obj.scale.x) / 2 - (obj.isAlly ? iconOffset + ENEMY_ICON_OFFSET : iconOffset) * 2;
-				obj.animation.curAnim.curFrame = (healthBar.percent > 80) ? LOSING_ICON_VALUE : 
+				obj.animation.curAnim.curFrame = 
+				(healthBar.percent > 80) ? LOSING_ICON_VALUE : 
 				(healthBar.percent < 20) ? WINNING_ICON_VALUE : 
 				IDLE_ICON_VALUE;
 			}
