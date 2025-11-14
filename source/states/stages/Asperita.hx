@@ -1,10 +1,7 @@
 package states.stages;
 
 import shaders.AdjustColorShader;
-import openfl.filters.ShaderFilter;
-import flixel.addons.display.FlxRuntimeShader;
-import objects.Bar;
-import flixel.util.FlxStringUtil;
+import objects.StrumNote;
 class Asperita extends BaseStage
 {
     var characterShaders:Bool = true;
@@ -126,6 +123,11 @@ class Asperita extends BaseStage
             colorShaderDad.contrast.value = [-23];
 		    colorShaderDad.saturation.value = [0];
         }
+
+        game.strumLineNotes.forEachAlive(function(note:StrumNote) {
+			note.antialiasing = true;
+		});
+	
     }
     override function stepHit()
 	{

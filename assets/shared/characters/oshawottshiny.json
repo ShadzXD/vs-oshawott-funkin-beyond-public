@@ -1,86 +1,62 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [-88, 0],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "idle"
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [-75, -3],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "left"
+			"fps": 24,
+			"name": "left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [-128, 3],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "right"
+			"fps": 24,
+			"name": "right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [-110, -42],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "down"
+			"fps": 24,
+			"name": "down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [-139, 50],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "up"
-		},
-		{
-			"offsets": [-91, 30],
-			"loop": false,
 			"fps": 24,
-			"anim": "giggle",
-			"indices": [],
-			"name": "giggle"
-		},
-		{
-			"offsets": [-108, -94],
-			"loop": false,
-			"fps": 24,
-			"anim": "hurt",
-			"indices": [],
-			"name": "pokeball impact"
-		},
-		{
-			"loop": false,
-			"offsets": [-68, 0],
-			"anim": "attack",
-			"fps": 24,
-			"name": "shell attack",
+			"name": "up",
 			"indices": []
 		},
 		{
+			"offsets": [-111, -7],
 			"loop": false,
-			"offsets": [-116, -10],
+			"fps": 24,
 			"anim": "idle-alt",
-			"fps": 24,
-			"name": "exhausted idle",
-			"indices": []
+			"indices": [],
+			"name": "exhausted idle"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Oshawott/oshawottshiny",
-	"position": [-90, 370],
+	"position": [90, 390],
 	"healthicon": "oshawottshiny",
 	"flip_x": false,
 	"healthbar_colors": [167, 255, 244],
-	"camera_position": [120, -50],
+	"camera_position": [-130, -50],
 	"sing_duration": 6.1,
 	"scale": 1.2,
 	"_editor_isPlayer": false

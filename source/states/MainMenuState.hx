@@ -40,6 +40,7 @@ class MainMenuState extends MusicBeatState
    // System/Discord RPT
    public static var psychEngineVersion:String = '1.0.4';
    var came:Bool = false; //yeah, my pants... heh.
+   //fuck off
    public function new(?stickers:StickerSubState = null, cameFromTitle:Bool = false)
 	{
 	  if (stickers != null)
@@ -169,7 +170,7 @@ class MainMenuState extends MusicBeatState
                     MusicBeatState.switchState(new FreeplayState());
                     freeplay.loadGraphic(Paths.image('menus/main/free-confirm'));
                 case 3:
-                    MusicBeatState.switchState(new CreditsState());
+                    MusicBeatState.switchState(new CreditState());
                     credits.loadGraphic(Paths.image('menus/main/credits-confirm'));
                 case 4:
                     MusicBeatState.switchState(new GalleryState());

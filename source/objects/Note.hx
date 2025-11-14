@@ -226,9 +226,9 @@ class Note extends FlxSprite
 				case 'GF Sing':
 					gfNote = true;
 					// note colors
-					rgbShader.r = 0xFF00C8FF;
-					rgbShader.g = 0xFFCFEBF3;
-					rgbShader.b = 0xFF2366B8;
+					//rgbShader.r = 0xFF00C8FF;
+					//rgbShader.g = 0xFFCFEBF3;
+					//rgbShader.b = 0xFF2366B8;
 
 			}
 			if (value != null && value.length > 1) NoteTypesConfig.applyNoteTypeData(this, value);

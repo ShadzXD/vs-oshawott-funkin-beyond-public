@@ -445,7 +445,9 @@ class Paths
 		localTrackedAssets.push(file);
 		return currentTrackedSounds.get(file);
 	}
-
+	inline static public function credits(key:String, ?library:String)
+		return getPath('songs/$key.txt', TEXT, library);
+	
 	#if MODS_ALLOWED
 	inline static public function mods(key:String = '')
 		return 'mods/' + key;

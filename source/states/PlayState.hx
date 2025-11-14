@@ -80,19 +80,6 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -271.5;
 	public var moveValue:Int = 20;
 
-	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], //From 0% to 19%
-		['Shit', 0.4], //From 20% to 39%
-		['Bad', 0.5], //From 40% to 49%
-		['Bruh', 0.6], //From 50% to 59%
-		['Meh', 0.69], //From 60% to 68%
-		['Nice', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['Great', 0.9], //From 80% to 89%
-		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
-	];
-
 	//event variables
 	private var isCameraOnForcedPos:Bool = false;
 
@@ -268,7 +255,9 @@ class PlayState extends MusicBeatState
 	var useHealth:Bool = true;
 	var camMoveTween:FlxTween;
 	var camOffsetNoteHit:FlxPoint;
-
+	var hasOpponentVocals:Bool = false;
+	var songCard:FlxText;
+	var composerCard:FlxText;
 	override public function create()
 	{
 		trace(storyWeek);
@@ -469,6 +458,24 @@ class PlayState extends MusicBeatState
 		startCharacterScripts(dad.curCharacter);
 		startCharacterScripts(boyfriend.curCharacter);
 		#end
+
+		// Song card for opening
+
+		//todo: put this in a class
+		songCard = new FlxText(-1350, 0, 500, SONG.song);
+		songCard.setFormat(Paths.font("PokemonGB.ttf"), 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		songCard.borderSize = 2;
+		songCard.cameras = [camOther];
+		songCard.screenCenter(Y);
+		add(songCard);
+	   
+		composerCard = new FlxText(-1350, (songCard.text.length  < 19 ?  songCard.y + 50 : songCard.y + 100), 500);
+		composerCard.setFormat(Paths.font("PokemonGB.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		composerCard.borderSize = 2;
+		composerCard.text = "--" + backend.SongInfo.ReturnComposerInfo(SONG.song) + "--";
+		composerCard.cameras = [camOther];
+		add(composerCard);
+
 		var type:String = 'OSHA';
 		switch(songName)
 		{
@@ -614,6 +621,7 @@ class PlayState extends MusicBeatState
 			note.reloadNote();
 			note.centerOffsets();
 			note.centerOrigin();
+			note.antialiasing = false;
 		});
 	
 		for (note in unspawnNotes)
@@ -1214,6 +1222,7 @@ class PlayState extends MusicBeatState
 		#if FLX_PITCH FlxG.sound.music.pitch = playbackRate; #end
 		FlxG.sound.music.onComplete = finishSong.bind();
 		vocals.play();
+		if(hasOpponentVocals)
 		opponentVocals.play();
 
 		setSongTime(Math.max(0, startOnTime - 500) + Conductor.offset);
@@ -1223,7 +1232,8 @@ class PlayState extends MusicBeatState
 			//trace('Oopsie doopsie! Paused sound');
 			FlxG.sound.music.pause();
 			vocals.pause();
-			opponentVocals.pause();
+			if(hasOpponentVocals)
+			opponentVocals.pause();		
 		}
 
 		stagesFunc(function(stage:BaseStage) stage.startSong());
@@ -1237,6 +1247,9 @@ class PlayState extends MusicBeatState
 		// Updating Discord Rich Presence (with Time Left)
 		if(autoUpdateRPC) DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", 'oshawott', true, songLength);
 		#end
+		FlxTween.tween(songCard, { x: 400}, 1.5, {ease: FlxEase.circOut});	
+		FlxTween.tween(composerCard, { x: 400}, 1.5, {ease: FlxEase.circOut});	
+
 		setOnScripts('songLength', songLength);
 		callOnScripts('onSongStart');
 	}
@@ -1273,7 +1286,11 @@ class PlayState extends MusicBeatState
 				vocals.loadEmbedded(playerVocals != null ? playerVocals : Paths.voices(songData.song));
 				
 				var oppVocals = Paths.voices(songData.song, (dad.vocalsFile == null || dad.vocalsFile.length < 1) ? 'Opponent' : dad.vocalsFile);
-				if(oppVocals != null && oppVocals.length > 0) opponentVocals.loadEmbedded(oppVocals);
+				if(oppVocals != null && oppVocals.length > 0)
+				{
+					opponentVocals.loadEmbedded(oppVocals);
+					hasOpponentVocals = true;
+				} 			
 			}
 		}
 		catch (e:Dynamic) {}
@@ -1624,7 +1641,9 @@ class PlayState extends MusicBeatState
 		#if FLX_PITCH FlxG.sound.music.pitch = playbackRate; #end
 		Conductor.songPosition = FlxG.sound.music.time + Conductor.offset;
 
-		var checkVocals = [vocals, opponentVocals];
+		var checkVocals;
+		if(hasOpponentVocals) checkVocals = [vocals, opponentVocals];
+		else checkVocals = [vocals];		
 		for (voc in checkVocals)
 		{
 			if (FlxG.sound.music.time < vocals.length)
@@ -2849,7 +2868,7 @@ class PlayState extends MusicBeatState
 
 		if(!note.hitCausesMiss) //Common notes
 		{
-			if(combo == 50 && gf != null && gf.hasAnimation('cheer'))
+			if(combo == 50 && gf != null && gf.hasAnimation('cheer') && !note.isSustainNote)
 			{
 				gf.playAnim('cheer');
 				gf.specialAnim = true;
@@ -3071,6 +3090,11 @@ class PlayState extends MusicBeatState
 
 	override function beatHit()
 	{
+		if(curBeat == 8)
+		{
+			FlxTween.tween(songCard, { x: 1400}, 1.6, {ease: FlxEase.circIn});
+			FlxTween.tween(composerCard, { x: 1400}, 1.6, {ease: FlxEase.circIn});
+		} 
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);
 			return;
@@ -3084,6 +3108,8 @@ class PlayState extends MusicBeatState
 
 		super.beatHit();
 		lastBeatHit = curBeat;
+
+
 
 		setOnScripts('curBeat', curBeat);
 		callOnScripts('onBeatHit');
