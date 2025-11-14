@@ -140,6 +140,9 @@ class MainMenuState extends MusicBeatState
             {
                 allowInputs = false;
                 FlxG.sound.play(Paths.sound('cancelMenu'));
+                FlxG.sound.music.stop();
+                FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+
                 MusicBeatState.switchState(new TitleState());
             }
             
