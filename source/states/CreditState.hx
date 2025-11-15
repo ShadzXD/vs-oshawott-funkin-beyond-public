@@ -75,7 +75,7 @@ class CreditState extends MusicBeatState
         quote = new FlxText(275,525, 500, "");
         quote.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, CENTER);
         add(quote);
-
+        setCreditContent(0);
         super.create();
     }
 
@@ -94,7 +94,7 @@ class CreditState extends MusicBeatState
 
     override public function update(elapsed: Float): Void {
         super.update(elapsed);
-        setCreditContent(currentIndex);
+        //setCreditContent(currentIndex);
         if (name == null) {
             currentIndex = (currentIndex + 1) % CreditData.length;
             setCreditContent(currentIndex);
