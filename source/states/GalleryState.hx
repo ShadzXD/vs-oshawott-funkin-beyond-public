@@ -135,9 +135,10 @@ class GalleryState extends MusicBeatState
             backspace.animation.play('backspace to exit');
             FlxG.sound.playMusic(Paths.music('mainmenu'));
         }
-    
+        /*
         if (controls.ACCEPT && allowInputs)
             CoolUtil.browserLoad(linkOpen[currentIndex]);
+        */
     }
     
     private function changeSelection(i:Int = 0)

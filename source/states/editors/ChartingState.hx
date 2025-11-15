@@ -85,7 +85,8 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 		['Change Scroll Speed', "Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"],
 		['Play Sound', "Value 1: Sound file name\nValue 2: Volume (Default: 1), ranges from 0 to 1"],
-		['Add Icon', "Value 1: Icon Name"]
+		['Add Icon', "Value 1: Icon Name"],
+		['Play Video', "Value 1: Video Name"]
 
 	];
 	

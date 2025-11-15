@@ -250,14 +250,23 @@ class PlayState extends MusicBeatState
 
 	private static var _lastLoadedModDirectory:String = '';
 	public static var nextReloadAll:Bool = false;
+
 	var comboClass:PopUpStuff;
 	public var hudClass:MainHUD;
+	
 	var useHealth:Bool = true;
 	var camMoveTween:FlxTween;
+
 	var camOffsetNoteHit:FlxPoint;
 	var hasOpponentVocals:Bool = false;
+
 	var songCard:FlxText;
 	var composerCard:FlxText;
+
+	var iconSkid:HealthIcon;
+	var iconPump:HealthIcon;
+
+	private var preloadedVideoAtLeastOnce:Bool = false;
 	override public function create()
 	{
 		trace(storyWeek);
@@ -495,6 +504,7 @@ class PlayState extends MusicBeatState
 			default:
 				hudClass = new PsychHUD();
 		}
+		
 		hudClass.cameras = [camHUD];
 		hudClass.visible = !ClientPrefs.data.hideHud;
 		useHealth = hudClass.useHealth;
@@ -601,7 +611,28 @@ class PlayState extends MusicBeatState
 		var splash:SustainSplash = new SustainSplash();
 		grpHoldSplashes.add(splash);
 		splash.alpha = 0.0001;
+		switch (songName) {
+			case 'asperita':
+				if (isStoryMode) {
+					FlxG.save.data.playedAsperita = true;
+					FlxG.save.flush();
+				}
+			case 'stumped':
+				hudClass.iconP1.active = false;
+				hudClass.iconP1.visible = false;
 
+				iconSkid = new HealthIcon(boyfriend.healthIcon, true);
+				iconSkid.y = hudClass.healthBar.y - 70;
+				iconSkid.scale.set(0.9,0.9);
+				hudClass.iconGroup.add(iconSkid);
+
+				iconPump = new HealthIcon(gf.healthIcon, true);
+				iconPump.y = iconSkid.y - 30;
+				iconPump.isAlly = true;
+				iconPump.scale.set(0.9,0.9);
+				iconPump.angle = 20;
+				hudClass.iconGroup.add(iconPump);
+		}
 		super.create();
 		Paths.clearUnusedMemory();
 
@@ -1481,6 +1512,27 @@ class PlayState extends MusicBeatState
 
 			case 'Play Sound':
 				Paths.sound(event.value1); //Precache sound
+
+			case 'Ashtump Jumpscare':
+				Paths.image('backgrounds/stumped/ashtump'); //Precache image
+
+			case 'Play Video':
+		
+			if(!preloadedVideoAtLeastOnce)
+			{
+				preloadedVideoAtLeastOnce = true;
+				videoCutscene = new VideoSprite(Paths.video('precache'), false, false, false);
+   			 	videoCutscene.alpha = 0.001;
+    			add(videoCutscene);
+			}
+				#if hxvlc
+				videoCutscene.play();
+				startVideo(event.value1, true, false, false, false);
+				trace('pre-loaded ' +  event.value1);
+				#end
+
+
+
 		}
 		stagesFunc(function(stage:BaseStage) stage.eventPushedUnique(event));
 	}
@@ -1887,7 +1939,12 @@ class PlayState extends MusicBeatState
 					note.resetAnim = 0;
 				}
 		}
+
+		#if VIDEOS_ALLOWED
+		videoCutscene?.pause();
+		#end
 		openSubState(new PauseSubState());
+	
 
 		#if DISCORD_ALLOWED
 		if(autoUpdateRPC) DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", 'oshawott');
@@ -2299,6 +2356,17 @@ class PlayState extends MusicBeatState
 				
 				newIcon.isAlly = true;
 				hudClass.iconGroup.add(newIcon);
+			case 'Ashtump Jumpscare':
+				var	ashtumpJumpscare:FlxSprite = new FlxSprite().loadGraphic(Paths.image('backgrounds/stumped/ashtump'));
+				ashtumpJumpscare.screenCenter();
+				ashtumpJumpscare.cameras = [camHUD];
+				ashtumpJumpscare.updateHitbox();
+				add(ashtumpJumpscare);
+				FlxTween.tween(ashtumpJumpscare, {alpha: 0}, flValue2, {ease: FlxEase.quartInOut});
+			
+			case 'Play Video':
+				FlxG.log.add('called video');
+				startVideo(value1, true, false, false, true);
 		}
 
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
@@ -2782,8 +2850,8 @@ class PlayState extends MusicBeatState
 			if(note != null) postfix = note.animSuffix;
 
 			var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length-1, direction)))] + 'miss' + postfix;
-			char.playAnim(animToPlay, true);
-
+			if(!note.isSustainNote)char.playAnim(animToPlay, true);
+			char.holdTimer = 0;
 			if(char != gf && lastCombo > 5 && gf != null && gf.hasAnimation('sad'))
 			{
 				gf.playAnim('sad');
@@ -2825,7 +2893,7 @@ class PlayState extends MusicBeatState
 					if(char.getAnimationName() == holdAnim || char.getAnimationName() == holdAnim + '-loop') canPlay = false;
 				}
 
-				if(canPlay) char.playAnim(animToPlay, true);
+				if(canPlay && !note.isSustainNote) char.playAnim(animToPlay, true);
 				char.holdTimer = 0;
 			}
 		}
@@ -2895,7 +2963,7 @@ class PlayState extends MusicBeatState
 						if(char.getAnimationName() == holdAnim || char.getAnimationName() == holdAnim + '-loop') canPlay = false;
 					}
 	
-					if(canPlay) char.playAnim(animToPlay, true);
+					if(canPlay && !note.isSustainNote) char.playAnim(animToPlay, true);
 					char.holdTimer = 0;
 
 					if(note.noteType == 'Hey!')

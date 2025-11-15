@@ -153,22 +153,21 @@ class MainMenuState extends MusicBeatState
                 switch (selectedItem) {
                 case 1:
                     if (FlxG.save.data.playedAsperita != null)
-                        {
-                            MusicBeatState.switchState(new StoryMenuState());
-
-                            storymode.loadGraphic(Paths.image('menus/main/story-confirm'));
-                        }
-                        else
-                        {
-                            PlayState.isStoryMode = true;
-                            WeekData.reloadWeekFiles(true);
-                            PlayState.storyPlaylist = ['Asperita'];
-                            PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase(), PlayState.storyPlaylist[0].toLowerCase());
-                            PlayState.campaignScore = 0;
-                            PlayState.storyWeek = 0; //should prevent a crash ????
-                            PlayState.campaignMisses = 0;
+                    {
+                        MusicBeatState.switchState(new StoryMenuState());
+                        storymode.loadGraphic(Paths.image('menus/main/story-confirm'));
+                    }
+                    else
+                    {
+                        PlayState.isStoryMode = true;
+                        WeekData.reloadWeekFiles(true);
+                        PlayState.storyPlaylist = ['Asperita'];
+                        PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase(), PlayState.storyPlaylist[0].toLowerCase());
+                        PlayState.campaignScore = 0;
+                        PlayState.storyWeek = 0; //should prevent a crash ????
+                        PlayState.campaignMisses = 0;
                             LoadingState.loadAndSwitchState(new PlayState(), true);
-                        }
+                    }
                 case 2:
                     MusicBeatState.switchState(new FreeplayState());
                     freeplay.loadGraphic(Paths.image('menus/main/free-confirm'));
