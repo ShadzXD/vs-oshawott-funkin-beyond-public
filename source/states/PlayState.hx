@@ -253,7 +253,7 @@ class PlayState extends MusicBeatState
 
 	var comboClass:PopUpStuff;
 	public var hudClass:MainHUD;
-	
+
 	var useHealth:Bool = true;
 	var camMoveTween:FlxTween;
 
@@ -1647,6 +1647,10 @@ class PlayState extends MusicBeatState
 			callOnScripts('onResume');
 			resetRPC(startTimer != null && startTimer.finished);
 		}
+
+		#if VIDEOS_ALLOWED
+		videoCutscene?.resume();
+		#end
 	}
 
 	#if DISCORD_ALLOWED
@@ -2795,13 +2799,13 @@ class PlayState extends MusicBeatState
 			if (daNote != note && daNote.mustPress && daNote.noteData == note.noteData && daNote.isSustainNote == note.isSustainNote && Math.abs(daNote.strumTime - note.strumTime) < 1)
 				invalidateNote(note);
 		});
-
-		noteMissCommon(daNote.noteData, daNote);
 		if(!daNote.isSustainNote)
 		{
-			comboClass.displayCombo(0);
-			comboClass.displayRating('miss');
+			if(combo >= 1)comboClass.displayCombo(0);
+			comboClass.displayMiss();
 		}
+		noteMissCommon(daNote.noteData, daNote);
+		
 
 		stagesFunc(function(stage:BaseStage) stage.noteMiss(daNote));
 		var result:Dynamic = callOnLuas('noteMiss', [notes.members.indexOf(daNote), daNote.noteData, daNote.noteType, daNote.isSustainNote]);

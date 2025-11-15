@@ -15,7 +15,7 @@ class PopUpStuff extends FlxTypedGroup<FlxSprite>
 	var speedRate:Float = 1;
 	var ratingsData:Array<Rating> = Rating.loadDefault();
 	var isBotplay:Bool = false;
-	// Stores Ratings and Combo Sprites in a group
+	private var hasMissRating:Bool = true;
 	override public function new(hud:String, ?fromPlayState:Bool = false, ?botplay:Bool = false)
 	{
 		super();
@@ -58,7 +58,34 @@ class PopUpStuff extends FlxTypedGroup<FlxSprite>
 		
 	
 	}
-
+	public function displayMiss()
+	{
+		if(!hasMissRating) return;
+		var missSpr:FlxSprite = new FlxSprite();
+		missSpr.loadGraphic(Paths.image(uiPrefix + 'miss' + uiSuffix));
+		missSpr.screenCenter();
+		missSpr.x = placement - 40;
+		missSpr.y -= 60;
+		missSpr.acceleration.y = 550 * speedRate * speedRate;
+		missSpr.velocity.y -= FlxG.random.int(140, 175) * speedRate;
+		missSpr.velocity.x -= FlxG.random.int(0, 10) * speedRate;
+		missSpr.x += ClientPrefs.data.comboOffset[0];
+		missSpr.y -= ClientPrefs.data.comboOffset[1];
+		missSpr.antialiasing = antialias;
+		missSpr.setGraphicSize(Std.int(missSpr.width * size));
+		missSpr.updateHitbox();
+		add(missSpr);
+		
+			FlxTween.tween(missSpr, {alpha: 0}, 0.2 / speedRate, {
+			onComplete: function(tween:FlxTween)
+			{
+				missSpr.destroy();
+			},
+			startDelay: Conductor.crochet * 0.001 / speedRate
+		});
+		
+	
+	}
 	public function displayCombo(?combo:Int = 0)
 	{
 		var seperatedScore:Array<Int> = [];
@@ -108,20 +135,23 @@ class PopUpStuff extends FlxTypedGroup<FlxSprite>
 		{
 			case 'FUNKIN':
 			uiPrefix = 'popups/base_game/';
-
+			hasMissRating = false;
 			case 'PIXEL':
 			uiPrefix = 'pixelUI/';
 			uiSuffix = '-pixel';
 			size = 5;
 			antialias = false;
+			hasMissRating = false;
 
 			case 'OSHA':
 			uiPrefix = 'popups/oshawott/';
 			antialias = false;
+			hasMissRating = true;
 
 			case 'COCOON':
 			uiPrefix = 'popups/cocoon/';
 			antialias = false;
+			hasMissRating = true;
 
 		}
 
