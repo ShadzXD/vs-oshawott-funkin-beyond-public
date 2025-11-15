@@ -6,8 +6,7 @@ function onCreate()
 end
 
 function onCreatePost()
-	doTweenColor('dad', 'dad', '#ffb152', 0.001, 'linear')
-	doTweenColor('bf', 'boyfriend', '#ffb152', 0.001, 'linear')
-	doTweenColor('gf', 'gf', '#ffb152', 0.001, 'linear')
-
+	doTweenColor('dad', 'dad', '0xffb46a', 0.001, 'linear')
+	doTweenColor('bf', 'boyfriend', '0xffb46a', 0.001, 'linear')
+	doTweenColor('gf', 'gf', '0xffb46a', 0.001, 'linear')
 end
