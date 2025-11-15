@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="texture.png" width="2357" height="278">
+	<SubTexture name="Bop instÃ¢ncia 10000" x="1810.8" y="0.6" width="545.4" height="249.6" frameX="-42.6" frameY="-11.4" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10001" x="0.6" y="0.6" width="631.1999999999999" height="277.2" frameX="-0" frameY="-0" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10002" x="0.6" y="0.6" width="631.1999999999999" height="277.2" frameX="-0" frameY="-0" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10003" x="634.8" y="0.6" width="588.6" height="265.2" frameX="-21" frameY="-4.2" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10004" x="634.8" y="0.6" width="588.6" height="265.2" frameX="-21" frameY="-4.2" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10005" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10006" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10007" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10008" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10009" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10010" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10011" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10012" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+	<SubTexture name="Bop instÃ¢ncia 10013" x="1226.3999999999999" y="0.6" width="581.4" height="262.2" frameX="-24.599999999999998" frameY="-6" frameWidth="631.1999999999999" frameHeight="277.8"/>
+</TextureAtlas>

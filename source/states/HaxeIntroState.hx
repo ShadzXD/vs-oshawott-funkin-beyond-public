@@ -6,8 +6,9 @@ import flixel.util.FlxTimer;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxTween;
+#if sys
 import Sys;
-
+#end
 class HaxeIntroState extends MusicBeatState
 {
 	public static var leftState:Bool = false;
@@ -22,6 +23,8 @@ class HaxeIntroState extends MusicBeatState
 	override function create()
 	{
 		FlxG.mouse.visible = true;
+
+		Init.setup();
 		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(blackScreen);
 
