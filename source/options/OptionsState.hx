@@ -105,8 +105,8 @@ class OptionsState extends MusicBeatState
 			}
 			else
 			{
-				MusicBeatState.switchState(new MainMenuState());
-				FlxG.sound.playMusic(Paths.music('mainmenu'), 1);
+				MusicBeatState.switchState(new MainMenuState(true));
+				//FlxG.sound.playMusic(Paths.music('mainmenu'), 1);
 			}
 		}
 		else if (controls.ACCEPT) openSelectedSubstate(options[curSelected]);
