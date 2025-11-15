@@ -85,6 +85,7 @@ class FreeplayState extends MusicBeatState
 
       		openSubState(stickerSubState);
       		stickerSubState.degenStickers();
+			FlxG.sound.playMusic(Paths.music('mainmenu'), 1);
     	}
 		#if DISCORD_ALLOWED
 		// Updating Discord Rich Presence
