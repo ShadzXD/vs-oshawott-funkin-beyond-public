@@ -10,9 +10,10 @@ import openfl.events.Event;
 	The FPS class provides an easy-to-use monitor to display
 	the current frame rate of an OpenFL project
 **/
-/*
-	FIXED UP CLASS WRITTEN BY Itz-miles!
-	*/
+/**
+ * FIXED UP CLASS WRITTEN BY Itz-miles!
+*/
+
 class FPSCounter extends TextField
 {
 	/**
@@ -24,7 +25,7 @@ class FPSCounter extends TextField
 
 	public static var updateInterval:Int = 250; // keep this high
 
-	public function new(x:Float = 10, y:Float = 10)
+	public function new(x:Float = 5, y:Float = 5)
 	{
 		super();
 

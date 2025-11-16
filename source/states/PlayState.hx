@@ -57,7 +57,7 @@ import crowplexus.hscript.Printer;
 
 import objects.PopUpStuff;
 import objects.huds.*;
-
+import objects.MidSongCreditText;
 /**
  * This is where all the Gameplay stuff happens and is managed
  *
@@ -250,23 +250,23 @@ class PlayState extends MusicBeatState
 
 	private static var _lastLoadedModDirectory:String = '';
 	public static var nextReloadAll:Bool = false;
-
+	//HUD STUFF
 	var comboClass:PopUpStuff;
 	public var hudClass:MainHUD;
-
 	var useHealth:Bool = true;
+
+	// STUFF FOR CAMERAMOVEMENT ON NOTE HIT
 	var camMoveTween:FlxTween;
-
 	var camOffsetNoteHit:FlxPoint;
+	//STUPID FIX FOR PSYCH
 	var hasOpponentVocals:Bool = false;
-
-	var songCard:FlxText;
-	var composerCard:FlxText;
-
+	//STUMPED HEALTH ICONS
 	var iconSkid:HealthIcon;
 	var iconPump:HealthIcon;
-
+	//CREDIT SONG THING
+	var songCreditGroup:MidSongCreditText;
 	private var preloadedVideoAtLeastOnce:Bool = false;
+	var regularCreditTranstion:Bool = true;
 	override public function create()
 	{
 		trace(storyWeek);
@@ -468,22 +468,9 @@ class PlayState extends MusicBeatState
 		startCharacterScripts(boyfriend.curCharacter);
 		#end
 
-		// Song card for opening
-
-		//todo: put this in a class
-		songCard = new FlxText(-1350, 0, 500, SONG.song);
-		songCard.setFormat(Paths.font("PokemonGB.ttf"), 42, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		songCard.borderSize = 2;
-		songCard.cameras = [camOther];
-		songCard.screenCenter(Y);
-		add(songCard);
-	   
-		composerCard = new FlxText(-1350, (songCard.text.length  < 19 ?  songCard.y + 50 : songCard.y + 100), 500);
-		composerCard.setFormat(Paths.font("PokemonGB.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		composerCard.borderSize = 2;
-		composerCard.text = "--" + backend.SongInfo.ReturnComposerInfo(SONG.song) + "--";
-		composerCard.cameras = [camOther];
-		add(composerCard);
+		songCreditGroup = new MidSongCreditText(-1000, 0, SONG.song, backend.SongInfo.ReturnComposerInfo(SONG.song));
+		songCreditGroup.cameras = [camOther];
+		add(songCreditGroup);
 
 		var type:String = 'OSHA';
 		switch(songName)
@@ -1247,6 +1234,7 @@ class PlayState extends MusicBeatState
 	function startSong():Void
 	{
 		startingSong = false;
+		if(regularCreditTranstion) finishCreditTrans();
 
 		@:privateAccess
 		FlxG.sound.playMusic(inst._sound, 1, false);
@@ -1277,9 +1265,7 @@ class PlayState extends MusicBeatState
 		#if DISCORD_ALLOWED
 		// Updating Discord Rich Presence (with Time Left)
 		if(autoUpdateRPC) DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", 'oshawott', true, songLength);
-		#end
-		FlxTween.tween(songCard, { x: 400}, 1.5, {ease: FlxEase.circOut});	
-		FlxTween.tween(composerCard, { x: 400}, 1.5, {ease: FlxEase.circOut});	
+		#end	
 
 		setOnScripts('songLength', songLength);
 		callOnScripts('onSongStart');
@@ -1530,8 +1516,8 @@ class PlayState extends MusicBeatState
 				startVideo(event.value1, true, false, false, false);
 				trace('pre-loaded ' +  event.value1);
 				#end
-
-
+			case 'Activate Song Credit Tween':
+			regularCreditTranstion = false;
 
 		}
 		stagesFunc(function(stage:BaseStage) stage.eventPushedUnique(event));
@@ -2371,6 +2357,8 @@ class PlayState extends MusicBeatState
 			case 'Play Video':
 				FlxG.log.add('called video');
 				startVideo(value1, true, false, false, true);
+			case 'Activate Song Credit Tween':
+				finishCreditTrans(value1 == 'true' ? false : true);
 		}
 
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
@@ -3158,14 +3146,29 @@ class PlayState extends MusicBeatState
 		callOnScripts('onStepHit');
 	}
 
+	public function finishCreditTrans(isFinishing:Bool = false)
+	{	
+		if(songCreditGroup == null) return;
+		if(isFinishing)
+		{
+			FlxTween.tween(songCreditGroup, { x: 1400}, 1.6, {ease: FlxEase.circIn,
+				onComplete:function(twn:FlxTween)
+				{
+					songCreditGroup.kill();
+					songCreditGroup.destroy();
+				}
+			});
+		}
+		else FlxTween.tween(songCreditGroup, { x: 0}, 1.5, {ease: FlxEase.circOut});	
+
+	}
 	var lastBeatHit:Int = -1;
 
 	override function beatHit()
 	{
-		if(curBeat == 8)
+		if(curBeat == 8 && regularCreditTranstion)
 		{
-			FlxTween.tween(songCard, { x: 1400}, 1.6, {ease: FlxEase.circIn});
-			FlxTween.tween(composerCard, { x: 1400}, 1.6, {ease: FlxEase.circIn});
+			finishCreditTrans(true);
 		} 
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);
@@ -3449,7 +3452,7 @@ class PlayState extends MusicBeatState
 				ratingPercent = Math.min(1, Math.max(0, totalNotesHit / totalPlayed));
 				hudClass.recalculateRating(ratingPercent);
 			}
-			fullComboFunction();
+			//fullComboFunction();
 		}
 
 		if(ClientPrefs.data.scoreZoom && !badHit)hudClass.doScoreBop();

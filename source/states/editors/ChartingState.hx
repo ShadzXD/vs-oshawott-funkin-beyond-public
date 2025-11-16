@@ -86,7 +86,8 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 		['Set Property', "Value 1: Variable name\nValue 2: New value"],
 		['Play Sound', "Value 1: Sound file name\nValue 2: Volume (Default: 1), ranges from 0 to 1"],
 		['Add Icon', "Value 1: Icon Name"],
-		['Play Video', "Value 1: Video Name"]
+		['Play Video', "Value 1: Video Name"],
+		['Activate Song Credit Tween', "Value 1: true if starting, else if ending"]
 
 	];
 	
