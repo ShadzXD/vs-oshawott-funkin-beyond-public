@@ -1511,11 +1511,10 @@ class PlayState extends MusicBeatState
    			 	videoCutscene.alpha = 0.001;
     			add(videoCutscene);
 			}
-				#if hxvlc
+			#if hxvlc
 				videoCutscene.play();
 				startVideo(event.value1, true, false, false, false);
-				trace('pre-loaded ' +  event.value1);
-				#end
+			#end
 			case 'Activate Song Credit Tween':
 			regularCreditTranstion = false;
 
