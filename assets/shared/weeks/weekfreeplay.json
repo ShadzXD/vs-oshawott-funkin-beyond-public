@@ -13,7 +13,7 @@
 	"hideStoryMode": true,
 	"songs": [
 		[
-			"littleroot",
+			"Littleroot",
 			"bf-pixel",
 			[
 				75,
@@ -41,7 +41,7 @@
 			]
 		],
 		[
-			"trifecta",
+			"Trifecta",
 			"fart",
 			[
 				75,
@@ -60,17 +60,7 @@
 			]
 		],
 		[
-			"25 Dola",
-			"pen",
-			[
-				75,
-				113,
-				253
-			],
-			"25-dola"
-		],
-		[
-			"aqua clash",
+			"Aqua Clash",
 			"oshawott",
 			[
 				75,

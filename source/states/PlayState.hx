@@ -58,6 +58,7 @@ import crowplexus.hscript.Printer;
 import objects.PopUpStuff;
 import objects.huds.*;
 import objects.MidSongCreditText;
+import backend.SongMetadata;
 /**
  * This is where all the Gameplay stuff happens and is managed
  *
@@ -267,6 +268,9 @@ class PlayState extends MusicBeatState
 	var songCreditGroup:MidSongCreditText;
 	private var preloadedVideoAtLeastOnce:Bool = false;
 	var regularCreditTranstion:Bool = true;
+
+	//sticker unlock stuff
+	var metadata:SongMetadata;
 	override public function create()
 	{
 		trace(storyWeek);
@@ -341,7 +345,7 @@ class PlayState extends MusicBeatState
 			SONG.stage = StageData.vanillaSongStage(Paths.formatToSongPath(Song.loadedSongName));
 
 		curStage = SONG.stage;
-
+	
 		var stageData:StageFile = StageData.getStageFile(curStage);
 		defaultCamZoom = stageData.defaultZoom;
 
@@ -468,7 +472,10 @@ class PlayState extends MusicBeatState
 		startCharacterScripts(boyfriend.curCharacter);
 		#end
 
-		songCreditGroup = new MidSongCreditText(-1000, 0, SONG.song, backend.SongInfo.ReturnComposerInfo(SONG.song));
+		metadata = new SongMetadata(songName);
+		trace(metadata.stickersToBeUnlocked);
+
+		songCreditGroup = new MidSongCreditText(-1000, 0, SONG.song, metadata.songComposer);
 		songCreditGroup.cameras = [camOther];
 		add(songCreditGroup);
 
@@ -1876,7 +1883,9 @@ class PlayState extends MusicBeatState
 			}
 			checkEventNote();
 		}
-
+		if(FlxG.keys.justPressed.THREE) { //unlock a sticker in debug
+				unlockSticker();
+		}
 		#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
@@ -2479,13 +2488,13 @@ class PlayState extends MusicBeatState
 			Highscore.saveScore(Song.loadedSongName, songScore, storyDifficulty, percent);
 			#end
 			playbackRate = 1;
+			unlockSticker();
 
 			if (chartingMode)
 			{
 				openChartEditor();
 				return false;
 			}
-
 			if (isStoryMode)
 			{
 				campaignScore += songScore;
@@ -2556,6 +2565,33 @@ class PlayState extends MusicBeatState
 		}
 		unspawnNotes = [];
 		eventNotes = [];
+	}
+	var alreadyUnlockedSticker:Bool = false;
+	function unlockSticker()
+	{
+		if(metadata.stickersToBeUnlocked == null || alreadyUnlockedSticker) return;
+		trace(FlxG.save.data.stickersUnlocked);
+	
+		/**
+		 * Double For loop to check for each variable in each array.
+		 * Theres probably an easier way to do this but whatev.
+		 */
+		for (i in 0...FlxG.save.data.stickersUnlocked.length) 
+		{
+			for (j in 0...metadata.stickersToBeUnlocked.length) 
+			{
+				if(FlxG.save.data.stickersUnlocked[i] == metadata.stickersToBeUnlocked[j])
+				{
+					alreadyUnlockedSticker = true;
+					return;
+				} 
+			}
+		}
+		for (i in 0...metadata.stickersToBeUnlocked.length)
+		FlxG.save.data.stickersUnlocked.push(metadata.stickersToBeUnlocked[i]);
+		alreadyUnlockedSticker = true;
+
+		trace('UNLOCKED STICKER ' + metadata.stickersToBeUnlocked);
 	}
 
 	public var totalPlayed:Int = 0;

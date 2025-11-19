@@ -145,9 +145,9 @@ class StickerSubState extends MusicBeatSubstate
 
     var stickerInfo:StickerInfo = new StickerInfo('stickers-set-1');
     var stickers:Map<String, Array<String>> = new Map<String, Array<String>>();
-    for (stickerSets in stickerInfo.getPack("all"))
-    {
-      stickers.set(stickerSets, stickerInfo.getStickers(stickerSets));
+    for (i in 0...FlxG.save.data.stickersUnlocked.length) //save data based stickers
+    {		
+      stickers.set(FlxG.save.data.stickersUnlocked[i], stickerInfo.getStickers(FlxG.save.data.stickersUnlocked[i]));
     }
 
     var xPos:Float = -100;

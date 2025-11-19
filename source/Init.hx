@@ -29,7 +29,6 @@ class Init
 			FlxG.fullscreen = FlxG.save.data.fullscreen;
 		}
 
-
 		ClientPrefs.loadPrefs();
 		Highscore.load();
 		Language.reloadPhrases();
@@ -38,7 +37,10 @@ class Init
 		{
 			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
 		}
+		if(FlxG.save.data.stickersUnlocked == null) FlxG.save.data.stickersUnlocked = ['bf', 'gf'];
 
-		FlxG.mouse.visible = false;
+		trace(FlxG.save.data.stickersUnlocked);
+
+		//FlxG.mouse.visible = true;
     }
 }
