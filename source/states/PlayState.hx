@@ -714,7 +714,7 @@ class PlayState extends MusicBeatState
 		Conductor.offset = Reflect.hasField(PlayState.SONG, 'offset') ? (PlayState.SONG.offset / value) : 0;
 		Conductor.safeZoneOffset = (ClientPrefs.data.safeFrames / 60) * 1000 * value;
 		#if VIDEOS_ALLOWED
-		if(videoCutscene != null && videoCutscene.videoSprite != null) videoCutscene.videoSprite.bitmap.rate = value;
+		//?????if(videoCutscene != null && videoCutscene.videoSprite != null) videoCutscene.videoSprite.bitmap.rate = value;
 		#end
 		setOnScripts('playbackRate', playbackRate);
 		#else
@@ -1883,9 +1883,7 @@ class PlayState extends MusicBeatState
 			}
 			checkEventNote();
 		}
-		if(FlxG.keys.justPressed.THREE) { //unlock a sticker in debug
-				unlockSticker();
-		}
+		
 		#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
@@ -1895,6 +1893,9 @@ class PlayState extends MusicBeatState
 			if(FlxG.keys.justPressed.TWO) { //Go 10 seconds into the future :O
 				setSongTime(Conductor.songPosition + 10000);
 				clearNotesBefore(Conductor.songPosition);
+			}
+			if(FlxG.keys.justPressed.THREE) { //unlock a sticker in debug
+				unlockSticker();
 			}
 		}
 		#end
