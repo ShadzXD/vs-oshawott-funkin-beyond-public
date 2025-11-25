@@ -91,11 +91,32 @@
         "link": "https://flezard.dev/"
     },
     {
-        "path": "tinkatonk",
-        "name": "TINKATONK",
-        "quote": "WHO'S THAT POKEMON? It's my dick!\nI was responsible for a lot of the source code work for this mod. Really fun team.",
+        "path": "Goose",
+        "name": "CatOnAKeyboard_",
+        "quote": "placeholder something hating staw",
+        "description": "Musician",
+        "link": "https://x.com/CatOnAKeyboard_"
+    },
+    {
+        "path": "Dylan",
+        "name": "DagaiTai",
+        "quote": "placeholder quote hey shawty",
+        "description": "Artist\nHuzz",
+        "link": "https://dagaitai.carrd.co/"
+    },
+    {
+        "path": "zhynn",
+        "name": "Jester",
+        "quote": "The One who started the mod with me!",
+        "description": "Artist",
+        "link": "https://x.com/Zyhapo"
+    },
+    {
+        "path": "Kiru",
+        "name": "Kiru",
+        "quote": "uuh... ough..... uhmm...",
         "description": "Ex-Lead Source Progammer",
-        "link": "https://squidbowl.carrd.co/"
+        "link": "https://x.com/Kiru_nuvem"
     }
 ]
    
