@@ -2,7 +2,7 @@
     {
         "path": "owen",
         "name": "OwenTheMC",
-        "quote": "Thanks For Playing The Mod. we spent two years on this mod and I hope you enjoyed it. Please check out everyone here, They are All Super Talented",
+        "quote": "Hey! Thanks For Playing The Mod. Me and my friends spent two years on this mod and I hope you enjoyed it. Please check out everyone on the team. They are All Super Talented",
         "description": "Director\nMusician\nVA",
         "link": "https://twitter.com/OwenTheMC"
     },
@@ -14,6 +14,34 @@
         "link": "https://twitter.com/CeloTwiiter"
     },
     {
+        "path": "FrenchOtter",
+        "name": "FrenchOtter",
+        "quote": "poop farticus idk placeholder",
+        "description": "Co-Director\nLead Artist\nAnimator",
+        "link": "https://www.youtube.com/@frenchotter"
+    },
+    {
+        "path": "sercadz",
+        "name": "Shannels",
+        "quote": "La batalla ya ha empezado en un mundo muy cuadrado",
+        "description": "Co-Director\nMusician\nCharter",
+        "link": "https://www.youtube.com/channel/UChMbhLcdM7Ju-GQb5WwLqvg"
+    },
+    {
+        "path": "Shadz",
+        "name": "Shadz",
+        "quote": "placeholder quote",
+        "description": "Co-Director\nLead Source Progammer",
+        "link": "https://x.com/ShadzDX"
+    },
+    {
+        "path": "rowlie",
+        "name": "Rowlie",
+        "quote": "rowlet is better!!! i had a rowlet once called meatball on my old save file and NEVER EVOLVED HIM!!! he was too ugly :)",
+        "description": "Musician\nArtist\nCharter\nAnimator",
+        "link": "https://www.youtube.com/channel/UCrwypGBQVT0C65lppJpn9YA"
+    },
+    {
         "path": "wood",
         "name": "Wood",
         "quote": "can oshawott beat goku tho (oshatope drops january 7th)",
@@ -21,25 +49,46 @@
         "link": "https://www.youtube.com/channel/UCV7pbRfqcgPEBelFIM-d_iA"
     },
     {
-        "path": "sercadz",
-        "name": "Sercadz",
-        "quote": "La batalla ya ha empezado en un mundo muy cuadrado",
-        "description": "Co-Director\nMusician\nCharter",
-        "link": "https://www.youtube.com/@Sercadz"
+        "path": "Uni",
+        "name": "Uni",
+        "quote": "PlaceHolder Quote",
+        "description": "Artist\nAnimator",
+        "link": "https://unibrine.com/"
     },
     {
-        "path": "Shadz",
-        "name": "Shadz",
-        "quote": "placeholder quote",
-        "description": "Co-Director\nLead Source Progammer",
-        "link": "https://www.youtube.com/channel/UC9N0V3r-J9F60MKTKToUZKw"
+        "path": "Vivi",
+        "name": "Vivi",
+        "quote": "Place Holder Quote but woke",
+        "description": "Artist",
+        "link": "https://bsky.app/profile/flarebat.bsky.social"
     },
     {
-        "path": "rowlie",
-        "name": "Rowlie",
-        "quote": "rowlet is better!!! i had a rowlet once called meatball on my old save file and NEVER EVOLVED HIM!!! he was too ugly :)",
-        "description": "Co-Director\nMusician\nArtist\nCharter\nAnimator",
-        "link": "https://www.youtube.com/channel/UCrwypGBQVT0C65lppJpn9YA"
+        "path": "Yolo",
+        "name": "YoloBot",
+        "quote": "Still Kicking!",
+        "description": "Artist",
+        "link": "https://x.com/TheYoloBOT9000"
+    },
+    {
+        "path": "Ame",
+        "name": "Yusxki_",
+        "quote": "something something huzz placeholder",
+        "description": "Artist\nVA",
+        "link": "https://yusxki.carrd.co/"
+    },
+    {
+        "path": "Dylan",
+        "name": "DagaiTai",
+        "quote": "placeholder quote hey shawty",
+        "description": "Artist\nHuzz",
+        "link": "https://dagaitai.carrd.co/"
+    },
+    {
+        "path": "Flez",
+        "name": "Flezard",
+        "quote": "palce holder its like 4am wtf",
+        "description": "Progammer",
+        "link": "https://flezard.dev/"
     },
     {
         "path": "tinkatonk",
@@ -47,7 +96,6 @@
         "quote": "WHO'S THAT POKEMON? It's my dick!\nI was responsible for a lot of the source code work for this mod. Really fun team.",
         "description": "Ex-Lead Source Progammer",
         "link": "https://squidbowl.carrd.co/"
-    }
+    },
 ]
-
-
+   
