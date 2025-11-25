@@ -3,7 +3,6 @@ package states;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.util.FlxTimer;
 import flixel.graphics.FlxGraphic;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.text.FlxText;
@@ -22,12 +21,6 @@ class WiiLOLState extends MusicBeatState
 
 	override function create()
 	{
-
-		ClientPrefs.loadPrefs();
-
-		//transIn = FlxTransitionableState.defaultTransIn;
-        //transOut = FlxTransitionableState.defaultTransOut;
-
 		background = new FlxSprite().loadGraphic(Paths.image('menus/pre-title/Oshawott-warning'));
 		background.screenCenter();
 		background.updateHitbox();
@@ -35,10 +28,19 @@ class WiiLOLState extends MusicBeatState
 
 		super.create();
 	}
-
+	final FADE_OUT_TIMER:Float = 0.2;
 	override function update(elapsed:Float)
 	{
-		if (controls.ACCEPT) FlxG.switchState(new TitleState());
+		if (controls.ACCEPT)
+		{
+			FlxG.camera.fade(FlxColor.WHITE, FADE_OUT_TIMER);
+			new FlxTimer().start(FADE_OUT_TIMER, function(tmr:FlxTimer)
+			{
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+				FlxG.switchState(new TitleState());
+			});
+		} 
 		
 
 		super.update(elapsed);

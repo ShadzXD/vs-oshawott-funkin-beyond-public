@@ -26,15 +26,7 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		if (initialized) startIntro();
-		else
-		{
-			new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
-				startIntro();
-			});
-		}
-		
+		startIntro();
 	}
 	
 
@@ -53,7 +45,7 @@ class TitleState extends MusicBeatState
 		}
 
 		Conductor.bpm = 140;
-		
+
 		var scrollingBG:FlxSprite = new FlxBackdrop(Paths.image("menus/thefunny"), X, -10, -10);
 		scrollingBG.velocity.set(-110);
 		scrollingBG.scale.set(1.12, 1.12);
@@ -67,6 +59,12 @@ class TitleState extends MusicBeatState
 		
 		if(!initialized)
 		{
+			var whiteBG:FlxSprite = new FlxSprite().makeGraphic(FlxG.width,FlxG.height, FlxColor.WHITE);
+			whiteBG.screenCenter();
+			add(whiteBG);
+
+			FlxTween.tween(whiteBG, {alpha: 0}, 5, {ease: FlxEase.quadInOut, startDelay: 1});
+
 			introLOGO = new FlxSprite(337, 194);
 			introLOGO.frames = Paths.getSparrowAtlas('menus/title/OshawottLogoNew-transition');
 			introLOGO.animation.addByPrefix('start', 'Appearing', 24, false);
