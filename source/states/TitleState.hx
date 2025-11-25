@@ -29,12 +29,10 @@ class TitleState extends MusicBeatState
 		startIntro();
 	}
 	
-
-	
 	var loopLOGO:FlxSprite;
 	var introLOGO:FlxSprite;
 	var pleaseText:FlxText;
-
+	var whiteBG:FlxSprite;
 	function startIntro()
 	{
 		if (!initialized)
@@ -59,7 +57,7 @@ class TitleState extends MusicBeatState
 		
 		if(!initialized)
 		{
-			var whiteBG:FlxSprite = new FlxSprite().makeGraphic(FlxG.width,FlxG.height, FlxColor.WHITE);
+			whiteBG = new FlxSprite().makeGraphic(FlxG.width,FlxG.height, FlxColor.WHITE);
 			whiteBG.screenCenter();
 			add(whiteBG);
 
@@ -222,7 +220,7 @@ class TitleState extends MusicBeatState
 			pleaseText.visible = true;
 			loopLOGO.visible = true;
 			FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : FlxColor.TRANSPARENT, 0.6);
-
+			if(whiteBG != null)whiteBG.visible = false;
 			skippedIntro = true;
 		}
 	}
