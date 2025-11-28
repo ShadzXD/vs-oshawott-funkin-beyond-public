@@ -1168,8 +1168,6 @@ class PlayState extends MusicBeatState
 		if (ret == LuaUtils.Function_Stop)
 			return;
 
-		if (!miss && !cpuControlled && scoreBop)
-			doScoreBop();
 
 		callOnScripts('onUpdateScore', [miss]);
 	}
@@ -1193,12 +1191,6 @@ class PlayState extends MusicBeatState
 			if (songMisses < 10) ratingFC = 'SDCB';
 			else ratingFC = 'Clear';
 		}
-	}
-
-	public function doScoreBop():Void {
-		if(!ClientPrefs.data.scoreZoom)
-			return;
-
 	}
 
 	public function setSongTime(time:Float)
@@ -1894,9 +1886,7 @@ class PlayState extends MusicBeatState
 				setSongTime(Conductor.songPosition + 10000);
 				clearNotesBefore(Conductor.songPosition);
 			}
-			if(FlxG.keys.justPressed.THREE) { //unlock a sticker in debug
-				unlockSticker();
-			}
+			if(FlxG.keys.justPressed.THREE) unlockSticker();
 		}
 		#end
 

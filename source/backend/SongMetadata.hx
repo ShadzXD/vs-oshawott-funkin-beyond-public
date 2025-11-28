@@ -4,9 +4,9 @@ import haxe.Json;
 typedef MetaDataInfo =
 {
 	var composer:String;
-	 var artist:String;
-	 var charter:String;
-	 var stickers:Array<String>;
+	var artist:String;
+	var charter:String;
+	@:optional var stickers:Array<String>;
 }
 
 class SongMetadata
