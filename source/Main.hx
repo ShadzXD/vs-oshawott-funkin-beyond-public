@@ -17,6 +17,7 @@ import openfl.events.Event;
 import openfl.display.StageScaleMode;
 import lime.app.Application;
 import states.HaxeIntroState;
+import flixel.input.keyboard.FlxKey;
 
 #if HSCRIPT_ALLOWED
 import crowplexus.iris.Iris;
@@ -191,6 +192,12 @@ class Main extends Sprite
 
 			if (FlxG.game != null)
 			resetSpriteCache(FlxG.game);
+		});
+
+		FlxG.stage.addEventListener(openfl.events.KeyboardEvent.KEY_DOWN, (e) ->
+		{
+			if (e.keyCode == FlxKey.F11)
+				FlxG.fullscreen = !FlxG.fullscreen;
 		});
 	}
 
