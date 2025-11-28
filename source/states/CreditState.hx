@@ -57,8 +57,9 @@ class CreditState extends MusicBeatState
         add(creditui);
 
         // Changing Sprite 
-        changingSprite = new FlxSprite(410, 180);
+        changingSprite = new FlxSprite(417, 180);
         changingSprite.loadGraphic(Paths.image(''));
+        changingSprite.updateHitbox();
         add(changingSprite);
 
         // Name
@@ -84,6 +85,7 @@ class CreditState extends MusicBeatState
             var data: CreditData = CreditData[index];
             if (data != null) {
                 changingSprite.loadGraphic(Paths.image("menus/credits/icons/" + data.path));
+                changingSprite.updateHitbox();
                 name.text = data.name;
                 quote.text = data.quote;
                 descText.text = data.description;
