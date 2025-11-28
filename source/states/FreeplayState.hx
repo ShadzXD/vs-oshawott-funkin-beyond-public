@@ -41,14 +41,11 @@ class FreeplayState extends MusicBeatState
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<HealthIcon> = [];
-	private var portraitArray:Array<FlxSprite> = [];
-
 
 	var missingTextBG:FlxSprite;
 	var missingText:FlxText;
 
 	var player:MusicPlayer;
-	var portrait:FlxSprite;
 	var grpDifficulty:FlxTypedGroup<FlxSprite>;
 	var grpDifficultyarrow:FlxTypedGroup<FlxSprite>;
 
@@ -60,6 +57,7 @@ class FreeplayState extends MusicBeatState
 	var stickerSubState:StickerSubState;
 	public static var instance:FreeplayState;
 
+	var songPortrait:FreeplayPortrait;
 	public function new(?stickers:StickerSubState = null)
   	{
     	super();
@@ -182,13 +180,8 @@ class FreeplayState extends MusicBeatState
 			icon.active = false;
 			var path:String =songs[i].songName.toLowerCase();
 			path = path.replace(' ', '_');
-			portrait = new FlxSprite(520, 53);
-			portrait.loadGraphic(Paths.image('menus/freeplay/' + path));		
-			portrait.setGraphicSize(Std.int(portrait.width * 1.02));
-			portrait.antialiasing = (path == 'cocoon' ? true : false);
-			portrait.visible = portrait.active = false;
-			portraitArray.push(portrait);
-			add(portrait);
+
+		
 
 			// using a FlxGroup is too much fuss!
 			//iconArray.push(icon);
@@ -198,6 +191,12 @@ class FreeplayState extends MusicBeatState
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
 			// songText.screenCenter(X);
 		}
+
+		songPortrait = new FreeplayPortrait(520, 53);
+		songPortrait.scale.set(1.02, 1.02);
+		songPortrait.updateHitbox();
+		add(songPortrait);
+
 		WeekData.setDirectoryFromWeek();
 
 		
@@ -593,6 +592,7 @@ class FreeplayState extends MusicBeatState
 		if(avalaibledifficultyOshawott[curDifficulty] == 'normal') return '';
 		else return '-' + avalaibledifficultyOshawott[curDifficulty];
 	}
+
 	function changeDiff(change:Int = 0)
 	{
 	
@@ -611,7 +611,6 @@ class FreeplayState extends MusicBeatState
 		intendedScore = Highscore.getScore(songs[curSelected].songName + newDiff, curDifficulty);
 		intendedRating = Highscore.getRating(songs[curSelected].songName + newDiff, curDifficulty);
 		#end
-		trace(intendedScore);
 
 		lastDifficultyName = Difficulty.getString(curDifficulty);
 	
@@ -663,13 +662,6 @@ class FreeplayState extends MusicBeatState
 		// selector.y = (70 * curSelected) + 30;
 
 		var bullShit:Int = 0;
-
-		for (i in 0...portraitArray.length)
-		{
-			portraitArray[i].alpha = 0;
-		}
-			//iconArray[curSelected].alpha = 1;
-			portraitArray[curSelected].alpha = 1;
 			
 		for (item in grpSongs.members)
 		{
@@ -684,15 +676,15 @@ class FreeplayState extends MusicBeatState
 		PlayState.storyWeek = songs[curSelected].week;
 		Difficulty.loadFromWeek();
 	
-		trace(songs[curSelected].songName);
-
-	
-		
+		/*
 		if(diffictxt.ID == 2)
 		{
 			diffictxt.visible = false;
 			diffictxt.alpha = 0;
-		}
+		}*/
+
+		songPortrait.loadPortrait(songs[curSelected].songName);
+
 		var formattedSongName:String = Paths.formatToSongPath(songs[curSelected].songName);
 		var path:String = Paths.json(formattedSongName + '-shiny/' + formattedSongName+ '-shiny');
 		if(Assets.exists(path, TEXT))
@@ -734,7 +726,6 @@ class FreeplayState extends MusicBeatState
 		for (i in _lastVisibles)
 		{
 			grpSongs.members[i].visible = grpSongs.members[i].active = false;
-			portraitArray[i].visible = portraitArray[i].active = false;
 		}
 		_lastVisibles = [];
 
@@ -744,10 +735,7 @@ class FreeplayState extends MusicBeatState
 		{
 			var item:Alphabet = grpSongs.members[i];
 			item.visible = item.active = true;
-			//item.x = ((item.targetY - lerpSelected) * item.distancePerItem.x) + item.startPosition.x;
 			item.y = ((item.targetY - lerpSelected) * item.distancePerItem.y) + item.startPosition.y;
-			var portrait:FlxSprite = portraitArray[i];
-			portrait.visible = portrait.active = true;
 		
 			_lastVisibles.push(i);
 		}
@@ -798,4 +786,21 @@ class SongMetadata
 		this.folder = Mods.currentModDirectory;
 		if(this.folder == null) this.folder = '';
 	}
+}
+
+class FreeplayPortrait extends FlxSprite
+{
+	final filePath:String = 'menus/freeplay/';
+	public function loadPortrait(songName:String)
+	{		
+		if(Paths.image(filePath + songName) == null)
+		{
+			loadGraphic(Paths.image(filePath + 'placeholder'));	
+			return;
+		}
+		
+		loadGraphic(Paths.image(filePath + songName));		
+		antialiasing = (songName == 'cocoon' ? true : false);
+	}
+
 }
