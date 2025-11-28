@@ -36,7 +36,7 @@ class CreditState extends MusicBeatState
     override public function create(): Void {
         Paths.clearStoredMemory();
         Paths.clearUnusedMemory();
-        FlxG.sound.playMusic(Paths.music('menus/creditsMenu'));
+        FlxG.sound.playMusic(Paths.music('menus/creditmenupoop'));
 
         var jsonData:String = Paths.getTextFromFile("data/credits.json");
 
