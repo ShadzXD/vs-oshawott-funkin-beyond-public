@@ -25,9 +25,9 @@ function onCreate()
 	scaleObject('Wii', 2, 2);
         addLuaSprite('Wii', false);
 
-    makeLuaSprite('gf_plush', 'backgrounds/shelf/gf_plush', -1080, -910);
+ makeLuaSprite('gf_plush', 'backgrounds/shelf/gf_plush', 1167, 200);
     setScrollFactor('gf_plush', 1, 1);
-    scaleObject('gf_plush', 1.5, 1.5)
+    scaleObject('gf_plush', 1, 1)
     addLuaSprite('gf_plush', false);
         
 
