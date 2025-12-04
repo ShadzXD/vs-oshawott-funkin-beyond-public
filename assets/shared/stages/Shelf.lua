@@ -25,6 +25,13 @@ function onCreate()
 	scaleObject('Wii', 2, 2);
         addLuaSprite('Wii', false);
 
+     makeAnimatedLuaSprite('gf_plush', 'backgrounds/shelf/gf_plush', -700, 150)
+        addAnimationByPrefix('gf_plush', 'dance', 'Idle', 12, true)
+ 	setScrollFactor('gf_plush', 1, 1);
+	scaleObject('gf_plush', 2, 2);
+        addLuaSprite('gf_plush', false);
+        
+
     makeAnimatedLuaSprite('oshawott','backgrounds/shelf/oshawott',0, 605)addAnimationByPrefix('oshawott','dance','oshawott',24,true)
     objectPlayAnimation('oshawott','dance',false)
     setScrollFactor('oshawott', 1, 1);
