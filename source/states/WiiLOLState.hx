@@ -17,23 +17,26 @@ class WiiLOLState extends MusicBeatState
 {
 	public static var leftState:Bool = false;
 
-	var background:FlxSprite;
+	final FADE_OUT_TIMER:Float = 0.2;
 
+	var transitioning:Bool = false;
 	override function create()
 	{
-		background = new FlxSprite().loadGraphic(Paths.image('menus/pre-title/Oshawott-warning'));
+		var background:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/pre-title/Oshawott-warning'));
 		background.screenCenter();
 		background.updateHitbox();
 		add(background);
 
 		super.create();
 	}
-	final FADE_OUT_TIMER:Float = 0.2;
+
 	override function update(elapsed:Float)
 	{
-		if (controls.ACCEPT)
+		super.update(elapsed);
+		if (controls.ACCEPT && !transitioning)
 		{
 			FlxG.camera.fade(FlxColor.WHITE, FADE_OUT_TIMER);
+			transitioning = true;
 			new FlxTimer().start(FADE_OUT_TIMER, function(tmr:FlxTimer)
 			{
 				FlxTransitionableState.skipNextTransIn = true;
@@ -41,8 +44,5 @@ class WiiLOLState extends MusicBeatState
 				FlxG.switchState(new TitleState());
 			});
 		} 
-		
-
-		super.update(elapsed);
 	}
 }

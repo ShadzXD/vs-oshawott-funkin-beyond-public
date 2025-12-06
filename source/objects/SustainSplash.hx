@@ -13,18 +13,18 @@ class SustainSplash extends FlxSprite {
   public function new():Void {
     super();
     frames = Paths.getSparrowAtlas('notes/noteSplashes/holdSplash');
+    animation.addByPrefix('start', 'start', 16, false); //this wasnt here before
     animation.addByPrefix('hold', 'hold', 20, true);
     animation.addByPrefix('end', 'end', 24, false);
-    animation.play('hold', true, false, 0);
+
     //animation.curAnim.frameRate = frameRate;
-    animation.curAnim.looped = true;
   }
 
   override function update(elapsed) {
     super.update(elapsed);
 		if (strumNote != null) {
 			alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
-			if (animation.curAnim.name == "hold" && strumNote.animation.curAnim.name == "static") {
+			if (animation.curAnim.name != "end" && strumNote.animation.curAnim.name == "static") {
         visible = false;
       }
     }
@@ -51,6 +51,16 @@ class SustainSplash extends FlxSprite {
 		alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
     setPosition(strum.x, strum.y);
     offset.set(PlayState.isPixelStage ? 112.5 : 106.25, 100);
+    animation.play('start');
+    animation.curAnim.looped = false;
+
+    animation.finishCallback = (animationName:String)->{
+      if(animationName == "start")
+      {
+        animation.play('hold', true, false, 0);
+        animation.curAnim.looped = true;
+      }
+    }
 
     new FlxTimer().start(timeThingy, (idk:FlxTimer) -> {
       if (tailEnd.mustPress && !(daNote.isSustainNote ? daNote.parent.noteSplashData.disabled : daNote.noteSplashData.disabled) && ClientPrefs.data.susSplashAlpha != 0) {
