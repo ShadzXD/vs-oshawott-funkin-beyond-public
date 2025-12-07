@@ -6,7 +6,7 @@
     "pico": ["picoSticker1", "picoSticker2", "picoSticker3"],
     "gf": ["gfSticker1", "gfSticker2", "gfSticker3"],
     "oshawott": ["oshawott_sticker_1","oshawott_sticker_2","oshawott_sticker_3"],
-    "dewott": ["dewottSticker1"],
+    "dewott": ["dewottSticker1","dewottstickers2"],
     "tankawott": ["tankawottSticker1", "tankawottSticker2", "tankawottSticker3"],
     "diancie": ["diancie_sticker1"],
     "meloletta": ["melolettaSticker1"],
@@ -21,7 +21,7 @@
     "pokeball":["pokeball_sticker"],
     "hex":["hex_sticker"],
     "tepig":["tepigSticker1", "tepigSticker2", "tepigSticker3"],
-
+    "snivey":["sniveySticker1","sniveySticker2","sniveySticker3"],
     "nene": ["neneSticker1", "neneSticker2", "neneSticker3"]
   },
   "stickerPacks": {
