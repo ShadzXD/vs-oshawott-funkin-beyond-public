@@ -178,9 +178,7 @@ class FreeplayState extends MusicBeatState
 			songText.visible = songText.active = songText.isMenuItem = false;
 			icon.visible = false;
 			icon.active = false;
-			var path:String =songs[i].songName.toLowerCase();
-			path = path.replace(' ', '_');
-
+	
 		
 
 			// using a FlxGroup is too much fuss!
@@ -792,7 +790,10 @@ class FreeplayPortrait extends FlxSprite
 {
 	final filePath:String = 'menus/freeplay/';
 	public function loadPortrait(songName:String)
-	{		
+	{
+		songName = songName.toLowerCase();
+		songName = songName.replace(' ', '_');
+
 		if(Paths.image(filePath + songName) == null)
 		{
 			loadGraphic(Paths.image(filePath + 'placeholder'));	
