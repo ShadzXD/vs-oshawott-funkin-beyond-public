@@ -3,6 +3,7 @@ package objects;
   * I dont know who made this.
   * I just took this from VS Oshawott.
   * If you made it, please pass me a dm, so I can credit you.
+  * Should probably also just redo most of this
 */
 class SustainSplash extends FlxSprite {
 
@@ -16,7 +17,7 @@ class SustainSplash extends FlxSprite {
     animation.addByPrefix('start', 'start', 16, false); //this wasnt here before
     animation.addByPrefix('hold', 'hold', 20, true);
     animation.addByPrefix('end', 'end', 24, false);
-
+    trace('created sustain splash');
     //animation.curAnim.frameRate = frameRate;
   }
 
@@ -24,8 +25,8 @@ class SustainSplash extends FlxSprite {
     super.update(elapsed);
 		if (strumNote != null) {
 			alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
-			if (animation.curAnim.name != "end" && strumNote.animation.curAnim.name == "static") {
-        visible = false;
+			if(animation.curAnim.name != "end" && strumNote.animation.curAnim.name == "static") {
+        kill();
       }
     }
   }
@@ -70,11 +71,13 @@ class SustainSplash extends FlxSprite {
         animation.curAnim.frameRate = 24;
         clipRect = null;
         animation.finishCallback = (idkEither:Dynamic) -> {
-          visible = false;
+        kill();
+
         }
         return;
       }
-      visible = false;
+      kill();
+
     });
 
   }
