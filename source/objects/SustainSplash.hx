@@ -4,6 +4,7 @@ package objects;
   * I just took this from VS Oshawott.
   * If you made it, please pass me a dm, so I can credit you.
   * Should probably also just redo most of this
+  * Maybe have the sustain follow the strum pos? Since modcharts use this shit.
 */
 class SustainSplash extends FlxSprite {
 
@@ -17,18 +18,13 @@ class SustainSplash extends FlxSprite {
     animation.addByPrefix('start', 'start', 16, false); //this wasnt here before
     animation.addByPrefix('hold', 'hold', 20, true);
     animation.addByPrefix('end', 'end', 24, false);
-    trace('created sustain splash');
-    //animation.curAnim.frameRate = frameRate;
   }
 
   override function update(elapsed) {
     super.update(elapsed);
-		if (strumNote != null) {
-			alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
-			if(animation.curAnim.name != "end" && strumNote.animation.curAnim.name == "static") {
-        kill();
-      }
-    }
+    if(strumNote != null)
+    setPosition(strumNote.x, strumNote.y);
+
   }
   
   public function setupSusSplash(strum:StrumNote, daNote:Note, ?playbackRate:Float = 1):Void {
@@ -50,7 +46,7 @@ class SustainSplash extends FlxSprite {
     }
     strumNote = strum;
 		alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
-    setPosition(strum.x, strum.y);
+
     offset.set(PlayState.isPixelStage ? 112.5 : 106.25, 100);
     animation.play('start');
     animation.curAnim.looped = false;
@@ -64,15 +60,14 @@ class SustainSplash extends FlxSprite {
     }
 
     new FlxTimer().start(timeThingy, (idk:FlxTimer) -> {
-      if (tailEnd.mustPress && !(daNote.isSustainNote ? daNote.parent.noteSplashData.disabled : daNote.noteSplashData.disabled) && ClientPrefs.data.susSplashAlpha != 0) {
+      if (tailEnd.mustPress && !(daNote.isSustainNote ? daNote.parent.noteSplashData.disabled : daNote.noteSplashData.disabled)) {
 				alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
         animation.play('end', true, false, 0);
         animation.curAnim.looped = false;
         animation.curAnim.frameRate = 24;
         clipRect = null;
         animation.finishCallback = (idkEither:Dynamic) -> {
-        kill();
-
+          kill();
         }
         return;
       }
