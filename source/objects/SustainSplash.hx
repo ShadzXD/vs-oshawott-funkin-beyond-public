@@ -1,10 +1,6 @@
 package objects;
 /*
-  * I dont know who made this.
-  * I just took this from VS Oshawott.
-  * If you made it, please pass me a dm, so I can credit you.
   * Should probably also just redo most of this
-  * Maybe have the sustain follow the strum pos? Since modcharts use this shit.
 */
 class SustainSplash extends FlxSprite {
 
@@ -23,10 +19,14 @@ class SustainSplash extends FlxSprite {
   override function update(elapsed) {
     super.update(elapsed);
     if(strumNote != null)
-    setPosition(strumNote.x, strumNote.y);
-
+    {
+        setPosition(strumNote.x, strumNote.y);
+        if(animation.curAnim.name != "end" && strumNote.animation.curAnim.name == "static") {
+            visible = false;
+        }
+    }
   }
-  
+
   public function setupSusSplash(strum:StrumNote, daNote:Note, ?playbackRate:Float = 1):Void {
 
     final lengthToGet:Int = !daNote.isSustainNote ? daNote.tail.length : daNote.parent.tail.length;
@@ -44,6 +44,7 @@ class SustainSplash extends FlxSprite {
       shader.data.b.value = daNote.shader.data.b.value;
       shader.data.mult.value = daNote.shader.data.mult.value;
     }
+    visible = true;
     strumNote = strum;
 		alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
 
