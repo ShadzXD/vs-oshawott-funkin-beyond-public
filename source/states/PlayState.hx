@@ -158,6 +158,7 @@ class PlayState extends MusicBeatState
 	public var opponentStrums:FlxTypedGroup<StrumNote> = new FlxTypedGroup<StrumNote>();
 	public var playerStrums:FlxTypedGroup<StrumNote> = new FlxTypedGroup<StrumNote>();
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash> = new FlxTypedGroup<NoteSplash>();
+	public var grpHoldSplashes:FlxTypedGroup<SustainSplash> = new FlxTypedGroup<SustainSplash>();
 	public var camZooming:Bool = false;
 	public var camZoomingMult:Float = 1;
 	public var camZoomingDecay:Float = 1;
@@ -505,6 +506,7 @@ class PlayState extends MusicBeatState
 
 		noteGroup = new FlxTypedGroup<FlxBasic>();
 		add(noteGroup);
+		add(grpHoldSplashes);
 
 		Conductor.songPosition = -Conductor.crochet * 5 + Conductor.offset;
 		
@@ -534,6 +536,7 @@ class PlayState extends MusicBeatState
 		moveCameraSection();
 
 		noteGroup.cameras = [camHUD];
+		grpHoldSplashes.cameras = [camHUD];
 
 		startingSong = true;
 
@@ -599,7 +602,9 @@ class PlayState extends MusicBeatState
 
 		SustainSplash.startCrochet = Conductor.stepCrochet;
 		SustainSplash.frameRate = Math.floor(24 / 100 * SONG.bpm);
-	
+		var splash:SustainSplash = new SustainSplash();
+		grpHoldSplashes.add(splash);
+		splash.alpha = 0.0001;
 		switch (songName) {
 			case 'asperita':
 				if (isStoryMode) {
@@ -2918,12 +2923,13 @@ class PlayState extends MusicBeatState
 		stagesFunc(function(stage:BaseStage) stage.opponentNoteHit(note));
 		var result:Dynamic = callOnLuas('opponentNoteHit', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
 		if(result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll) callOnHScript('opponentNoteHit', [note]);
+		spawnHoldSplashOnNote(note);
 
-		if(!note.isSustainNote)
-		{
-			globalNoteHit(note, false);
-			invalidateNote(note);
-		} 
+			if(!note.isSustainNote)
+			{
+				globalNoteHit(note, false);
+				invalidateNote(note);
+			} 
 
 	}
 
@@ -3004,7 +3010,7 @@ class PlayState extends MusicBeatState
 				if(combo > 9999) combo = 9999;
 				popUpScore(note);
 			}
-			
+			spawnHoldSplashOnNote(note);
 			var gainHealth:Bool = true; // prevent health gain, *if* sustains are treated as a singular note
 			if (gainHealth) health += note.hitHealth * healthGain;
 
@@ -3076,7 +3082,28 @@ class PlayState extends MusicBeatState
 		grpNoteSplashes.add(splash);
 	}
 	
-	
+		public function spawnHoldSplashOnNote(note:Note) {
+		if (!note.isSustainNote && note.tail.length != 0 && note.tail[note.tail.length - 1].extraData['holdSplash'] == null) {
+			spawnHoldSplash(note);
+		} else if (note.isSustainNote) {
+			final end:Note = StringTools.endsWith(note.animation.curAnim.name, 'end') ? note : note.parent.tail[note.parent.tail.length - 1];
+			if (end != null) {
+				var leSplash:SustainSplash = end.extraData['holdSplash'];
+				if (leSplash == null && !end.parent.wasGoodHit) {
+					spawnHoldSplash(end);
+				} else if (leSplash != null) {
+					leSplash.visible = true;
+				}
+			}
+		}
+	}
+
+	public function spawnHoldSplash(note:Note) {
+		var end:Note = note.isSustainNote ? note.parent.tail[note.parent.tail.length - 1] : note.tail[note.tail.length - 1];
+		var splash:SustainSplash = grpHoldSplashes.recycle(SustainSplash);
+		splash.setupSusSplash(strumLineNotes.members[note.noteData + (note.mustPress ? 4 : 0)], note, playbackRate);
+		grpHoldSplashes.add(end.extraData['holdSplash'] = splash);
+	}
 
 	override function destroy() {
 		if (psychlua.CustomSubstate.instance != null)
