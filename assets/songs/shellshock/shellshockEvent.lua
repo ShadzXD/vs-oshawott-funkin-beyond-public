@@ -13,6 +13,7 @@ function onStepHit()
         addLuaSprite('Ground', false);
         scaleObject('Ground',1.7,1.7)
         setProperty('gf.visible', false)
+        setProperty('overlay.visible', false)
 
         setProperty('defaultCamZoom',0.4)
         triggerEvent('Camera Follow Pos',1300,800);
@@ -57,8 +58,9 @@ function onStepHit()
         setCharacterX('dad',430)
         setCharacterY('dad',750)
         triggerEvent('Change Character','BF','bf')
-        triggerEvent('Change Character','dad','Oshawott')
+        triggerEvent('Change Character','dad','oshawott')
         setProperty('gf.visible', true)
+        setProperty('overlay.visible', true)
 
         setProperty('defaultCamZoom',0.75)
         removeLuaSprite('Bg', true)
