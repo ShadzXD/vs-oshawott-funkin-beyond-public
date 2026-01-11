@@ -16,20 +16,23 @@ class SustainSplash extends FlxSprite {
     animation.addByPrefix('end', 'end', 24, false);
   }
 
-  override function update(elapsed) {
+ override function update(elapsed) {
     super.update(elapsed);
     if(strumNote != null)
     {
-        setPosition(strumNote.x, strumNote.y);
-        if(animation.curAnim.name != "end" && strumNote.animation.curAnim.name == "static") {
+        if(!animation.curAnim.name.startsWith("end-") && strumNote.animation.curAnim.name == "static") {
             visible = false;
         }
     }
   }
-
   public function setupSusSplash(strum:StrumNote, daNote:Note, ?playbackRate:Float = 1):Void {
 
     final lengthToGet:Int = !daNote.isSustainNote ? daNote.tail.length : daNote.parent.tail.length;
+    if(lengthToGet <= 1 || strum.visible == false) //kill splash if size of hold is too small
+    {
+        kill();
+        return;
+    } 
     final timeToGet:Float = !daNote.isSustainNote ? daNote.strumTime : daNote.parent.strumTime;
     final timeThingy:Float = (startCrochet * lengthToGet + (timeToGet - Conductor.songPosition + ClientPrefs.data.ratingOffset)) / playbackRate * .001;
 
@@ -51,7 +54,9 @@ class SustainSplash extends FlxSprite {
     offset.set(PlayState.isPixelStage ? 112.5 : 106.25, 100);
     animation.play('start');
     animation.curAnim.looped = false;
+    setPosition(strumNote.x, strumNote.y);
 
+    offset.set(PlayState.isPixelStage ? 112.5 : 106.25, 100);
     animation.finishCallback = (animationName:String)->{
       if(animationName == "start")
       {
