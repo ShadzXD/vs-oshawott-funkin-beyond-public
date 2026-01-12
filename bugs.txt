@@ -1,0 +1,1 @@
+game reopens playstate if you enter adjust delay and combo from main menu
