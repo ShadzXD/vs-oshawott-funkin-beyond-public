@@ -29,6 +29,11 @@ function onCreate()
     setScrollFactor('gf_plush', 1, 1);
     scaleObject('gf_plush', 1, 1)
     addLuaSprite('gf_plush', false);
+
+     makeLuaSprite('oshapoop', 'backgrounds/shelf/oshapoop', 3397, 200);
+    setScrollFactor('oshapoop', 1, 1);
+    scaleObject('oshapoop', 1, 1)
+    addLuaSprite('oshapoop', false);
         
 
     makeAnimatedLuaSprite('oshawott','backgrounds/shelf/oshawott',0, 605)addAnimationByPrefix('oshawott','dance','oshawott',24,true)
