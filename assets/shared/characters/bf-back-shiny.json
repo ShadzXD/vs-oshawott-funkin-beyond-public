@@ -77,7 +77,7 @@
 	"no_antialiasing": false,
 	"image": "characters/BF/bf-back-shiny",
 	"position": [-80, 120],
-	"healthicon": "bf",
+	"healthicon": "bf-shiny",
 	"flip_x": true,
 	"healthbar_colors": [49, 176, 209],
 	"camera_position": [-250, -50],
