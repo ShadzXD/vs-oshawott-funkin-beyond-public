@@ -1,7 +1,7 @@
 {
 	"animations": [
 		{
-			"offsets": [-52, -58],
+			"offsets": [-52, -28],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
@@ -9,7 +9,7 @@
 			"name": "down"
 		},
 		{
-			"offsets": [-90, 70],
+			"offsets": [-140, 10],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
@@ -18,7 +18,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [-88, 0],
+			"offsets": [-79, 9],
 			"anim": "idle",
 			"fps": 24,
 			"name": "idle",
@@ -26,28 +26,28 @@
 		},
 		{
 			"loop": false,
-			"offsets": [46, 2],
+			"offsets": [-11, 2],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "right",
+			"name": "left",
 			"indices": []
 		},
 		{
 			"loop": false,
-			"offsets": [-124, -4],
+			"offsets": [-94, 16],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "left",
+			"name": "right",
 			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/Oshawott/oshawott",
-	"position": [1060, -30],
-	"healthicon": "oshawott",
-	"flip_x": true,
-	"healthbar_colors": [176, 255, 255],
+	"image": "characters/Oshawott/osha-smug",
+	"position": [700, -30],
+	"healthicon": "oshawottshiny",
+	"flip_x": false,
+	"healthbar_colors": [167, 255, 244],
 	"camera_position": [120, -50],
 	"sing_duration": 6.1,
 	"scale": 2,
