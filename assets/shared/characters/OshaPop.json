@@ -1,52 +1,53 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [17, 3],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [-16, -51],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [51, 97],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": false,
 			"offsets": [-19, 16],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Oshawott/OshaPop",
 	"position": [260, 420],
-	"healthicon": "oshawott",
+	"healthicon": "OshToy",
 	"flip_x": false,
-	"healthbar_colors": [143, 255, 251],
+	"healthbar_colors": [143, 220, 255],
 	"camera_position": [0, 0],
 	"sing_duration": 6.1,
 	"scale": 1.2,
