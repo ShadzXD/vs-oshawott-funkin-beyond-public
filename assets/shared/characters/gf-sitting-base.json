@@ -17,18 +17,18 @@
 			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 		},
 		{
-			"loop": false,
 			"offsets": [1, 715],
-			"anim": "intro",
+			"indices": [],
 			"fps": 24,
-			"name": "Girlfriend Week 1/sewaddle intro",
-			"indices": []
+			"anim": "intro",
+			"loop": false,
+			"name": "Girlfriend Week 1/sewaddle intro"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/GF/GF_SITTING",
-	"position": [120, 360],
+	"position": [120, 410],
 	"healthicon": "gf",
 	"flip_x": false,
 	"healthbar_colors": [165, 0, 77],
