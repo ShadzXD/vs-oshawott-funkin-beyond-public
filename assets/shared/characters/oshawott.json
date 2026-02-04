@@ -81,13 +81,14 @@
 			"name": "dodge"
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Oshawott/oshawott",
-	"position": [110, 390],
+	"position": [110, 430],
 	"healthicon": "oshawott",
 	"flip_x": false,
 	"healthbar_colors": [143, 220, 255],
-	"camera_position": [-180, -30],
+	"camera_position": [-210, -70],
 	"sing_duration": 6.1,
 	"scale": 1.2,
 	"_editor_isPlayer": false
