@@ -1393,7 +1393,7 @@ class PlayState extends MusicBeatState
 
 				var curStepCrochet:Float = 60 / daBpm * 1000 / 4.0;
 				final roundSus:Int = Math.round(swagNote.sustainLength / curStepCrochet);
-				if(roundSus > 0)
+				if(roundSus > 1)
 				{
 					for (susNote in 0...roundSus)
 					{
@@ -1506,7 +1506,7 @@ class PlayState extends MusicBeatState
 			if(!preloadedVideoAtLeastOnce)
 			{
 				preloadedVideoAtLeastOnce = true;
-				videoCutscene = new VideoSprite(Paths.video('precache'), false, false, false);
+				videoCutscene = new VideoSprite(Paths.video(event.value1), false, false, false);
    			 	videoCutscene.alpha = 0.001;
     			add(videoCutscene);
 			}
