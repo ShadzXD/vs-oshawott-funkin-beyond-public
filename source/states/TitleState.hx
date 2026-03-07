@@ -150,13 +150,17 @@ class TitleState extends MusicBeatState
 			{
 				FlxG.sound.music.fadeOut(0.9, 0);
 				FlxTween.tween(FlxG.camera, {zoom: 4}, 3, {ease: FlxEase.quartInOut}); // zoomy zoomy when you hit enter enter
-				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+				new FlxTimer().start(0.5, function(tmr:FlxTimer)
+				{
+					FlxG.camera.fade(FlxColor.BLACK, 0.7);
 
+				});
+				FlxTransitionableState.skipNextTransIn = true;
 				transitioning = true;
 				// FlxG.sound.music.stop();
 
-				new FlxTimer().start(1, function(tmr:FlxTimer)
+				new FlxTimer().start(1.2, function(tmr:FlxTimer)
 				{
 					
 					if (debugStageTesting){
