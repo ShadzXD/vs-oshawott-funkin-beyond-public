@@ -104,10 +104,11 @@ class GalleryState extends MusicBeatState
         backspace.updateHitbox();
         add(backspace);
     
-        galleryByText = new FlxText(FlxG.width - 200, FlxG.height - 30, 200, "Gallery by SquidBowl");
+        galleryByText = new FlxText(FlxG.width - 200, FlxG.height - 30, 300, "Gallery by SquidBowl");
         galleryByText.setFormat("vcr.ttf", 18, 0xffffff, "center");
         galleryByText.screenCenter(X);
         add(galleryByText);
+        FlxTween.tween(galleryByText, {alpha: 0}, 4, {ease: FlxEase.linear, startDelay: 7});
 
         persistentUpdate = true;
         changeSelection();

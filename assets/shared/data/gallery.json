@@ -25,13 +25,13 @@
     },
     {
         "path": "menutest",
-        "description": "Made By Frenchie",
+        "description": "Made By CrysOtter",
         "title": "Options Menu Concept",
         "link": ""
     },
     {
         "path": "storymodewip",
-        "description": "Made By Frenchie",
+        "description": "Made By CrysOtter",
         "title": "Story Mode WIP",
         "link": ""
     },
@@ -153,6 +153,24 @@
         "path": "MrWott",
         "description": "Made By Aura_Content",
         "title": "Yo soy oshawott, mamma mia",
+        "link": ""
+    },
+    {
+        "path": "tuff",
+        "description": "Made By CrysOtter",
+        "title": "same",
+        "link": ""
+    },
+    {
+        "path": "gfSewaddle",
+        "description": "Made By CrysOtter",
+        "title": "Girlfriend and, a Sewaddle",
+        "link": ""
+    },
+    {
+        "path": "2021osha",
+        "description": "Made By CrysOtter",
+        "title": "VS Oshawott in 2021",
         "link": ""
     }
 ]
