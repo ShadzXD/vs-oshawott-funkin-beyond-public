@@ -1613,15 +1613,15 @@
 	],
 	"events": [
 		[
-			17454.5454545455,
+			0,
 			[
-				["Zoom Cam-base", "1.1", "1, INSTANT"]
+				["Play Video", "genwunners-intro", ""]
 			]
 		],
 		[
-			17727.2727272727,
+			17454.5454545455,
 			[
-				["Activate Song Credit Tween", "true", ""]
+				["Zoom Cam-base", "1.1", "1, INSTANT"]
 			]
 		],
 		[
@@ -1629,12 +1629,6 @@
 			[
 				["Set Camera Target", "Dad,-150", ""],
 				["Zoom Cam-base", "1.4", "1, INSTANT"]
-			]
-		],
-		[
-			20727.2727272727,
-			[
-				["Activate Song Credit Tween", "false", ""]
 			]
 		],
 		[
