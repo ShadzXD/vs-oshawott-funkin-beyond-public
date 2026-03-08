@@ -624,7 +624,7 @@ class PlayState extends MusicBeatState
 				iconPump.y = iconSkid.y - 30;
 				iconPump.isAlly = true;
 				iconPump.scale.set(0.9,0.9);
-				iconPump.angle = 20;
+				iconPump.angle = 10;
 				hudClass.iconGroup.add(iconPump);
 		}
 		super.create();
@@ -1233,7 +1233,7 @@ class PlayState extends MusicBeatState
 	function startSong():Void
 	{
 		startingSong = false;
-		if(regularCreditTranstion) finishCreditTrans();
+		if(regularCreditTranstion) finishCreditTrans(false);
 
 		@:privateAccess
 		FlxG.sound.playMusic(inst._sound, 1, false);
@@ -3168,15 +3168,20 @@ class PlayState extends MusicBeatState
 		if(songCreditGroup == null) return;
 		if(isFinishing)
 		{
+			//?????????????????????
+			/// it keeps on crashing
+			if(songCreditGroup != null)
 			FlxTween.tween(songCreditGroup, { x: 1400}, 1.6, {ease: FlxEase.circIn,
 				onComplete:function(twn:FlxTween)
 				{
-					songCreditGroup.kill();
-					songCreditGroup.destroy();
+					if(songCreditGroup != null)
+					songCreditGroup?.kill();
+					if(songCreditGroup != null)
+					songCreditGroup?.destroy();
 				}
 			});
 		}
-		else FlxTween.tween(songCreditGroup, { x: 0}, 1.5, {ease: FlxEase.circOut});	
+		else FlxTween.tween(songCreditGroup?, { x: 0}, 1.5, {ease: FlxEase.circOut});	
 
 	}
 	var lastBeatHit:Int = -1;
