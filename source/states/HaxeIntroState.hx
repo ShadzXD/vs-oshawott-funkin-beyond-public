@@ -79,8 +79,9 @@ class HaxeIntroState extends MusicBeatState
 			introGOOO.animation.play('hiii');
 			FlxG.sound.play(Paths.sound('haxe_intro'), 0.7);
 
-			haxeTEXT = new FlxText(50, 500, FlxG.width - 100, "HaxeFlixel").setFormat(Paths.font("vcr.ttf"), 32, 0xffffff, "center");
+			haxeTEXT = new FlxText(50, 500, FlxG.width - 100, "HaxeFlixel").setFormat(Paths.font("PokemonGB.ttf"), 32, 0xffffff, "center");
 			haxeTEXT.screenCenter(X);
+			haxeTEXT.antialiasing = false;
 			add(haxeTEXT);
 			
 			new FlxTimer().start(1.1, byebye, 1);
