@@ -20,15 +20,19 @@ class SustainSplash extends FlxSprite {
     super.update(elapsed);
     if(strumNote != null)
     {
-      
-      	alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
-        setPosition(strumNote.x, strumNote.y);
-        offset.set(PlayState.isPixelStage ? 112.5 : 106.25, 100);
+       	  alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
+
+        repositionSplash();
 
         if(!animation.curAnim.name.startsWith("end") && strumNote.animation.curAnim.name == "static") {
             visible = false;
         }
     }
+  }
+  function repositionSplash()
+  {
+    setPosition(strumNote.x, strumNote.y);
+    offset.set(PlayState.isPixelStage ? 112.5 : 106.25, 100);
   }
   public function setupSusSplash(strum:StrumNote, daNote:Note, ?playbackRate:Float = 1):Void {
 
@@ -54,6 +58,7 @@ class SustainSplash extends FlxSprite {
     }
     visible = true;
     strumNote = strum;
+    repositionSplash();
 
     animation.play('start');
     animation.curAnim.looped = false;
