@@ -106,7 +106,7 @@ class LoadingState extends MusicBeatState
 			add(funkay);
 	
 			finishedText = new FlxText(0, 0, 0, "Loading Finished! Press Enter to continue.", 32);
-			finishedText.setFormat(Paths.font('vcr.ttf'), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			finishedText.setFormat(Paths.font('vcr.ttf'), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE_FAST, FlxColor.BLACK);
 			finishedText.alpha = 0;
 			add(finishedText);
 

@@ -81,6 +81,7 @@ class Asperita extends BaseStage
         viewPoint.scale.set(1.5, 1.5);
         viewPoint.alpha = 0;
 
+
         insert(0, stageBack);
         insert(10, brightLightSmall);
         //insert(5, audience);
@@ -100,7 +101,10 @@ class Asperita extends BaseStage
         DS.alpha = 0;
         add(DS);
         DS.cameras = [camGame];
-
+        
+        game.hudClass.iconP1.changeIcon('icon-bf-classic');
+        game.hudClass.iconP2.changeIcon('icon-gf-classic');
+        game.moveValue = 0;
         super.createPost();
 
         if(!ClientPrefs.data.lowQuality) {
@@ -169,6 +173,8 @@ class Asperita extends BaseStage
             game.set_health(1);
 
             game.changeNoteSkin('NOTE_assets');
+
+            // never mind no fucking clue why it isnt workinggame.vocals.volume = 1; //force full volume at this part because if you miss the final note the transition will be silent
 
         }
 	}
