@@ -77,48 +77,23 @@ class LoadingState extends MusicBeatState
 	override function create()
 	{
 		persistentUpdate = true;
-
-		/*
-		#if HSCRIPT_ALLOWED
-		if(Mods.currentModDirectory != null && Mods.currentModDirectory.trim().length > 0)
-		{
-			var scriptPath:String = 'mods/${Mods.currentModDirectory}/data/LoadingScreen.hx'; //mods/My-Mod/data/LoadingScreen.hx
-			if(FileSystem.exists(scriptPath))
-			{
-				try
-				{
-					hscript = new HScript(null, scriptPath);
-					hscript.set('getLoaded', function() return loaded);
-					hscript.set('getLoadMax', function() return loadMax);
-					hscript.set('barBack', barBack);
-					hscript.set('bar', bar);
+		var maxImages:Int = 0;
 	
-					if(hscript.exists('onCreate'))
-					{
-						hscript.call('onCreate');
-						trace('initialized hscript interp successfully: $scriptPath');
-						return super.create();
-					}
-					else
-					{
-						trace('"$scriptPath" contains no \"onCreate" function, stopping script.');
-					}
-				}
-				catch(e:IrisError)
-				{
-					var pos:HScriptInfos = cast {fileName: scriptPath, showLine: false};
-					Iris.error(Printer.errorToString(e, false), pos);
-					var hscript:HScript = cast (Iris.instances.get(scriptPath), HScript);
-				}
-				if(hscript != null) hscript.destroy();
-				hscript = null;
-			}
-		}
-		#end
-		*/
 		if(!canBeSkipped && ClientPrefs.data.loadingScreen)
 		{
-			var randomIMG:Int = FlxG.random.int(1, 24);
+			//checks the loading screens folder and loads whatever it can find.
+			//doing this because its tedious to always have to specify each one with a number
+			for (folder in Mods.directoriesWithFile(Paths.getSharedPath(), 'images/loadingScreens/'))
+			for (file in FileSystem.readDirectory(folder))
+			{
+				if(file.toLowerCase().endsWith('.xml'))
+				{
+					maxImages++;	
+					
+				}
+			}
+			trace('loading screens found ' + maxImages);
+			var randomIMG:Int = FlxG.random.int(1, maxImages);
 			trace(randomIMG);
 			var loadingPath = 'images/loadingScreens/AnimatedLoading-';
 			funkay = new FlxSprite().loadGraphic(Paths.image('loadingScreens/AnimatedLoading-' + randomIMG));
@@ -131,14 +106,13 @@ class LoadingState extends MusicBeatState
 			add(funkay);
 	
 			finishedText = new FlxText(0, 0, 0, "Loading Finished! Press Enter to continue.", 32);
-			finishedText.font = Paths.font('vcr.ttf');
+			finishedText.setFormat(Paths.font('vcr.ttf'), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			finishedText.alpha = 0;
 			add(finishedText);
 
-
 			FlxG.sound.playMusic(Paths.music('menus/loadingsong'), 1);	
-
-		}else
+		}
+		else
 		{
 			if (stateChangeDelay <= 0 && checkLoaded())
 			{
