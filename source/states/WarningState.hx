@@ -11,7 +11,7 @@ class WarningState extends MusicBeatState
     {
         super.create();
 
-		FlxG.sound.playMusic(Paths.music('breakfast'), 0);
+		FlxG.sound.playMusic(Paths.music('menus/meeting-beyond-the-horizon'), 0);
 		FlxG.sound.music.fadeIn(20, 0, 0.6);				
 
 		var backdrop:FlxSprite = new FlxBackdrop(Paths.image("icons/oshawott"), XY, 10, -10);
@@ -20,7 +20,7 @@ class WarningState extends MusicBeatState
         backdrop.alpha = 0.3;
      	add(backdrop);
 
-        var warningText:FlxText = new FlxText(0,30,0, "Hello everyone!", 70);
+        var warningText:FlxText = new FlxText(0,20,0, "Hello everyone!", 70);
         warningText.setFormat(Paths.font('Adamsky SF Regular.ttf'), 70, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE_FAST, FlxColor.BLACK);
         warningText.screenCenter(X);
         warningText.updateHitbox();
@@ -36,7 +36,7 @@ class WarningState extends MusicBeatState
         add(actualText);
         FlxTween.tween(actualText, {alpha: 1}, 0.7, {ease: FlxEase.linear, startDelay: 5});
 
-        backspace = new FlxSprite(FlxG.width - 300, FlxG.height - 130);
+        backspace = new FlxSprite(FlxG.width - 300, FlxG.height - 110);
         backspace.frames = Paths.getSparrowAtlas('menus/gallery/ui/backspace');
         backspace.animation.addByPrefix('backspace to exit white0', "backspace to exit white0", 24);
         backspace.animation.play('backspace to exit white0');
