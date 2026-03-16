@@ -15,22 +15,22 @@
     },
     {
         "path": "FrenchOtter",
-        "name": "FrenchOtter",
+        "name": "CrysOtter",
         "quote": "Holy fart, dude",
         "description": "Co-Director\nLead Artist\nAnimator",
-        "link": "https://www.youtube.com/@frenchotter"
+        "link": "https://www.youtube.com/@crysotter?app=desktop"
     },
     {
         "path": "sercadz",
         "name": "Shannels",
-        "quote": "La batalla ya ha empezado en un mundo muy cuadrado",
+        "quote": "¡Muchas gracias por jugar nuestro mod! Después de tanto tiempo, el esfuerzo de tantas personas talentosas por fin verá la luz. No esperabamos hacerlo de esta manera, pero nos alegra por fin compartir todo nuestro trabajo :)\n¡Cuidense y disfruten nuestro mod!",
         "description": "Co-Director\nMusician\nCharter",
         "link": "https://www.youtube.com/channel/UChMbhLcdM7Ju-GQb5WwLqvg"
     },
     {
         "path": "Shadz",
         "name": "Shadz",
-        "quote": "placeholder quote",
+        "quote": "I am NOT a Progammer bro.\nAnyways... see you guys in\nVS. Oshawott: Updog!!!!!",
         "description": "Co-Director\nLead Source Progammer",
         "link": "https://x.com/ShadzDX"
     },
@@ -54,13 +54,6 @@
         "quote": "LIFE IS PAIN GET THE HELL OUT OF THIS PLACE I SWEAR THEY ARE TRYING TO SHUT ME DOWN B Hello thank you for checking very versus oshawott im the bg artist love u all <3",
         "description": "Artist\nAnimator",
         "link": "https://unibrine.com/"
-    },
-    {
-        "path": "Vivi",
-        "name": "Vivi",
-        "quote": "Place Holder Quote but woke",
-        "description": "Artist",
-        "link": "https://bsky.app/profile/flarebat.bsky.social"
     },
     {
         "path": "Yolo",
@@ -115,8 +108,51 @@
         "path": "Kiru",
         "name": "Kiru",
         "quote": "uuh... ough..... uhmm...",
-        "description": "Ex-Lead Source Progammer",
+        "description": "Artist",
         "link": "https://x.com/Kiru_nuvem"
+    },
+    {
+        "path": "smb",
+        "name": "SMB",
+        "quote": "I only got to do some small things for this mod but it was nice being part of this mod and I hope you enjoyed it. Now when and where is VS Scorbunny?!",
+        "description": "Programmer",
+        "link": "https://smb-bio.carrd.co/"
+    },
+    {
+        "path": "crackhead",
+        "name": "local_crackhead_va",
+        "quote": "I VOICED THE FUCKING CHUD PIG and also made some chromatics or whatever, BUT I VOICED THE PIG",
+        "description": "Voice Actor\nChromatic Scale Maker",
+        "link": ""
+    },
+    {
+        "path": "cryoptera",
+        "name": "Cryoptera",
+        "quote": "So this is our oshawott.",
+        "description": "Voice Actor\nChromatic Scale Maker",
+        "link": ""
+    },
+    {
+        "path": "chimera",
+        "name": "Chimera",
+        "quote": "The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents. We live on a placid island of ignorance in the midst of a black sea of infinity, and it was not meant that we should voyage far.",
+        "description": "Musician",
+        "link": ""
+    },
+    {
+     
+        "path": "gripou",
+        "name": "Gripou",
+        "quote": "",
+        "description": "Artist",
+        "link": ""
+    },
+    {
+        "path": "charaster",
+        "name": "Charaster",
+        "quote": "help where am i?",
+        "description": "Playtesting",
+        "link": ""
     }
 ]
    
