@@ -4,7 +4,7 @@ import flixel.addons.display.FlxBackdrop;
 class WarningState extends MusicBeatState
 {
     final text:String = 
-    'This mod has been in the works for over three years and we unfortunately had to can what we had of the mod! There is still lots of quality stuff that the team is very proud of and I hope you all enjoy what we managed to make. Please note this is a CANCELED build so there are missing sprites, songs and other quirks and things! Be warned! We made it as cleaned up as we could for you to enjoy. Apologies to everyone who was looking forward to this mod. We may come back in the future but for now...\nLETS GO BEYOND!';
+    'This mod has been in the works for over three years and we unfortunately had to can what we had of the mod! There is still lots of quality stuff that the team is very proud of and I hope you all enjoy what we managed to make. Please note this is a CANCELED build so there are missing sprites, songs and other quirks and things! Be warned! We made it as cleaned up as we could for you to enjoy. Apologies to everyone who was looking forward to this mod. We may come back in the future but for now...\nLETS GO BEYOND!\n - owenthemc';
     var backspace:FlxSprite;
     var canExit:Bool = false;
     override public function create():Void
