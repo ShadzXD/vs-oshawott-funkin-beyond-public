@@ -74,6 +74,7 @@ class LoadingState extends MusicBeatState
 
 	var noticeFinished:Bool = false;
 	var finishedText:FlxText;
+	var loadingScreensList:Array<String> = [];
 	override function create()
 	{
 		persistentUpdate = true;
@@ -88,16 +89,16 @@ class LoadingState extends MusicBeatState
 			{
 				if(file.toLowerCase().endsWith('.xml'))
 				{
-					maxImages++;	
+					var finalString:String = file;
+					finalString = finalString.replace('.xml','');
+					trace(finalString);
+					loadingScreensList.push(finalString);
 					
 				}
 			}
-			trace('loading screens found ' + maxImages);
-			var randomIMG:Int = FlxG.random.int(1, maxImages);
-			trace(randomIMG);
-			var loadingPath = 'images/loadingScreens/AnimatedLoading-';
-			funkay = new FlxSprite().loadGraphic(Paths.image('loadingScreens/AnimatedLoading-' + randomIMG));
-			funkay.frames = Paths.getSparrowAtlas('loadingScreens/AnimatedLoading-' + randomIMG);
+			final loadingPath = 'loadingScreens/';
+			funkay = new FlxSprite();
+			funkay.frames = Paths.getSparrowAtlas(loadingPath +FlxG.random.getObject(loadingScreensList));
 			funkay.animation.addByPrefix('thing', 'AnimatedLoading', 24, true);
 			funkay.animation.play('thing');
 			funkay.setGraphicSize(1280, 720);
