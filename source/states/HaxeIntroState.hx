@@ -91,6 +91,7 @@ class HaxeIntroState extends MusicBeatState
 
 	function goToWii()
 	{
+		FlxG.mouse.visible = false;
 		leftState  = true;
 		FlxG.switchState(new WiiLOLState());
 	}

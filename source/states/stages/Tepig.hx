@@ -44,7 +44,7 @@ class Tepig extends BaseStage
 		var backmountain:BGSprite = new BGSprite('backgrounds/tepig/backMountain', -600, -350, 0.5, 0.5);
 		add(backmountain);
 
-		victini = new BGSprite('backgrounds/tepig/Victini', -70,250, 0.7, 0.7);
+		victini = new BGSprite('backgrounds/tepig/Victini', -65,250, 0.7, 0.7);
 		add(victini);
 
 		var frontmountain:BGSprite = new BGSprite('backgrounds/tepig/BigMountain', -550, -750, 0.7, 0.7);
@@ -52,13 +52,11 @@ class Tepig extends BaseStage
 
 		var frontMountainClouds:FlxSprite = new FlxSprite(-100, -650).loadGraphic(Paths.image('backgrounds/tepig/FrontMounttainClous'));
 		frontMountainClouds.scrollFactor.set(0.7, 0.7);
-		frontMountainClouds.antialiasing =  ClientPrefs.data.antialiasing;
 		frontMountainClouds.scale.set(1.3,1.3);
 		add(frontMountainClouds);
 		
 		var cloudsplatform:FlxSprite = new FlxSprite(-600, 200).loadGraphic(Paths.image('backgrounds/tepig/Clouds1'));
 		cloudsplatform.scrollFactor.set(0.9, 0.9);
-		cloudsplatform.antialiasing =  ClientPrefs.data.antialiasing;
 		add(cloudsplatform);
 
 		var platform:BGSprite = new BGSprite('backgrounds/tepig/platform', -600, 300);
@@ -152,11 +150,12 @@ class Tepig extends BaseStage
 		}
 	}
 	override function stepHit()
+	{
+		switch(curStep)
 		{
-			switch(curStep)
-			{
-				case 960: createDropShadow(gf);
-				case 2104: createDropShadow(boyfriend);
-			}
+			case 960: createDropShadow(gf);
+			case 1552: createDropShadow(boyfriend);
+			case 2104: createDropShadow(boyfriend);
 		}
+	}
 }
