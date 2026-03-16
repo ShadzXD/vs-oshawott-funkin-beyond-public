@@ -2333,7 +2333,8 @@ class PlayState extends MusicBeatState
 				var newIcon:HealthIcon = new HealthIcon(value1,iconIsPlayer);
 				newIcon.y = hudClass.healthBar.y - 120;
 				newIcon.updateHitbox();
-				
+				newIcon.alpha = 0;
+				FlxTween.tween(newIcon, {alpha: 1}, 0.4, {ease: FlxEase.linear});
 				newIcon.isAlly = true;
 				hudClass.iconGroup.add(newIcon);
 			case 'Ashtump Jumpscare':
