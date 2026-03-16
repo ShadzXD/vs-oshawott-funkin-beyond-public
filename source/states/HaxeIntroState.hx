@@ -24,6 +24,8 @@ class HaxeIntroState extends MusicBeatState
 	{
 		Init.setup();
 		super.create();
+		FlxG.mouse.visible = false;
+
 		if (FlxG.save.data.seenDemoWarning == null)
 		{
 	        FlxTransitionableState.skipNextTransIn = true;
