@@ -22,9 +22,21 @@ class HaxeIntroState extends MusicBeatState
 
 	override function create()
 	{
+		Init.setup();
+		super.create();
+		if (FlxG.save.data.seenDemoWarning == null)
+		{
+	        FlxTransitionableState.skipNextTransIn = true;
+        	FlxTransitionableState.skipNextTransOut = true;
+			MusicBeatState.switchState(new WarningState());
+		}
+		else
+			playAnimation();
+	}
+	function playAnimation()
+	{
 		FlxG.mouse.visible = true;
 
-		Init.setup();
 		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(blackScreen);
 
@@ -42,9 +54,7 @@ class HaxeIntroState extends MusicBeatState
 		
 		new FlxTimer().start(0.6, startNOW, 1);
 
-		super.create();
 	}
-
 	override function update(elapsed:Float)
 	{
 		if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(nose)) {
@@ -91,8 +101,8 @@ class HaxeIntroState extends MusicBeatState
 
 	function goToWii()
 	{
-		FlxG.mouse.visible = false;
 		leftState  = true;
+		FlxG.mouse.visible = false;
 		FlxG.switchState(new WiiLOLState());
 	}
 
