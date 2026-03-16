@@ -1,137 +1,137 @@
 {
 	"player1": "bf",
-	"gfVersion": "gf-sitting-base",
-	"events": [],
-	"player2": "oshawott",
 	"notes": [
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": false,
+			"gfSection": false,
+			"bpm": 150,
 			"changeBPM": false,
-			"bpm": 150
+			"mustHitSection": false
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": false,
+			"gfSection": false,
+			"bpm": 150,
 			"changeBPM": false,
-			"bpm": 150
+			"mustHitSection": false
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": false,
+			"gfSection": false,
+			"bpm": 150,
 			"changeBPM": false,
-			"bpm": 150
+			"mustHitSection": false
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": false,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": false
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": false,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": false
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": true,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": true
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": true,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": true
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": true,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": true
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": true,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": true
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": false,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": false
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": false,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": false
 		},
 		{
-			"sectionBeats": 4,
-			"sectionNotes": [],
 			"typeOfSection": 0,
-			"gfSection": false,
+			"sectionNotes": [],
+			"sectionBeats": 4,
 			"altAnim": false,
-			"mustHitSection": false,
+			"gfSection": false,
+			"bpm": 135,
 			"changeBPM": false,
-			"bpm": 135
+			"mustHitSection": false
 		}
 	],
+	"player2": "oshawott",
+	"events": [],
+	"gfVersion": "gf-sitting-base",
 	"splashSkin": "noteSplashes",
 	"song": "watering",
-	"stage": "grassbg",
-	"needsVoices": true,
-	"validScore": true,
 	"arrowSkin": "",
-	"format": "psych_v1_convert",
+	"validScore": true,
+	"needsVoices": true,
+	"stage": "grassBG",
+	"speed": 2.8,
 	"bpm": 135,
-	"speed": 2.8
+	"format": "psych_v1_convert"
 }
