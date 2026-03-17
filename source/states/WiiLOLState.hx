@@ -22,6 +22,7 @@ class WiiLOLState extends MusicBeatState
 	var transitioning:Bool = false;
 	override function create()
 	{
+		FlxG.mouse.visible = false;
 		var background:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/pre-title/Oshawott-warning'));
 		background.screenCenter();
 		background.updateHitbox();

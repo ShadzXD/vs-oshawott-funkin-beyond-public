@@ -33,6 +33,7 @@ class TitleState extends MusicBeatState
 	var introLOGO:FlxSprite;
 	var pleaseText:FlxText;
 	var whiteBG:FlxSprite;
+	var textBar:FlxSprite;
 	function startIntro()
 	{
 		if (!initialized)
@@ -44,8 +45,8 @@ class TitleState extends MusicBeatState
 
 		Conductor.bpm = 140;
 
-		var scrollingBG:FlxSprite = new FlxBackdrop(Paths.image("menus/thefunny"), X, -10, -10);
-		scrollingBG.velocity.set(-110);
+		var scrollingBG:FlxBackdrop = new FlxBackdrop(Paths.image("menus/thefunny"), X, -10, -10);
+		scrollingBG.velocity.set(-100);
 		scrollingBG.scale.set(1.12, 1.12);
      	add(scrollingBG);
 
@@ -76,6 +77,15 @@ class TitleState extends MusicBeatState
 	    pleaseText.screenCenter(X);
 		pleaseText.updateHitbox();
 		pleaseText.size = 45;
+		
+		textBar = new FlxSprite(0 ,579).makeGraphic(1, 1, FlxColor.BLACK);
+		textBar.scale.set(FlxG.width + 20, 70);
+		textBar.updateHitbox();
+		textBar.screenCenter(X);
+		textBar.scrollFactor.set();
+		textBar.alpha = 0.00001;
+		textBar.antialiasing = false;
+		add(textBar);
         add(pleaseText);
 		pleaseText.visible = false;
 	
@@ -221,6 +231,7 @@ class TitleState extends MusicBeatState
 		{
 		
 			if(introLOGO != null)remove(introLOGO);
+			textBar.alpha = 0.4;
 			pleaseText.visible = true;
 			loopLOGO.visible = true;
 			FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : FlxColor.TRANSPARENT, 0.6);

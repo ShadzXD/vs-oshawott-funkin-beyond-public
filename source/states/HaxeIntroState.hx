@@ -59,7 +59,7 @@ class HaxeIntroState extends MusicBeatState
 	}
 	override function update(elapsed:Float)
 	{
-		if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(nose)) {
+		if (nose != null && FlxG.mouse.justPressed && FlxG.mouse.overlaps(nose)) {
 			if (numClick <= 2) FlxG.sound.play(Paths.sound('Boop'), 0.7);
 			numClick = numClick + 1;
 

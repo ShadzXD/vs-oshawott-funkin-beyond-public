@@ -19,18 +19,12 @@ class Init
 		#end
 		Mods.loadTopMod();
 
-		FlxG.fixedTimestep = false;
-		FlxG.game.focusLostFramerate = 60;
-		FlxG.keys.preventDefaultKeys = [TAB];
-
-        FlxG.save.bind('funkin', CoolUtil.getSavePath());
         if(FlxG.save.data != null && FlxG.save.data.fullscreen)
 		{
 			FlxG.fullscreen = FlxG.save.data.fullscreen;
 		}
 
 		ClientPrefs.loadPrefs();
-		Highscore.load();
 		Language.reloadPhrases();
 	
 		if (FlxG.save.data.weekCompleted != null)

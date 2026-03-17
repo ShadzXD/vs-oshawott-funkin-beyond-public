@@ -1875,7 +1875,6 @@ class PlayState extends MusicBeatState
 			}
 			checkEventNote();
 		}
-		
 		#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
@@ -1889,7 +1888,6 @@ class PlayState extends MusicBeatState
 			if(FlxG.keys.justPressed.THREE) unlockSticker();
 		}
 		#end
-
 		setOnScripts('botPlay', cpuControlled);
 		callOnScripts('onUpdatePost', [elapsed]);
 	}
@@ -2488,11 +2486,10 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 					Mods.loadTopMod();
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 
 					canResync = false;
-					MusicBeatState.switchState(new StoryMenuState());
+					openSubState(new StickerSubState(STORY));
 
 					// if ()
 					if(!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay')) {
@@ -2530,8 +2527,7 @@ class PlayState extends MusicBeatState
 				#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 
 				canResync = false;
-				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				openSubState(new StickerSubState(FREEPLAY));
 				changedDifficulty = false;
 			}
 			transitioning = true;

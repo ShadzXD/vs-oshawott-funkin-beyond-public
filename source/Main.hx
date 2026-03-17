@@ -109,7 +109,9 @@ class Main extends Sprite
 		Mods.pushGlobalMods();
 		#end
 		Mods.loadTopMod();
+    	FlxG.save.bind('funkin', CoolUtil.getSavePath());
 
+		Highscore.load();
 		#if HSCRIPT_ALLOWED
 		Iris.warn = function(x, ?pos:haxe.PosInfos)
 		{
