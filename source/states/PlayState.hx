@@ -1393,7 +1393,7 @@ class PlayState extends MusicBeatState
 
 				var curStepCrochet:Float = 60 / daBpm * 1000 / 4.0;
 				final roundSus:Int = Math.round(swagNote.sustainLength / curStepCrochet);
-				if(roundSus > 0)
+				if(roundSus > 1)
 				{
 					for (susNote in 0...roundSus)
 					{
@@ -1506,7 +1506,7 @@ class PlayState extends MusicBeatState
 			if(!preloadedVideoAtLeastOnce)
 			{
 				preloadedVideoAtLeastOnce = true;
-				videoCutscene = new VideoSprite(Paths.video('precache'), false, false, false);
+				videoCutscene = new VideoSprite(Paths.video(event.value1), false, false, false);
    			 	videoCutscene.alpha = 0.001;
     			add(videoCutscene);
 			}
@@ -1875,7 +1875,6 @@ class PlayState extends MusicBeatState
 			}
 			checkEventNote();
 		}
-		
 		#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
@@ -1889,7 +1888,6 @@ class PlayState extends MusicBeatState
 			if(FlxG.keys.justPressed.THREE) unlockSticker();
 		}
 		#end
-
 		setOnScripts('botPlay', cpuControlled);
 		callOnScripts('onUpdatePost', [elapsed]);
 	}
@@ -1918,15 +1916,6 @@ class PlayState extends MusicBeatState
 			FlxG.sound.music.pause();
 			vocals.pause();
 			opponentVocals.pause();
-		}
-		if(!cpuControlled)
-		{
-			for (note in playerStrums)
-				if(note.animation.curAnim != null && note.animation.curAnim.name != 'static')
-				{
-					note.playAnim('static');
-					note.resetAnim = 0;
-				}
 		}
 
 		#if VIDEOS_ALLOWED
@@ -2342,7 +2331,8 @@ class PlayState extends MusicBeatState
 				var newIcon:HealthIcon = new HealthIcon(value1,iconIsPlayer);
 				newIcon.y = hudClass.healthBar.y - 120;
 				newIcon.updateHitbox();
-				
+				newIcon.alpha = 0;
+				FlxTween.tween(newIcon, {alpha: 1}, 0.4, {ease: FlxEase.linear});
 				newIcon.isAlly = true;
 				hudClass.iconGroup.add(newIcon);
 			case 'Ashtump Jumpscare':
@@ -2496,11 +2486,10 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 					Mods.loadTopMod();
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 
 					canResync = false;
-					MusicBeatState.switchState(new StoryMenuState());
+					openSubState(new StickerSubState(STORY));
 
 					// if ()
 					if(!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay')) {
@@ -2538,8 +2527,7 @@ class PlayState extends MusicBeatState
 				#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 
 				canResync = false;
-				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				openSubState(new StickerSubState(FREEPLAY));
 				changedDifficulty = false;
 			}
 			transitioning = true;

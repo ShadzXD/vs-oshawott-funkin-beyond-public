@@ -73,7 +73,7 @@ class CreditState extends MusicBeatState
         add(descText);
 
         // Quote text
-        quote = new FlxText(275,525, 500, "");
+        quote = new FlxText(275,500, 500, "");
         quote.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, CENTER);
         add(quote);
         setCreditContent(0);

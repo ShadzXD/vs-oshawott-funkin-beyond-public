@@ -22,9 +22,23 @@ class HaxeIntroState extends MusicBeatState
 
 	override function create()
 	{
+		Init.setup();
+		super.create();
+		FlxG.mouse.visible = false;
+
+		if (FlxG.save.data.seenDemoWarning == null)
+		{
+	        FlxTransitionableState.skipNextTransIn = true;
+        	FlxTransitionableState.skipNextTransOut = true;
+			MusicBeatState.switchState(new WarningState());
+		}
+		else
+			playAnimation();
+	}
+	function playAnimation()
+	{
 		FlxG.mouse.visible = true;
 
-		Init.setup();
 		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(blackScreen);
 
@@ -42,12 +56,10 @@ class HaxeIntroState extends MusicBeatState
 		
 		new FlxTimer().start(0.6, startNOW, 1);
 
-		super.create();
 	}
-
 	override function update(elapsed:Float)
 	{
-		if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(nose)) {
+		if (nose != null && FlxG.mouse.justPressed && FlxG.mouse.overlaps(nose)) {
 			if (numClick <= 2) FlxG.sound.play(Paths.sound('Boop'), 0.7);
 			numClick = numClick + 1;
 
@@ -79,8 +91,9 @@ class HaxeIntroState extends MusicBeatState
 			introGOOO.animation.play('hiii');
 			FlxG.sound.play(Paths.sound('haxe_intro'), 0.7);
 
-			haxeTEXT = new FlxText(50, 500, FlxG.width - 100, "HaxeFlixel").setFormat(Paths.font("vcr.ttf"), 32, 0xffffff, "center");
+			haxeTEXT = new FlxText(50, 500, FlxG.width - 100, "HaxeFlixel").setFormat(Paths.font("PokemonGB.ttf"), 32, 0xffffff, "center");
 			haxeTEXT.screenCenter(X);
+			haxeTEXT.antialiasing = false;
 			add(haxeTEXT);
 			
 			new FlxTimer().start(1.1, byebye, 1);
@@ -91,6 +104,7 @@ class HaxeIntroState extends MusicBeatState
 	function goToWii()
 	{
 		leftState  = true;
+		FlxG.mouse.visible = false;
 		FlxG.switchState(new WiiLOLState());
 	}
 

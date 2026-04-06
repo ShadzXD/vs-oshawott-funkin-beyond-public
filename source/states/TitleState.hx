@@ -33,6 +33,7 @@ class TitleState extends MusicBeatState
 	var introLOGO:FlxSprite;
 	var pleaseText:FlxText;
 	var whiteBG:FlxSprite;
+	var textBar:FlxSprite;
 	function startIntro()
 	{
 		if (!initialized)
@@ -44,8 +45,8 @@ class TitleState extends MusicBeatState
 
 		Conductor.bpm = 140;
 
-		var scrollingBG:FlxSprite = new FlxBackdrop(Paths.image("menus/thefunny"), X, -10, -10);
-		scrollingBG.velocity.set(-110);
+		var scrollingBG:FlxBackdrop = new FlxBackdrop(Paths.image("menus/thefunny"), X, -10, -10);
+		scrollingBG.velocity.set(-100);
 		scrollingBG.scale.set(1.12, 1.12);
      	add(scrollingBG);
 
@@ -76,6 +77,15 @@ class TitleState extends MusicBeatState
 	    pleaseText.screenCenter(X);
 		pleaseText.updateHitbox();
 		pleaseText.size = 45;
+		
+		textBar = new FlxSprite(0 ,579).makeGraphic(1, 1, FlxColor.BLACK);
+		textBar.scale.set(FlxG.width + 20, 70);
+		textBar.updateHitbox();
+		textBar.screenCenter(X);
+		textBar.scrollFactor.set();
+		textBar.alpha = 0.00001;
+		textBar.antialiasing = false;
+		add(textBar);
         add(pleaseText);
 		pleaseText.visible = false;
 	
@@ -150,13 +160,17 @@ class TitleState extends MusicBeatState
 			{
 				FlxG.sound.music.fadeOut(0.9, 0);
 				FlxTween.tween(FlxG.camera, {zoom: 4}, 3, {ease: FlxEase.quartInOut}); // zoomy zoomy when you hit enter enter
-				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+				new FlxTimer().start(0.5, function(tmr:FlxTimer)
+				{
+					FlxG.camera.fade(FlxColor.BLACK, 0.7);
 
+				});
+				FlxTransitionableState.skipNextTransIn = true;
 				transitioning = true;
 				// FlxG.sound.music.stop();
 
-				new FlxTimer().start(1, function(tmr:FlxTimer)
+				new FlxTimer().start(1.2, function(tmr:FlxTimer)
 				{
 					
 					if (debugStageTesting){
@@ -217,6 +231,7 @@ class TitleState extends MusicBeatState
 		{
 		
 			if(introLOGO != null)remove(introLOGO);
+			textBar.alpha = 0.4;
 			pleaseText.visible = true;
 			loopLOGO.visible = true;
 			FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : FlxColor.TRANSPARENT, 0.6);

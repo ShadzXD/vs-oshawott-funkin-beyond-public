@@ -1,78 +1,54 @@
 {
 	"animations": [
 		{
+			"offsets": [-64, -272],
 			"loop": false,
-			"offsets": [
-				-64,
-				-272
-			],
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "quil idle",
-			"indices": []
+			"indices": [],
+			"name": "quil idle"
 		},
 		{
+			"offsets": [-90, -260],
 			"loop": false,
-			"offsets": [
-				-90,
-				-260
-			],
+			"fps": 12,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "quil left",
-			"indices": []
+			"indices": [],
+			"name": "quil left"
 		},
 		{
+			"offsets": [-40, -280],
 			"loop": false,
-			"offsets": [
-				-40,
-				-280
-			],
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "quil down",
-			"indices": []
+			"indices": [],
+			"name": "quil down"
 		},
 		{
+			"offsets": [-20, -190],
 			"loop": false,
-			"offsets": [
-				-20,
-				-190
-			],
+			"fps": 12,
 			"anim": "singUP",
-			"fps": 12,
-			"name": "quil up",
-			"indices": []
+			"indices": [],
+			"name": "quil up"
 		},
 		{
+			"offsets": [-47, -228],
 			"loop": false,
-			"offsets": [
-				-47,
-				-228
-			],
-			"anim": "singRIGHT",
 			"fps": 12,
-			"name": "quil right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "quil right"
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": true,
 	"image": "characters/Cyndaquil/quil",
-	"position": [
-		40,
-		70
-	],
-	"healthicon": "snivy",
+	"position": [40, 70],
+	"healthicon": "cyndiaquil-pixel",
 	"flip_x": true,
-	"healthbar_colors": [
-		76,
-		148,
-		76
-	],
-	"camera_position": [
-		340,
-		0
-	],
+	"healthbar_colors": [76, 148, 76],
+	"camera_position": [340, 0],
 	"sing_duration": 4,
 	"scale": 2,
 	"_editor_isPlayer": true

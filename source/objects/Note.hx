@@ -225,11 +225,6 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
-					// note colors
-					//rgbShader.r = 0xFF00C8FF;
-					//rgbShader.g = 0xFFCFEBF3;
-					//rgbShader.b = 0xFF2366B8;
-
 			}
 			if (value != null && value.length > 1) NoteTypesConfig.applyNoteTypeData(this, value);
 			if (hitsound != 'hitsound' && hitsoundVolume > 0) Paths.sound(hitsound); //precache new sound for being idiot-proof
@@ -288,6 +283,7 @@ class Note extends FlxSprite
 			multAlpha = 1;
 			hitsoundDisabled = true;
 			if(ClientPrefs.data.downScroll) flipY = true;
+			scale.y = 0.62;
 
 			offsetX += width / 2;
 			copyAngle = false;
@@ -295,6 +291,7 @@ class Note extends FlxSprite
 			animation.play(colArray[noteData % colArray.length] + 'holdend');
 
 			updateHitbox();
+			centerOffsets();
 
 			offsetX -= width / 2;
 
@@ -305,11 +302,11 @@ class Note extends FlxSprite
 			{
 				prevNote.animation.play(colArray[prevNote.noteData % colArray.length] + 'hold');
 
-				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.05;
+				prevNote.scale.y = Conductor.stepCrochet / 100 * 1.054;
 				if(createdFrom != null && createdFrom.songSpeed != null) prevNote.scale.y *= createdFrom.songSpeed;
 
 				if(PlayState.isPixelStage) {
-					prevNote.scale.y *= 1.19;
+					prevNote.scale.y *= 4.58;
 					prevNote.scale.y *= (6 / height); //Auto adjust note size
 				}
 				prevNote.updateHitbox();
@@ -396,7 +393,7 @@ class Note extends FlxSprite
 				loadGraphic(graphic, true, Math.floor(graphic.width / 4), Math.floor(graphic.height / 2));
 				originalHeight = graphic.height / 2;
 			} else {
-				var graphic = Paths.image('pixelUI/noteSkins/NOTE_assets' + skinPostfix);
+				var graphic = Paths.image('pixelUI/' + skinPixel + skinPostfix);
 				loadGraphic(graphic, true, Math.floor(graphic.width / 4), Math.floor(graphic.height / 5));
 			}
 			setGraphicSize(Std.int(width * PlayState.daPixelZoom));
@@ -430,8 +427,6 @@ class Note extends FlxSprite
 	public static function getNoteSkinPostfix()
 	{
 		var skin:String = '';
-		if(ClientPrefs.data.noteSkin != ClientPrefs.defaultData.noteSkin)
-			skin = '-' + ClientPrefs.data.noteSkin.trim().toLowerCase().replace(' ', '_');
 		return skin;
 	}
 

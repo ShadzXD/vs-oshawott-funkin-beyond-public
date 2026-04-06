@@ -12,10 +12,16 @@ function onEvent(name, value1, value2)
 		end
 
 		if character == 1.5 then
-			noteTweenAlpha("NoteAlpha2", 1, 1, transitionTime, linear)
-			noteTweenAlpha("NoteAlpha4", 3, 1, transitionTime, linear)
-			noteTweenAlpha("NoteAlpha3", 2, 1, transitionTime, linear)
-			noteTweenAlpha("NoteAlpha1", 0, 1, transitionTime, linear)
+			strumAlpha = 1;
+
+			if getPropertyFromClass('backend.ClientPrefs', 'data.middleScroll') then
+				strumAlpha = 0.35;
+			end 
+				noteTweenAlpha("NoteAlpha2", 1, strumAlpha, transitionTime, linear)
+				noteTweenAlpha("NoteAlpha4", 3, strumAlpha, transitionTime, linear)
+				noteTweenAlpha("NoteAlpha3", 2, strumAlpha, transitionTime, linear)
+				noteTweenAlpha("NoteAlpha1", 0, strumAlpha, transitionTime, linear)
+			
 		end
 
 		if character == 2 then

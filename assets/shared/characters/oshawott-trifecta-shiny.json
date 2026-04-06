@@ -2,10 +2,7 @@
 	"animations": [
 		{
 			"loop": false,
-			"offsets": [
-				-111,
-				-451
-			],
+			"offsets": [-111, -451],
 			"anim": "idle",
 			"fps": 12,
 			"name": "shinyoshawott idle",
@@ -13,10 +10,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [
-				-105,
-				-451
-			],
+			"offsets": [-105, -451],
 			"anim": "singLEFT",
 			"fps": 12,
 			"name": "shinyoshawott left",
@@ -24,10 +18,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [
-				-111,
-				-451
-			],
+			"offsets": [-111, -451],
 			"anim": "singDOWN",
 			"fps": 12,
 			"name": "shinyoshawott down",
@@ -35,10 +26,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [
-				-133,
-				-414
-			],
+			"offsets": [-133, -414],
 			"anim": "singUP",
 			"fps": 12,
 			"name": "shinyoshawott up",
@@ -46,33 +34,21 @@
 		},
 		{
 			"loop": false,
-			"offsets": [
-				-129,
-				-455
-			],
+			"offsets": [-129, -455],
 			"anim": "singRIGHT",
 			"fps": 12,
 			"name": "shinyoshawott right",
 			"indices": []
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": true,
 	"image": "characters/Oshawott/shinyoshawott",
-	"position": [
-		40,
-		-160
-	],
-	"healthicon": "fart",
+	"position": [40, -160],
+	"healthicon": "fart-shiny-pixel",
 	"flip_x": false,
-	"healthbar_colors": [
-		40,
-		99,
-		106
-	],
-	"camera_position": [
-		-190,
-		180
-	],
+	"healthbar_colors": [40, 99, 106],
+	"camera_position": [-190, 180],
 	"sing_duration": 6.1,
 	"scale": 2.2,
 	"_editor_isPlayer": false

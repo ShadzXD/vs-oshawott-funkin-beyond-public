@@ -11,7 +11,7 @@ import Init;
 	public var downScroll:Bool = false;
 	public var middleScroll:Bool = false;
 	public var opponentStrums:Bool = true;
-	public var showFPS:Bool = true;
+	public var showFPS:Bool = false;
 	public var flashing:Bool = true;
 	public var autoPause:Bool = true;
 	public var antialiasing:Bool = true;
@@ -162,7 +162,8 @@ class ClientPrefs {
 
 		//Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
 		var save:FlxSave = new FlxSave();
-		save.bind('controls_v3', CoolUtil.getSavePath());
+		save.bind('controls_v3', 'Oshawott/savetest');
+		
 		save.data.keyboard = keyBinds;
 		save.data.gamepad = gamepadBinds;
 		save.flush();
@@ -217,7 +218,8 @@ class ClientPrefs {
 
 		// controls on a separate save file
 		var save:FlxSave = new FlxSave();
-		save.bind('controls_v3', CoolUtil.getSavePath());
+		save.bind('controls_v3', 'Oshawott/savetest');
+		trace(save);
 		if(save != null)
 		{
 			if(save.data.keyboard != null)

@@ -1,3 +1,0 @@
-Is getting dark in here.
-value1: Transparency, 0-1 (i suggest 0.7)
-value2: Time (seconds) 0-???

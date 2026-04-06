@@ -1,7 +1,7 @@
 package objects;
-/*
-  * Should probably just redo most of this
-*/
+/**
+ * If i continue using psych in the future (probably wont), i need to rewrite this because of my god
+ */
 class SustainSplash extends FlxSprite {
 
   public static var startCrochet:Float;
@@ -20,18 +20,24 @@ class SustainSplash extends FlxSprite {
     super.update(elapsed);
     if(strumNote != null)
     {
-      
-      		alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
+       	  alpha = ClientPrefs.data.susSplashAlpha - (1 - strumNote.alpha);
+
+        repositionSplash();
 
         if(!animation.curAnim.name.startsWith("end") && strumNote.animation.curAnim.name == "static") {
             visible = false;
         }
     }
   }
+  function repositionSplash()
+  {
+    setPosition(strumNote.x, strumNote.y);
+    offset.set(PlayState.isPixelStage ? 112.5 : 106.25, 100);
+  }
   public function setupSusSplash(strum:StrumNote, daNote:Note, ?playbackRate:Float = 1):Void {
 
     final lengthToGet:Int = !daNote.isSustainNote ? daNote.tail.length : daNote.parent.tail.length;
-    if(lengthToGet <= 1 || strum.visible == false) //kill splash if size of hold is too small
+    if(strum.visible == false) //kill splash if size of hold is too small
     {
         kill();
         return;
@@ -52,12 +58,11 @@ class SustainSplash extends FlxSprite {
     }
     visible = true;
     strumNote = strum;
+    repositionSplash();
 
     animation.play('start');
     animation.curAnim.looped = false;
-    setPosition(strumNote.x, strumNote.y);
 
-    offset.set(PlayState.isPixelStage ? 112.5 : 106.25, 100);
     animation.finishCallback = (animationName:String)->{
       if(animationName == "start")
       {
