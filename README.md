@@ -1,6 +1,23 @@
-VS Oshawott v2, created using a modified Psych Engine v1.0.4
+# VS Oshawott: Funkin' Beyond! #
 
-Built on Shadz' Psych fork
- 
+## An unfinished FNF Mod created using modified Psych Engine v1.0.4. ##
 
-#### Psych Engine by ShadowMario ####
+
+
+This is the source code, if you just want to play the mod [click here.](https://gamebanana.com/mods/486544)
+
+Vs. Oshawott: Funkin Beyond is an FNF mod created by [OwenTheMC](https://x.com/OwenTheMC) that features various characters from the 5th generation of the Pokémon games. This build contains over 15 songs, updated visuals, and dozens of new events.
+
+Source code being released as per Funkin' developers request.
+
+### Programming Credits: ###
+- ShadzXD
+- SMB
+- PlusherX
+- Flezard
+
+### Special Thanks: ###
+- SquidBowl for the v1. menus.
+- ShadowMario for creating Psych Engine.
+
+  ### **Thank you for playing Vs Oshawott: Funkin' Beyond!** ###
