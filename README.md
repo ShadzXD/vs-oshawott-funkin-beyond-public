@@ -21,3 +21,5 @@ Source code being released as per the Funkin' Crews request.
 - ShadowMario for creating Psych Engine.
 
   ### **Thank you for playing: Vs Oshawott: Funkin' Beyond!** ###
+  
+<img width="340" height="200" alt="Oshawott_dances_to_Gerber_Life_original" src="https://github.com/user-attachments/assets/f38a344a-dda0-4bbb-8d57-7ebce7a11099" />
