@@ -1,6 +1,6 @@
 # VS Oshawott: Funkin' Beyond! #
 
-## An unfinished FNF Mod created using a modified build of Psych Engine v1.0.4. ##
+## An unfinished FNF Mod built on Psych Engine v1.0.4. ##
 
 
 
